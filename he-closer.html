@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HE CLOSER Academy | Academia Alpha para Closers de Alto Rendimiento</title>
+    <meta name="description" content="Academia exclusiva de alto rendimiento para el closer que llevas dentro. Somos la revolución en LATAM entrenando Alpha Closers.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    <link rel="stylesheet" href="styles/he-closer.css">
+    
+    <style>
+        :root {
+            --program-primary: #3457D5;
+            --program-secondary: #5B7FFF;
+            --program-gradient: linear-gradient(135deg, #1a2a6c 0%, #3457D5 50%, #5B7FFF 100%);
+        }
+    </style>
+</head>
+<body class="program-page" data-program="he-closer">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <span class="program-header__logo-text">ESCUELA</span>
+                <span class="program-header__logo-accent">VEN7AS</span>
+            </a>
+            <nav class="program-header__nav">
+                <a href="#pilares">Pilares</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#ceo">CEO</a>
+                <a href="#inscripcion">Inscripción</a>
+            </nav>
+            <a href="#inscripcion" class="program-header__cta">Únete Ahora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="program-hero__bg">
+            <div class="program-hero__gradient"></div>
+            <div class="program-hero__particles" id="particles"></div>
+            <div class="program-hero__lines">
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+            </div>
+        </div>
+        
+        <div class="program-hero__container">
+            <!-- Badge Alpha -->
+            <div class="he-alpha-badge">
+                REVOLUCIÓN ALPHA CLOSERS LATAM
+            </div>
+            
+            <h1 class="program-hero__title">
+                <span class="program-hero__title-line" data-animate="title">HE</span>
+                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">CLOSER</span>
+            </h1>
+            
+            <p class="program-hero__subtitle" data-animate="fade">
+                Una academia <strong>exclusiva de alto rendimiento</strong> para el closer que llevas dentro. Tu sello de calidad en el cierre de ventas.
+            </p>
+            
+            <div class="program-hero__stats" data-animate="fade">
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">95%</span>
+                    <span class="program-hero__stat-label">Hombres en ventas empíricas</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">8-12</span>
+                    <span class="program-hero__stat-label">Sesiones en vivo/mes</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">100%</span>
+                    <span class="program-hero__stat-label">Online</span>
+                </div>
+            </div>
+            
+            <div class="program-hero__cta-group" data-animate="fade">
+                <a href="#inscripcion" class="program-hero__cta-primary">
+                    <span>Quiero ser HE CLOSER</span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#pilares" class="program-hero__cta-secondary">
+                    <span>Conocer los 4 Pilares</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="program-hero__scroll">
+            <span>Scroll</span>
+            <div class="program-hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="program-intro">
+        <div class="program-intro__container">
+            <div class="program-intro__content">
+                <span class="program-intro__label">¿POR QUÉ HE CLOSER?</span>
+                
+                <!-- Stat Badge del 95% -->
+                <div class="he-stat-badge">
+                    <span class="he-stat-badge__number">95%</span>
+                    <span class="he-stat-badge__text">de los hombres en ventas lo hacen de manera empírica</span>
+                </div>
+                
+                <h2 class="program-intro__title">
+                    ¿Estás listo para ser nuestra <span>historia de éxito</span> y revolucionar la forma de vender?
+                </h2>
+                <p class="program-intro__text">
+                    Transformamos la forma en que los hombres venden, brindando una metodología única basada en psicología masculina, hábitos de alto rendimiento y estrategias de cierre que potencien tu confianza, tus resultados y tu crecimiento económico.
+                </p>
+                <div class="program-intro__highlights">
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <strong>Mentalidad Alpha</strong>
+                            <p>Resiliencia, recursividad y herramientas de PNL</p>
+                        </div>
+                    </div>
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <strong>La Técnica 7</strong>
+                            <p>Sistema de ventas completo y estrategias B2C</p>
+                        </div>
+                    </div>
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <div>
+                            <strong>Presencia Irresistible</strong>
+                            <p>Imagen, oratoria y lenguaje corporal de impacto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="program-intro__visual">
+                <div class="program-intro__image-wrapper">
+                    <img src="assets/hero/5.jpg" alt="HE CLOSER Academy - Alpha Closers">
+                    <div class="program-intro__image-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="he-mission">
+        <div class="he-mission__container">
+            <div class="he-mission__grid">
+                <div class="he-mission__card">
+                    <div class="he-mission__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Transformar la forma en que los hombres venden, brindando una metodología única basada en psicología masculina, hábitos de alto rendimiento y estrategias de cierre que potencien su confianza, sus resultados y su crecimiento económico.</p>
+                </div>
+                <div class="he-mission__card">
+                    <div class="he-mission__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser referente en LATAM en entrenamiento alpha en ventas, liderando la evolución del sector hacia un modelo hecho por y para hombres, donde cerrar ventas desde lo masculino sea reconocido como una ventaja estratégica global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Pilares Section -->
+    <section class="he-pillars" id="pilares">
+        <div class="he-pillars__container">
+            <div class="he-pillars__header">
+                <span class="he-pillars__label">CONTENIDO</span>
+                <h2 class="he-pillars__title">Los 4 Pilares de He Closer</h2>
+                <p class="he-pillars__subtitle">Sistema H.E.C.L.O.S.E.R. para convertirte en un cerrador Alpha</p>
+            </div>
+            
+            <div class="he-pillars__grid">
+                <!-- Pilar 1: Mentalidad Alpha -->
+                <div class="he-pillar">
+                    <span class="he-pillar__number">PILAR 1</span>
+                    <div class="he-pillar__acronym">H.E.</div>
+                    <h3 class="he-pillar__title">Mentalidad Alpha</h3>
+                    <p class="he-pillar__desc">Habilidad Estratégica - Maestría en la Ejecución</p>
+                    <ul class="he-pillar__list">
+                        <li>Resiliencia</li>
+                        <li>Recursividad</li>
+                        <li>Herramientas de PNL</li>
+                        <li>Hábitos de Éxito</li>
+                        <li>Propósito & Metas</li>
+                    </ul>
+                </div>
+                
+                <!-- Pilar 2: Proceso de Venta -->
+                <div class="he-pillar">
+                    <span class="he-pillar__number">PILAR 2</span>
+                    <div class="he-pillar__acronym">C.L.</div>
+                    <h3 class="he-pillar__title">Proceso de Venta</h3>
+                    <p class="he-pillar__desc">Claridad Líder - Visión y Propósito Definido</p>
+                    <ul class="he-pillar__list">
+                        <li>La Técnica 7</li>
+                        <li>Tipología de Clientes</li>
+                        <li>Gestión de Objeciones</li>
+                        <li>Planes de Trabajo & Estrategias B2C</li>
+                        <li>Fidelización & PostVenta</li>
+                    </ul>
+                </div>
+                
+                <!-- Pilar 3: Roles y Enfoque -->
+                <div class="he-pillar">
+                    <span class="he-pillar__number">PILAR 3</span>
+                    <div class="he-pillar__acronym">O.S.</div>
+                    <h3 class="he-pillar__title">Roles y Enfoque</h3>
+                    <p class="he-pillar__desc">Optimización y Sinergia - Rendimiento y Colaboración</p>
+                    <ul class="he-pillar__list">
+                        <li>Relaciones & Ventas</li>
+                        <li>Productividad</li>
+                        <li>Alto Rendimiento</li>
+                        <li>Organización</li>
+                    </ul>
+                </div>
+                
+                <!-- Pilar 4: Irresistible -->
+                <div class="he-pillar">
+                    <span class="he-pillar__number">PILAR 4</span>
+                    <div class="he-pillar__acronym">E.R.</div>
+                    <h3 class="he-pillar__title">Irresistible</h3>
+                    <p class="he-pillar__desc">Exploración Radiante - Adaptación e Innovación</p>
+                    <ul class="he-pillar__list">
+                        <li>Imagen</li>
+                        <li>Oratoria</li>
+                        <li>Dicción</li>
+                        <li>Lenguaje Corporal</li>
+                        <li>Autoestima</li>
+                        <li>Autoconocimiento</li>
+                        <li>Empoderamiento</li>
+                        <li>Actitud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logística -->
+    <section class="he-logistics">
+        <div class="he-logistics__container">
+            <div class="he-logistics__header">
+                <span class="he-logistics__label">LOGÍSTICA</span>
+                <h2 class="he-logistics__title">Metodología de aprendizaje</h2>
+            </div>
+            
+            <div class="he-logistics__grid">
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2"/><path d="M3 21V19C3 16.79 4.79 15 7 15H17C19.21 15 21 16.79 21 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="he-logistics__name">Role Playing</span>
+                </div>
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="he-logistics__name">100% Online</span>
+                </div>
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="2"/><path d="M9 12H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 16H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="he-logistics__name">Estudio de Caso</span>
+                </div>
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5C4 18.1193 5.11929 17 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 2H20V22H6.5C5.11929 22 4 20.8807 4 19.5V4.5C4 3.11929 5.11929 2 6.5 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="he-logistics__name">Recursos</span>
+                </div>
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C23 17.13 21.74 15.55 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.74 3.55 19 5.13 19 7C19 8.87 17.74 10.45 16 10.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="he-logistics__name">Expertos en Cierre</span>
+                </div>
+                <div class="he-logistics__item">
+                    <div class="he-logistics__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="he-logistics__name">Certificado Virtual</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué Incluye Section -->
+    <section class="he-includes" id="metodologia">
+        <div class="he-includes__container">
+            <div class="he-includes__header">
+                <span class="he-includes__label">METODOLOGÍA</span>
+                <h2 class="he-includes__title">Todo lo que incluye He Closer</h2>
+            </div>
+            
+            <div class="he-includes__grid">
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M23 7L16 12L23 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>8-12 Sesiones en Vivo por Mes</h4>
+                        <p>Entrenamientos en tiempo real con expertos en cierre</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5C4 18.1193 5.11929 17 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 2H20V22H6.5C5.11929 22 4 20.8807 4 19.5V4.5C4 3.11929 5.11929 2 6.5 2Z" stroke="currentColor" stroke-width="2"/><path d="M8 7H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 11H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Materiales y Recursos</h4>
+                        <p>Biblioteca on-demand con todo lo que necesitas</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 10V6C22 4.89543 21.1046 4 20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 8H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 12H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="4" stroke="currentColor" stroke-width="2"/><path d="M18 16V18L19.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Plataforma Teórica</h4>
+                        <p>Clases grabadas y contenido adicional disponible 24/7</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C23 17.13 21.74 15.55 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.74 3.55 19 5.13 19 7C19 8.87 17.74 10.45 16 10.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Comunidad de Apoyo</h4>
+                        <p>Red de hombres Alpha que se impulsan mutuamente</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2"/><path d="M3 21V19C3 16.79 4.79 15 7 15H17C19.21 15 21 16.79 21 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Ejercicios de Role Playing</h4>
+                        <p>Prácticas guiadas para dominar cada técnica</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Estudios de Caso</h4>
+                        <p>Análisis de situaciones reales del mercado</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Coaching Personalizado</h4>
+                        <p>Acompañamiento para tu desarrollo individual</p>
+                    </div>
+                </div>
+                
+                <div class="he-includes__card">
+                    <div class="he-includes__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 21V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V21" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <div class="he-includes__card-content">
+                        <h4>Oportunidad Laboral</h4>
+                        <p>Candidato para ser agente HE CLOSER en empresas online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="program-pricing" id="inscripcion">
+        <div class="program-pricing__container">
+            <div class="program-pricing__header">
+                <span class="program-pricing__label">INSCRIPCIÓN</span>
+                <h2 class="program-pricing__title">Invierte en tu transformación</h2>
+                <p class="program-pricing__subtitle">Únete a la revolución Alpha Closers de He Closer Academy</p>
+            </div>
+            
+            <div class="program-pricing__cards" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 3rem;">
+                <div class="program-pricing__card program-pricing__card--featured">
+                    <div class="he-price-badge">ACCESO EXCLUSIVO</div>
+                    <div class="program-pricing__card-header">
+                        <h3>He Closer Academy</h3>
+                        <p>El programa completo</p>
+                    </div>
+                    <div class="program-pricing__card-price" style="flex-direction: column; align-items: center;">
+                        <span class="he-price-original">Valorado en $1,200</span>
+                        <div style="display: flex; align-items: baseline;">
+                            <span class="program-pricing__card-currency">$</span>
+                            <span class="program-pricing__card-amount">357</span>
+                            <span class="program-pricing__card-period">USD</span>
+                        </div>
+                        <span class="he-savings">Ahorra $843 USD</span>
+                    </div>
+                    <ul class="program-pricing__card-features">
+                        <li>8-12 sesiones en vivo por mes</li>
+                        <li>Materiales y recursos (biblioteca on-demand)</li>
+                        <li>Plataforma teórica con clases grabadas</li>
+                        <li>Contenido adicional exclusivo</li>
+                        <li>Comunidad de apoyo</li>
+                        <li>Ejercicios de Role Playing</li>
+                        <li>Prácticas guiadas</li>
+                        <li>Estudios de caso</li>
+                        <li>Coaching personalizado</li>
+                        <li><strong>Certificado virtual</strong></li>
+                    </ul>
+                    <a href="https://wa.me/593991988400?text=Hola!%20Quiero%20inscribirme%20en%20He%20Closer%20Academy" target="_blank" class="program-pricing__card-btn program-pricing__card-btn--featured">
+                        ¡Quiero ser He Closer!
+                    </a>
+                    
+                    <!-- Badge Candidato -->
+                    <div class="he-candidate-badge">
+                        <span class="he-candidate-badge__icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="he-candidate-badge__text">Al graduarte serás <strong>candidato para ser agente HE CLOSER</strong> en empresas online</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-pricing__guarantee">
+                <div class="program-pricing__guarantee-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="program-pricing__guarantee-content">
+                    <h4>Garantía de satisfacción</h4>
+                    <p>Estamos tan seguros de la transformación que vivirás que te garantizamos resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section class="he-ceo" id="ceo">
+        <div class="he-ceo__container">
+            <div class="he-ceo__header">
+                <span class="he-ceo__label">CONOCE AL LÍDER</span>
+                <h2 class="he-ceo__title">CEO Escuela Ven7as</h2>
+            </div>
+            
+            <div class="he-ceo__card">
+                <div class="he-ceo__avatar">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <h3 class="he-ceo__name">CEO Escuela Ven7as</h3>
+                <span class="he-ceo__role">Fundador & Master Trainer</span>
+                
+                <div class="he-ceo__credentials">
+                    <div class="he-ceo__credential">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Master Trainer</span>
+                    </div>
+                    <div class="he-ceo__credential">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 1V23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <span>Master Speaker</span>
+                    </div>
+                    <div class="he-ceo__credential">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 10V6C22 4.89543 21.1046 4 20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14L20 16L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 12H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <span>Doctor Honoris Causa</span>
+                    </div>
+                    <div class="he-ceo__credential">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M2 12H22" stroke="currentColor" stroke-width="2"/><path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22C9.5 19.5 8 16 8 12C8 8 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Reconocido por CÁTEDRA UNESCO</span>
+                    </div>
+                </div>
+                
+                <div class="he-ceo__contact">
+                    <a href="mailto:escuelaven7asoficial@gmail.com" class="he-ceo__contact-link">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>escuelaven7asoficial@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/593991988400" target="_blank" class="he-ceo__contact-link">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>+593 991 988 400 (WhatsApp)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="program-final-cta">
+        <div class="program-final-cta__container">
+            <h2 class="program-final-cta__title">
+                Es hora de <span>dominar</span> el juego
+            </h2>
+            <p class="program-final-cta__subtitle">
+                ¿Estás listo para ser nuestra historia de éxito y revolucionar la forma de vender?
+            </p>
+            <a href="https://wa.me/593991988400?text=Hola!%20Quiero%20información%20sobre%20He%20Closer%20Academy" target="_blank" class="program-final-cta__btn">
+                <span>Comenzar mi transformación</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="https://wa.me/593991988400" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>© 2026 He Closer Academy - Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>

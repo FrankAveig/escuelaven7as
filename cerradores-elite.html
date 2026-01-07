@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERRADORES ÉLITE | Escuela VEN7AS - La Clínica de Ventas más Grande del País</title>
+    <meta name="description" content="Eventos presenciales intensivos de alto impacto. La Clínica de Ventas más grande del país para transformar vendedores en cerradores de élite.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    
+    <style>
+        :root {
+            --program-primary: #FF6B35;
+            --program-secondary: #FFB347;
+            --program-gradient: linear-gradient(135deg, #C62828 0%, #FF6B35 50%, #FFB347 100%);
+        }
+    </style>
+</head>
+<body class="program-page" data-program="cerradores-elite">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <span class="program-header__logo-text">ESCUELA</span>
+                <span class="program-header__logo-accent">VEN7AS</span>
+            </a>
+            <nav class="program-header__nav">
+                <a href="#experiencia">Experiencia</a>
+                <a href="#programa">Programa</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#inscripcion">Inscripción</a>
+            </nav>
+            <a href="#inscripcion" class="program-header__cta">Reservar Lugar</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="program-hero program-hero--event">
+        <div class="program-hero__bg">
+            <div class="program-hero__gradient"></div>
+            <div class="program-hero__particles" id="particles"></div>
+            <div class="program-hero__lines">
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+            </div>
+            <div class="program-hero__video-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/videos/hero.mp4" type="video/mp4">
+                </video>
+                <div class="program-hero__video-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="program-hero__container">
+            <div class="program-hero__badge program-hero__badge--urgent">
+                <span class="program-hero__badge-dot program-hero__badge-dot--pulse"></span>
+                <span>PRÓXIMO EVENTO: 15 DE FEBRERO 2026 - CUPOS LIMITADOS</span>
+            </div>
+            
+            <h1 class="program-hero__title">
+                <span class="program-hero__title-line" data-animate="title">CERRADORES</span>
+                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">ÉLITE</span>
+            </h1>
+            
+            <p class="program-hero__subtitle" data-animate="fade">
+                La Clínica de Ventas más grande del país. <strong>3 días presenciales</strong> de entrenamiento intensivo que transformarán tu forma de vender para siempre.
+            </p>
+            
+            <div class="program-hero__stats" data-animate="fade">
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number" data-count="5000">0</span>
+                    <span class="program-hero__stat-label">Participantes en 18 años</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">3</span>
+                    <span class="program-hero__stat-label">Días intensivos</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">100%</span>
+                    <span class="program-hero__stat-label">Práctico y vivencial</span>
+                </div>
+            </div>
+            
+            <div class="program-hero__cta-group" data-animate="fade">
+                <a href="#inscripcion" class="program-hero__cta-primary">
+                    <span>Reservar mi lugar ahora</span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#experiencia" class="program-hero__cta-secondary">
+                    <span>Ver la experiencia</span>
+                </a>
+            </div>
+            
+            <div class="program-hero__countdown" data-animate="fade">
+                <div class="program-hero__countdown-item">
+                    <span class="program-hero__countdown-number" id="days">45</span>
+                    <span class="program-hero__countdown-label">Días</span>
+                </div>
+                <div class="program-hero__countdown-item">
+                    <span class="program-hero__countdown-number" id="hours">12</span>
+                    <span class="program-hero__countdown-label">Horas</span>
+                </div>
+                <div class="program-hero__countdown-item">
+                    <span class="program-hero__countdown-number" id="minutes">34</span>
+                    <span class="program-hero__countdown-label">Minutos</span>
+                </div>
+                <div class="program-hero__countdown-item">
+                    <span class="program-hero__countdown-number" id="seconds">56</span>
+                    <span class="program-hero__countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="program-hero__scroll">
+            <span>Scroll</span>
+            <div class="program-hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="program-experience" id="experiencia">
+        <div class="program-experience__container">
+            <div class="program-experience__header">
+                <span class="program-experience__label">LA EXPERIENCIA</span>
+                <h2 class="program-experience__title">3 días que cambiarán tu vida</h2>
+                <p class="program-experience__subtitle">No es un curso, es una inmersión total en el mundo del cierre de ventas de alto nivel</p>
+            </div>
+            
+            <div class="program-experience__grid">
+                <div class="program-experience__card">
+                    <div class="program-experience__card-icon"></div>
+                    <h3>Ponentes Internacionales</h3>
+                    <p>Aprende de los mejores cerradores de Latinoamérica con décadas de experiencia en el campo</p>
+                </div>
+                <div class="program-experience__card">
+                    <div class="program-experience__card-icon"></div>
+                    <h3>Role-Play Intensivo</h3>
+                    <p>Práctica en vivo con feedback inmediato. Aprende haciendo, no solo escuchando.</p>
+                </div>
+                <div class="program-experience__card">
+                    <div class="program-experience__card-icon"></div>
+                    <h3>Networking Poderoso</h3>
+                    <p>Conecta con cientos de vendedores de alto rendimiento de diversas industrias</p>
+                </div>
+                <div class="program-experience__card">
+                    <div class="program-experience__card-icon"></div>
+                    <h3>Certificación Oficial</h3>
+                    <p>Recibe tu certificación como Cerrador Élite con validez internacional</p>
+                </div>
+            </div>
+            
+            <div class="program-experience__gallery">
+                <div class="program-experience__gallery-item">
+                    <img src="assets/hero/2.jpg" alt="Evento Cerradores Élite">
+                </div>
+                <div class="program-experience__gallery-item">
+                    <img src="assets/hero/3.jpg" alt="Entrenamiento intensivo">
+                </div>
+                <div class="program-experience__gallery-item">
+                    <img src="assets/hero/4.jpg" alt="Networking">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program-agenda" id="programa">
+        <div class="program-agenda__container">
+            <div class="program-agenda__header">
+                <span class="program-agenda__label">AGENDA</span>
+                <h2 class="program-agenda__title">Programa de los 3 días</h2>
+            </div>
+            
+            <div class="program-agenda__days">
+                <div class="program-agenda__day">
+                    <div class="program-agenda__day-header">
+                        <span class="program-agenda__day-number">DÍA 1</span>
+                        <h3>Mentalidad del Cerrador</h3>
+                    </div>
+                    <ul class="program-agenda__day-list">
+                        <li>
+                            <span class="program-agenda__time">09:00</span>
+                            <span class="program-agenda__topic">Ceremonia de apertura y networking</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">10:00</span>
+                            <span class="program-agenda__topic">La psicología del vendedor de élite</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">12:00</span>
+                            <span class="program-agenda__topic">Workshop: Eliminando creencias limitantes</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">15:00</span>
+                            <span class="program-agenda__topic">El arte de la primera impresión</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">17:00</span>
+                            <span class="program-agenda__topic">Sesión de role-play grupal</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="program-agenda__day program-agenda__day--featured">
+                    <div class="program-agenda__day-header">
+                        <span class="program-agenda__day-number">DÍA 2</span>
+                        <h3>Técnicas de Cierre</h3>
+                    </div>
+                    <ul class="program-agenda__day-list">
+                        <li>
+                            <span class="program-agenda__time">09:00</span>
+                            <span class="program-agenda__topic">Las 12 técnicas de cierre infalibles</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">11:00</span>
+                            <span class="program-agenda__topic">Masterclass: Manejo de objeciones</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">14:00</span>
+                            <span class="program-agenda__topic">Competencia de cierre en vivo</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">16:00</span>
+                            <span class="program-agenda__topic">Negociación de alto nivel</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">19:00</span>
+                            <span class="program-agenda__topic">Cena de gala y networking</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="program-agenda__day">
+                    <div class="program-agenda__day-header">
+                        <span class="program-agenda__day-number">DÍA 3</span>
+                        <h3>Implementación</h3>
+                    </div>
+                    <ul class="program-agenda__day-list">
+                        <li>
+                            <span class="program-agenda__time">09:00</span>
+                            <span class="program-agenda__topic">Construyendo tu sistema de ventas</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">11:00</span>
+                            <span class="program-agenda__topic">Workshop: Plan de acción personal</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">14:00</span>
+                            <span class="program-agenda__topic">Panel de cerradores exitosos</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">16:00</span>
+                            <span class="program-agenda__topic">Compromisos y accountability</span>
+                        </li>
+                        <li>
+                            <span class="program-agenda__time">17:30</span>
+                            <span class="program-agenda__topic">Ceremonia de certificación</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="program-testimonials" id="testimonios">
+        <div class="program-testimonials__container">
+            <div class="program-testimonials__header">
+                <span class="program-testimonials__label">TESTIMONIOS</span>
+                <h2 class="program-testimonials__title">Lo que dicen los graduados</h2>
+            </div>
+            
+            <div class="program-testimonials__slider">
+                <div class="program-testimonials__track">
+                    <div class="program-testimonials__card">
+                        <div class="program-testimonials__card-video">
+                            <video poster="assets/hero/5.jpg" controls>
+                                <source src="assets/videos/testimonials/testimonio7.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="program-testimonials__card-content">
+                            <div class="program-testimonials__stars">★★★★★</div>
+                            <p>"Los 3 días más intensos y transformadores de mi carrera. Salí siendo una persona diferente."</p>
+                            <div class="program-testimonials__author">
+                                <strong>Patricia Vega</strong>
+                                <span>Gerente de Ventas</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-testimonials__card">
+                        <div class="program-testimonials__card-video">
+                            <video poster="assets/hero/6.jpg" controls>
+                                <source src="assets/videos/testimonials/testimonio8.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="program-testimonials__card-content">
+                            <div class="program-testimonials__stars">★★★★★</div>
+                            <p>"El networking solo vale la inversión. Hice contactos que se convirtieron en clientes."</p>
+                            <div class="program-testimonials__author">
+                                <strong>Miguel Ángel Torres</strong>
+                                <span>Empresario</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-testimonials__card">
+                        <div class="program-testimonials__card-video">
+                            <video poster="assets/hero/7.jpg" controls>
+                                <source src="assets/videos/testimonials/testimonio1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="program-testimonials__card-content">
+                            <div class="program-testimonials__stars">★★★★★</div>
+                            <p>"Ya he asistido 3 veces. Cada año salgo con nuevas herramientas y más motivado que nunca."</p>
+                            <div class="program-testimonials__author">
+                                <strong>Fernando Ruiz</strong>
+                                <span>Director Comercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="program-pricing" id="inscripcion">
+        <div class="program-pricing__container">
+            <div class="program-pricing__header">
+                <span class="program-pricing__label">INSCRIPCIÓN</span>
+                <h2 class="program-pricing__title">Reserva tu lugar</h2>
+                <p class="program-pricing__subtitle">Cupos limitados - Solo 200 participantes por evento</p>
+            </div>
+            
+            <div class="program-pricing__cards">
+                <div class="program-pricing__card">
+                    <div class="program-pricing__card-header">
+                        <h3>Entrada General</h3>
+                        <p>Acceso al evento</p>
+                    </div>
+                    <div class="program-pricing__card-price">
+                        <span class="program-pricing__card-currency">$</span>
+                        <span class="program-pricing__card-amount">497</span>
+                        <span class="program-pricing__card-period">USD</span>
+                    </div>
+                    <ul class="program-pricing__card-features">
+                        <li>Acceso a los 3 días</li>
+                        <li>Material de trabajo</li>
+                        <li>Coffee breaks incluidos</li>
+                        <li>Certificado de participación</li>
+                        <li>Acceso a comunidad</li>
+                    </ul>
+                    <a href="#" class="program-pricing__card-btn">Reservar Ahora</a>
+                </div>
+                
+                <div class="program-pricing__card program-pricing__card--featured">
+                    <div class="program-pricing__card-badge">VIP</div>
+                    <div class="program-pricing__card-header">
+                        <h3>Entrada VIP</h3>
+                        <p>Experiencia premium</p>
+                    </div>
+                    <div class="program-pricing__card-price">
+                        <span class="program-pricing__card-original">$1,497</span>
+                        <span class="program-pricing__card-currency">$</span>
+                        <span class="program-pricing__card-amount">997</span>
+                        <span class="program-pricing__card-period">USD</span>
+                    </div>
+                    <ul class="program-pricing__card-features">
+                        <li>Todo lo de entrada general</li>
+                        <li><strong>Asientos primera fila</strong></li>
+                        <li><strong>Cena de gala incluida</strong></li>
+                        <li>Meet & greet con ponentes</li>
+                        <li>Grabaciones del evento</li>
+                        <li>Sesión 1:1 post-evento</li>
+                    </ul>
+                    <a href="#" class="program-pricing__card-btn program-pricing__card-btn--featured">¡Quiero ser VIP!</a>
+                    <p class="program-pricing__card-note">Solo quedan 23 lugares VIP</p>
+                </div>
+            </div>
+            
+            <div class="program-pricing__guarantee">
+                <div class="program-pricing__guarantee-icon"></div>
+                <div class="program-pricing__guarantee-content">
+                    <h4>Ubicación del evento</h4>
+                    <p>Centro de Convenciones Principal - Ciudad de Guayaquil, Ecuador. Incluye estacionamiento gratuito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="program-final-cta">
+        <div class="program-final-cta__container">
+            <h2 class="program-final-cta__title">
+                No te quedes <span>afuera</span>
+            </h2>
+            <p class="program-final-cta__subtitle">
+                Este evento se llena cada año. Asegura tu lugar antes de que sea tarde.
+            </p>
+            <a href="#inscripcion" class="program-final-cta__btn">
+                <span>Reservar mi lugar ahora</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>

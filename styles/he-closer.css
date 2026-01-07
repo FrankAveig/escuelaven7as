@@ -1,0 +1,727 @@
+/* ============================================
+   HE CLOSER ACADEMY - Estilos Específicos
+   Academia Alpha para closers masculinos
+   ============================================ */
+
+/* Colores específicos He Closer */
+:root {
+    --he-blue: #3457D5;
+    --he-blue-light: #5B7FFF;
+    --he-blue-dark: #1a2a6c;
+    --he-gradient: linear-gradient(135deg, #1a2a6c 0%, #3457D5 50%, #5B7FFF 100%);
+    --he-gradient-dark: linear-gradient(135deg, #1a2a6c 0%, #3457D5 100%);
+}
+
+/* ============================================
+   STAT BADGE (95% dato)
+   ============================================ */
+
+.he-stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(52, 87, 213, 0.15) 0%, rgba(91, 127, 255, 0.1) 100%);
+    border: 1px solid rgba(52, 87, 213, 0.3);
+    border-radius: 100px;
+    margin-bottom: 2rem;
+}
+
+.he-stat-badge__number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--he-blue);
+    line-height: 1;
+}
+
+.he-stat-badge__text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 220px;
+    line-height: 1.4;
+}
+
+/* ============================================
+   ALPHA BADGE
+   ============================================ */
+
+.he-alpha-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--he-gradient);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.he-alpha-badge::before {
+    content: '◆';
+}
+
+/* ============================================
+   4 PILARES SECTION (H.E.C.L.O.S.E.R.)
+   ============================================ */
+
+.he-pillars {
+    padding: 8rem 0;
+    background: #050508;
+    position: relative;
+    overflow: hidden;
+}
+
+.he-pillars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top center, rgba(52, 87, 213, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.he-pillars__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.he-pillars__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.he-pillars__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--he-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.he-pillars__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.he-pillars__subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.he-pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.he-pillar {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.he-pillar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--he-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.he-pillar:hover {
+    transform: translateY(-5px);
+    border-color: var(--he-blue);
+}
+
+.he-pillar:hover::before {
+    opacity: 1;
+}
+
+.he-pillar__number {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--he-gradient);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.he-pillar__acronym {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--he-blue);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.he-pillar__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.he-pillar__desc {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.he-pillar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.he-pillar__list li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.he-pillar__list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--he-blue);
+    font-size: 0.8rem;
+}
+
+/* ============================================
+   LOGÍSTICA (Contenido Práctico)
+   ============================================ */
+
+.he-logistics {
+    padding: 6rem 0;
+    background: var(--color-dark);
+}
+
+.he-logistics__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.he-logistics__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.he-logistics__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--he-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.he-logistics__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.he-logistics__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.he-logistics__item {
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.he-logistics__item:hover {
+    border-color: var(--he-blue);
+    background: rgba(52, 87, 213, 0.05);
+}
+
+.he-logistics__icon {
+    margin-bottom: 0.75rem;
+    color: var(--he-blue);
+}
+
+.he-logistics__icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.he-logistics__name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ============================================
+   QUÉ INCLUYE (Feature Cards)
+   ============================================ */
+
+.he-includes {
+    padding: 8rem 0;
+    background: #050508;
+}
+
+.he-includes__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.he-includes__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.he-includes__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--he-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.he-includes__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.he-includes__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.he-includes__card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.he-includes__card:hover {
+    border-color: var(--he-blue);
+    transform: translateX(5px);
+}
+
+.he-includes__card-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--he-blue);
+}
+
+.he-includes__card-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.he-includes__card-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.he-includes__card-content p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+/* ============================================
+   CEO SECTION
+   ============================================ */
+
+.he-ceo {
+    padding: 8rem 0;
+    background: var(--color-dark);
+    position: relative;
+}
+
+.he-ceo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(52, 87, 213, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.he-ceo__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.he-ceo__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.he-ceo__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--he-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.he-ceo__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.he-ceo__card {
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.he-ceo__avatar {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--he-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--he-blue);
+}
+
+.he-ceo__avatar svg {
+    width: 50px;
+    height: 50px;
+}
+
+.he-ceo__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.he-ceo__role {
+    font-size: 1rem;
+    color: var(--he-blue);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.he-ceo__credentials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.he-ceo__credential {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(52, 87, 213, 0.1);
+    border: 1px solid rgba(52, 87, 213, 0.2);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.he-ceo__credential svg {
+    width: 16px;
+    height: 16px;
+    color: var(--he-blue);
+}
+
+.he-ceo__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.he-ceo__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.he-ceo__contact-link:hover {
+    color: var(--he-blue);
+}
+
+.he-ceo__contact-link svg {
+    width: 20px;
+    height: 20px;
+    color: var(--he-blue);
+}
+
+/* ============================================
+   MISIÓN Y VISIÓN
+   ============================================ */
+
+.he-mission {
+    padding: 6rem 0;
+    background: #050508;
+}
+
+.he-mission__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.he-mission__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.he-mission__card {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.he-mission__card:hover {
+    border-color: var(--he-blue);
+}
+
+.he-mission__card-icon {
+    margin-bottom: 1.5rem;
+    color: var(--he-blue);
+}
+
+.he-mission__card-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.he-mission__card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.he-mission__card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+}
+
+/* ============================================
+   PRECIO ESPECIAL STYLING
+   ============================================ */
+
+.he-price-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 0.5rem 1.25rem;
+    background: var(--he-gradient);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.he-price-original {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+}
+
+.he-savings {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(52, 87, 213, 0.2);
+    color: var(--he-blue-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 100px;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   CANDIDATO BADGE
+   ============================================ */
+
+.he-candidate-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(52, 87, 213, 0.2) 0%, rgba(91, 127, 255, 0.1) 100%);
+    border: 1px solid rgba(52, 87, 213, 0.3);
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.he-candidate-badge__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--he-blue);
+}
+
+.he-candidate-badge__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.he-candidate-badge__text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.he-candidate-badge__text strong {
+    color: var(--he-blue);
+}
+
+/* ============================================
+   ICONOS SIN FONDO (Overrides)
+   ============================================ */
+
+.program-intro__highlight-icon {
+    font-size: inherit;
+    color: var(--he-blue);
+}
+
+.program-intro__highlight-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.program-pricing__guarantee-icon {
+    font-size: inherit;
+    color: var(--he-blue);
+}
+
+.program-pricing__guarantee-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* ============================================
+   RESPONSIVE AJUSTES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .he-pillars__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .he-logistics__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .he-includes__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .he-mission__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .he-pillars__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .he-logistics__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .he-stat-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .he-ceo__credentials {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .he-logistics__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .he-ceo__card {
+        padding: 2rem 1.5rem;
+    }
+}

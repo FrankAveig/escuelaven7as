@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Escuela VEN7AS - Estrategias de Ventas de Alto Rendimiento</title>
+    <meta name="description" content="Descubre artículos, guías y consejos de expertos para transformar tu estrategia de ventas y convertirte en un cerrador de élite.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/blog-pages.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="blog-header">
+        <div class="blog-header__container">
+            <a href="index.html" class="blog-header__logo">
+                <span class="blog-header__logo-text">ESCUELA</span>
+                <span class="blog-header__logo-accent">VEN7AS</span>
+            </a>
+            
+            <nav class="blog-header__nav">
+                <ul class="blog-header__nav-list">
+                    <li><a href="index.html#programas">Programas</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <a href="index.html#contacto" class="blog-header__cta">Contáctanos</a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="blog-header__menu-btn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-hero__bg">
+            <div class="blog-hero__bg-gradient"></div>
+            <div class="blog-hero__bg-pattern"></div>
+            <div class="blog-hero__bg-orb blog-hero__bg-orb--1"></div>
+            <div class="blog-hero__bg-orb blog-hero__bg-orb--2"></div>
+        </div>
+        
+        <div class="blog-hero__container">
+            <div class="blog-hero__label">
+                <span class="blog-hero__label-dot"></span>
+                <span>NUESTRO BLOG</span>
+            </div>
+            
+            <h1 class="blog-hero__title">
+                Domina el arte de <span class="blog-hero__title-accent">vender</span>
+            </h1>
+            
+            <p class="blog-hero__description">
+                Artículos, guías y consejos de expertos para transformar tu estrategia de ventas y convertirte en un cerrador de élite.
+            </p>
+            
+            <!-- Search -->
+            <div class="blog-hero__search">
+                <svg class="blog-hero__search-icon" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input type="text" placeholder="Buscar artículos..." class="blog-hero__search-input">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="blog-categories">
+        <div class="blog-categories__container">
+            <div class="blog-categories__list">
+                <button class="blog-categories__btn blog-categories__btn--active">Todos</button>
+                <button class="blog-categories__btn">Estrategia</button>
+                <button class="blog-categories__btn">Mindset</button>
+                <button class="blog-categories__btn">Técnicas</button>
+                <button class="blog-categories__btn">Negociación</button>
+                <button class="blog-categories__btn">Liderazgo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="blog-featured">
+        <div class="blog-featured__container">
+            <article class="blog-featured__card">
+                <div class="blog-featured__image">
+                    <img src="assets/hero/1.jpg" alt="Las 7 claves del cierre perfecto">
+                    <div class="blog-featured__image-overlay"></div>
+                </div>
+                <div class="blog-featured__content">
+                    <div class="blog-featured__meta">
+                        <span class="blog-featured__category">Estrategia</span>
+                        <span class="blog-featured__date">15 Dic 2025</span>
+                        <span class="blog-featured__read">8 min lectura</span>
+                    </div>
+                    <h2 class="blog-featured__title">
+                        <a href="blog-single.html">Las 7 claves del cierre perfecto que todo vendedor debe dominar</a>
+                    </h2>
+                    <p class="blog-featured__excerpt">
+                        Descubre las técnicas que utilizan los cerradores de élite para convertir objeciones en ventas. En este artículo profundizamos en los principios fundamentales que separan a los vendedores promedio de los verdaderos maestros del cierre.
+                    </p>
+                    <a href="blog-single.html" class="blog-featured__link">
+                        <span>Leer artículo</span>
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="blog-grid">
+        <div class="blog-grid__container">
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/2.jpg" alt="Psicología del comprador">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--blue">Mindset</span>
+                        <span class="blog-card__date">12 Dic 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">Psicología del comprador: entiende cómo piensa tu cliente</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Aprende a descifrar las motivaciones y objeciones de tus clientes para cerrar más ventas.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">5 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/3.jpg" alt="El método SPIN">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--coral">Técnicas</span>
+                        <span class="blog-card__date">10 Dic 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">El método SPIN aplicado a ventas de alto valor</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Domina la técnica de preguntas que te permite cerrar ventas consultivas de manera efectiva.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">6 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/4.jpg" alt="Negociación estratégica">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--blue">Negociación</span>
+                        <span class="blog-card__date">8 Dic 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">Negociación estratégica: cómo ganar sin perder la relación</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Las tácticas de negociación que te permiten cerrar tratos favorables mientras construyes relaciones duraderas.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">7 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/5.jpg" alt="Liderazgo en ventas">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--coral">Liderazgo</span>
+                        <span class="blog-card__date">5 Dic 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">Cómo liderar un equipo de ventas de alto rendimiento</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Las claves para motivar, entrenar y escalar un equipo de ventas que supere sus metas consistentemente.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">9 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/6.jpg" alt="Objeciones comunes">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--blue">Técnicas</span>
+                        <span class="blog-card__date">2 Dic 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">Las 10 objeciones más comunes y cómo superarlas</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Un manual práctico para manejar las objeciones que escuchas todos los días en tus llamadas.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">10 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post Card -->
+            <article class="blog-card">
+                <a href="blog-single.html" class="blog-card__image">
+                    <img src="assets/hero/7.jpg" alt="Mentalidad ganadora">
+                    <div class="blog-card__image-overlay"></div>
+                </a>
+                <div class="blog-card__content">
+                    <div class="blog-card__meta">
+                        <span class="blog-card__category blog-card__category--coral">Mindset</span>
+                        <span class="blog-card__date">28 Nov 2025</span>
+                    </div>
+                    <h3 class="blog-card__title">
+                        <a href="blog-single.html">Mentalidad ganadora: el secreto de los top performers</a>
+                    </h3>
+                    <p class="blog-card__excerpt">
+                        Descubre los hábitos mentales que practican los vendedores más exitosos del mundo.
+                    </p>
+                    <div class="blog-card__footer">
+                        <span class="blog-card__read">6 min lectura</span>
+                        <a href="blog-single.html" class="blog-card__link">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+        
+        <!-- Pagination -->
+        <div class="blog-pagination">
+            <button class="blog-pagination__btn blog-pagination__btn--prev" disabled>
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="blog-pagination__numbers">
+                <button class="blog-pagination__num blog-pagination__num--active">1</button>
+                <button class="blog-pagination__num">2</button>
+                <button class="blog-pagination__num">3</button>
+                <span class="blog-pagination__dots">...</span>
+                <button class="blog-pagination__num">12</button>
+            </div>
+            <button class="blog-pagination__btn blog-pagination__btn--next">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="blog-newsletter">
+        <div class="blog-newsletter__container">
+            <div class="blog-newsletter__content">
+                <h2 class="blog-newsletter__title">Suscríbete a nuestro newsletter</h2>
+                <p class="blog-newsletter__description">Recibe cada semana las mejores estrategias de ventas directamente en tu bandeja de entrada.</p>
+            </div>
+            <form class="blog-newsletter__form">
+                <input type="email" placeholder="tu@email.com" class="blog-newsletter__input" required>
+                <button type="submit" class="blog-newsletter__btn">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <div class="blog-footer__container">
+            <div class="blog-footer__top">
+                <div class="blog-footer__brand">
+                    <a href="index.html" class="blog-footer__logo">
+                        <span class="blog-footer__logo-text">ESCUELA</span>
+                        <span class="blog-footer__logo-accent">VEN7AS</span>
+                    </a>
+                    <p class="blog-footer__tagline">Transformando vendedores en cerradores de élite desde hace más de 18 años.</p>
+                </div>
+                
+                <div class="blog-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as?igsh=bWtndzRsOXNvM3Q5" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as?_r=1&_t=ZS-92R1yCHyFm8" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-footer__divider"></div>
+            
+            <div class="blog-footer__bottom">
+                <p class="blog-footer__copyright">© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="blog-footer__legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

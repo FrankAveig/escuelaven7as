@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Galería de Fotos | Escuela VEN7AS</title>
+    <meta name="description" content="Explora nuestra galería de fotos de eventos, capacitaciones y clientes satisfechos de Escuela VEN7AS.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fuente Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/galeria.css">
+</head>
+<body class="galeria-page">
+    
+    <!-- Header / Navigation -->
+    <header class="header header--solid">
+        <div class="header__wrapper">
+            <div class="header__container">
+                <a href="./index.html" class="header__logo">
+                    <span class="header__logo-text">ESCUELA</span>
+                    <span class="header__logo-accent">VEN7AS</span>
+                </a>
+                
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="./index.html#programas" class="header__nav-link">Programas</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./index.html#nosotros" class="header__nav-link">Nosotros</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./index.html#testimonios" class="header__nav-link">Testimonios</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./blog.html" class="header__nav-link">Blog</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./index.html#contacto" class="header__nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+    <a href="./index.html#contacto" class="header__cta">CONTACTAR</a>
+
+    <!-- Hero Section -->
+    <section class="galeria-hero">
+        <div class="galeria-hero__bg">
+            <div class="galeria-hero__gradient"></div>
+            <div class="galeria-hero__pattern"></div>
+        </div>
+        
+        <div class="galeria-hero__content">
+            <span class="galeria-hero__label">
+                <span class="galeria-hero__label-dot"></span>
+                NUESTRA GALERÍA
+            </span>
+            <h1 class="galeria-hero__title">
+                <span class="galeria-hero__title-line">Momentos que</span>
+                <span class="galeria-hero__title-line galeria-hero__title-line--accent">transforman</span>
+            </h1>
+            <p class="galeria-hero__subtitle">
+                Revive los mejores momentos de nuestros eventos, capacitaciones y la comunidad de cerradores de élite
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="galeria">
+        <div class="galeria__container">
+            
+            <!-- Filters -->
+            <div class="galeria__filters">
+                <button class="galeria__filter active" data-filter="all">
+                    <span>Todos</span>
+                </button>
+                <button class="galeria__filter" data-filter="eventos">
+                    <span>Eventos</span>
+                </button>
+                <button class="galeria__filter" data-filter="clientes">
+                    <span>Clientes</span>
+                </button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="galeria__grid" id="galeriaGrid">
+                
+                <!-- Eventos -->
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/hero.jpg" alt="Evento Escuela VEN7AS" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/1.jpg" alt="Capacitación de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/2.jpg" alt="Evento de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/3.jpg" alt="Taller de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/4.jpg" alt="Conferencia de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/5.jpg" alt="Seminario de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/6.jpg" alt="Workshop de ventas" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="eventos">
+                    <img src="assets/hero/7.jpg" alt="Evento corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Eventos</span>
+                    </div>
+                </div>
+                
+                <!-- Clientes -->
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/1.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/3.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/4.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/5.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/6.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/7.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/8.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/9.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/10.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/11.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/12.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/13.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/14.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/15.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/16.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/17.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/18.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/19.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/20.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/21.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/22.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/23.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/24.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/25.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/26.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/27.jpg" alt="Cliente satisfecho" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/28.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/29.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="clientes">
+                    <img src="assets/clients/30.png" alt="Cliente corporativo" loading="lazy">
+                    <div class="galeria__item-overlay">
+                        <span class="galeria__item-category">Clientes</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <button class="lightbox__prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="lightbox__next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="lightbox__content">
+            <img src="" alt="" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__bg-gradient"></div>
+            <div class="footer__bg-pattern"></div>
+        </div>
+        
+        <div class="footer__container">
+            
+            <div class="footer__top">
+                
+                <div class="footer__brand">
+                    <a href="./index.html" class="footer__logo">
+                        <span class="footer__logo-text">ESCUELA</span>
+                        <span class="footer__logo-accent">VEN7AS</span>
+                    </a>
+                    <p class="footer__tagline">Transformando vendedores en cerradores de élite desde hace más de 18 años.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Navegación</h4>
+                    <ul class="footer__links-list">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./index.html#programas">Programas</a></li>
+                        <li><a href="./index.html#testimonios">Testimonios</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Programas</h4>
+                    <ul class="footer__links-list">
+                        <li><a href="./she-closer.html">SHE CLOSER</a></li>
+                        <li><a href="./he-closer.html">HE CLOSER</a></li>
+                        <li><a href="./cerradores-elite.html">CERRADORES ÉLITE</a></li>
+                        <li><a href="./closers-hub.html">CLOSERS HUB</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__links-title">Contáctanos</h4>
+                    
+                    <a href="tel:+593981037979" class="footer__phone">
+                        <span class="footer__phone-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="footer__phone-number">0981 037 979</span>
+                    </a>
+                    
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/escuelaven7as" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="footer__legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/galeria.js"></script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOSERS HUB | Escuela VEN7AS - Agencia de Ventas de Alto Valor</title>
+    <meta name="description" content="Agencia especializada en cerrar ventas de alto valor para tu organización. Cerradores profesionales trabajando para tu negocio.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    
+    <style>
+        :root {
+            --program-primary: #00C9A7;
+            --program-secondary: #00F5D4;
+            --program-gradient: linear-gradient(135deg, #004D40 0%, #00C9A7 50%, #00F5D4 100%);
+        }
+    </style>
+</head>
+<body class="program-page" data-program="closers-hub">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <span class="program-header__logo-text">ESCUELA</span>
+                <span class="program-header__logo-accent">VEN7AS</span>
+            </a>
+            <nav class="program-header__nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#casos">Casos de Éxito</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <a href="#contacto" class="program-header__cta">Agendar Llamada</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="program-hero program-hero--agency">
+        <div class="program-hero__bg">
+            <div class="program-hero__gradient"></div>
+            <div class="program-hero__particles" id="particles"></div>
+            <div class="program-hero__grid-bg"></div>
+        </div>
+        
+        <div class="program-hero__container">
+            <div class="program-hero__badge">
+                <span class="program-hero__badge-dot"></span>
+                <span>AGENCIA DE VENTAS DE ALTO VALOR</span>
+            </div>
+            
+            <h1 class="program-hero__title">
+                <span class="program-hero__title-line" data-animate="title">CLOSERS</span>
+                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">HUB</span>
+            </h1>
+            
+            <p class="program-hero__subtitle" data-animate="fade">
+                Cerradores profesionales que trabajan para tu negocio. <strong>Nosotros cerramos, tú facturas.</strong>
+            </p>
+            
+            <div class="program-hero__stats" data-animate="fade">
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">$50M+</span>
+                    <span class="program-hero__stat-label">En ventas cerradas</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">120+</span>
+                    <span class="program-hero__stat-label">Empresas atendidas</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">35%</span>
+                    <span class="program-hero__stat-label">Tasa de cierre promedio</span>
+                </div>
+            </div>
+            
+            <div class="program-hero__cta-group" data-animate="fade">
+                <a href="#contacto" class="program-hero__cta-primary">
+                    <span>Agendar llamada estratégica</span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#servicios" class="program-hero__cta-secondary">
+                    <span>Ver servicios</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="program-hero__scroll">
+            <span>Scroll</span>
+            <div class="program-hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="program-problem">
+        <div class="program-problem__container">
+            <div class="program-problem__header">
+                <span class="program-problem__label">EL PROBLEMA</span>
+                <h2 class="program-problem__title">¿Tu negocio tiene estos síntomas?</h2>
+            </div>
+            
+            <div class="program-problem__grid">
+                <div class="program-problem__card">
+                    <div class="program-problem__card-icon"></div>
+                    <h3>Leads que no cierran</h3>
+                    <p>Generas leads pero tu equipo no logra convertirlos en clientes que paguen.</p>
+                </div>
+                <div class="program-problem__card">
+                    <div class="program-problem__card-icon"></div>
+                    <h3>Rotación de vendedores</h3>
+                    <p>Contratas, entrenas, y se van. Un ciclo interminable que te cuesta tiempo y dinero.</p>
+                </div>
+                <div class="program-problem__card">
+                    <div class="program-problem__card-icon"></div>
+                    <h3>Tu tiempo en ventas</h3>
+                    <p>Eres el mejor vendedor de tu empresa pero deberías estar enfocado en hacer crecer el negocio.</p>
+                </div>
+                <div class="program-problem__card">
+                    <div class="program-problem__card-icon"></div>
+                    <h3>Ingresos impredecibles</h3>
+                    <p>No puedes planificar porque no sabes cuánto vas a vender el próximo mes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="program-services" id="servicios">
+        <div class="program-services__container">
+            <div class="program-services__header">
+                <span class="program-services__label">NUESTROS SERVICIOS</span>
+                <h2 class="program-services__title">Soluciones para escalar tus ventas</h2>
+            </div>
+            
+            <div class="program-services__grid">
+                <div class="program-services__card">
+                    <div class="program-services__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Cierre de Ventas</h3>
+                    <p>Nuestros cerradores expertos toman tus leads y los convierten en clientes. Tú solo recibes la comisión.</p>
+                    <ul>
+                        <li>Cerradores certificados</li>
+                        <li>Llamadas en tu nombre</li>
+                        <li>CRM integrado</li>
+                        <li>Reportes en tiempo real</li>
+                    </ul>
+                </div>
+                
+                <div class="program-services__card program-services__card--featured">
+                    <div class="program-services__card-badge">MÁS POPULAR</div>
+                    <div class="program-services__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21M23 21V19C22.9986 17.1771 21.765 15.5857 20 15.13M16 3.13C17.7699 3.58317 19.0078 5.17787 19.0078 7.005C19.0078 8.83213 17.7699 10.4268 16 10.88M9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7C13 9.20914 11.2091 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Equipo de Ventas Dedicado</h3>
+                    <p>Un equipo completo de ventas trabajando exclusivamente para tu empresa, sin costos fijos.</p>
+                    <ul>
+                        <li>SDRs + Closers dedicados</li>
+                        <li>Manager de cuenta</li>
+                        <li>Estrategia personalizada</li>
+                        <li>Escalabilidad inmediata</li>
+                    </ul>
+                </div>
+                
+                <div class="program-services__card">
+                    <div class="program-services__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 20V10M18 20V4M6 20V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Consultoría de Ventas</h3>
+                    <p>Optimizamos tu proceso de ventas actual para maximizar conversiones con tu equipo existente.</p>
+                    <ul>
+                        <li>Auditoría de proceso</li>
+                        <li>Diseño de scripts</li>
+                        <li>Entrenamiento de equipo</li>
+                        <li>Implementación de CRM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="program-process" id="proceso">
+        <div class="program-process__container">
+            <div class="program-process__header">
+                <span class="program-process__label">CÓMO FUNCIONA</span>
+                <h2 class="program-process__title">Un proceso simple y efectivo</h2>
+            </div>
+            
+            <div class="program-process__steps">
+                <div class="program-process__step">
+                    <div class="program-process__step-number">01</div>
+                    <div class="program-process__step-content">
+                        <h3>Llamada Estratégica</h3>
+                        <p>Analizamos tu negocio, tu proceso actual de ventas y definimos si somos el fit correcto.</p>
+                    </div>
+                    <div class="program-process__step-icon"></div>
+                </div>
+                
+                <div class="program-process__step">
+                    <div class="program-process__step-number">02</div>
+                    <div class="program-process__step-content">
+                        <h3>Propuesta Personalizada</h3>
+                        <p>Diseñamos una estrategia a medida con proyecciones realistas y KPIs claros.</p>
+                    </div>
+                    <div class="program-process__step-icon"></div>
+                </div>
+                
+                <div class="program-process__step">
+                    <div class="program-process__step-number">03</div>
+                    <div class="program-process__step-content">
+                        <h3>Onboarding (7 días)</h3>
+                        <p>Estudiamos tu producto, creamos los scripts y configuramos las integraciones necesarias.</p>
+                    </div>
+                    <div class="program-process__step-icon"></div>
+                </div>
+                
+                <div class="program-process__step">
+                    <div class="program-process__step-number">04</div>
+                    <div class="program-process__step-content">
+                        <h3>Empezamos a Cerrar</h3>
+                        <p>Nuestros cerradores comienzan a trabajar tus leads. Tú solo ves los resultados.</p>
+                    </div>
+                    <div class="program-process__step-icon"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="program-cases" id="casos">
+        <div class="program-cases__container">
+            <div class="program-cases__header">
+                <span class="program-cases__label">CASOS DE ÉXITO</span>
+                <h2 class="program-cases__title">Resultados que hablan por sí solos</h2>
+            </div>
+            
+            <div class="program-cases__grid">
+                <div class="program-cases__card">
+                    <div class="program-cases__card-header">
+                        <span class="program-cases__card-industry">SaaS</span>
+                        <h3>Empresa de Software B2B</h3>
+                    </div>
+                    <div class="program-cases__card-metrics">
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">+340%</span>
+                            <span class="program-cases__card-metric-label">Incremento en cierres</span>
+                        </div>
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">$1.2M</span>
+                            <span class="program-cases__card-metric-label">Facturado en 6 meses</span>
+                        </div>
+                    </div>
+                    <p class="program-cases__card-quote">"Pasamos de cerrar 5 demos al mes a 22. El ROI fue inmediato."</p>
+                </div>
+                
+                <div class="program-cases__card">
+                    <div class="program-cases__card-header">
+                        <span class="program-cases__card-industry">Educación</span>
+                        <h3>Academia de Formación</h3>
+                    </div>
+                    <div class="program-cases__card-metrics">
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">42%</span>
+                            <span class="program-cases__card-metric-label">Tasa de cierre</span>
+                        </div>
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">850</span>
+                            <span class="program-cases__card-metric-label">Estudiantes inscritos</span>
+                        </div>
+                    </div>
+                    <p class="program-cases__card-quote">"Por fin pude salir de las ventas y enfocarme en el contenido."</p>
+                </div>
+                
+                <div class="program-cases__card">
+                    <div class="program-cases__card-header">
+                        <span class="program-cases__card-industry">Consultoría</span>
+                        <h3>Firma de Consultoría</h3>
+                    </div>
+                    <div class="program-cases__card-metrics">
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">$85K</span>
+                            <span class="program-cases__card-metric-label">Ticket promedio</span>
+                        </div>
+                        <div class="program-cases__card-metric">
+                            <span class="program-cases__card-metric-value">28%</span>
+                            <span class="program-cases__card-metric-label">Reducción en ciclo</span>
+                        </div>
+                    </div>
+                    <p class="program-cases__card-quote">"Cierran ventas de alto valor mejor que cualquier vendedor interno."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="program-contact" id="contacto">
+        <div class="program-contact__container">
+            <div class="program-contact__content">
+                <span class="program-contact__label">EMPECEMOS</span>
+                <h2 class="program-contact__title">Agenda tu llamada estratégica</h2>
+                <p class="program-contact__subtitle">Sin compromiso. 30 minutos para entender si podemos ayudarte.</p>
+                
+                <div class="program-contact__benefits">
+                    <div class="program-contact__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Análisis de tu proceso actual</span>
+                    </div>
+                    <div class="program-contact__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Identificación de oportunidades</span>
+                    </div>
+                    <div class="program-contact__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Propuesta personalizada</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-contact__form-wrapper">
+                <form class="program-contact__form">
+                    <div class="program-contact__form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="program-contact__form-group">
+                        <label for="email">Email corporativo</label>
+                        <input type="email" id="email" name="email" placeholder="tu@empresa.com" required>
+                    </div>
+                    <div class="program-contact__form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Nombre de tu empresa" required>
+                    </div>
+                    <div class="program-contact__form-group">
+                        <label for="revenue">Facturación mensual aproximada</label>
+                        <select id="revenue" name="revenue" required>
+                            <option value="">Selecciona un rango</option>
+                            <option value="10k-50k">$10,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-500k">$100,000 - $500,000</option>
+                            <option value="500k+">Más de $500,000</option>
+                        </select>
+                    </div>
+                    <div class="program-contact__form-group">
+                        <label for="challenge">¿Cuál es tu mayor desafío en ventas?</label>
+                        <textarea id="challenge" name="challenge" placeholder="Cuéntanos brevemente..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="program-contact__form-btn">
+                        <span>Agendar mi llamada</span>
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <p class="program-contact__form-note">Tu información está segura y no será compartida</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="program-final-cta">
+        <div class="program-final-cta__container">
+            <h2 class="program-final-cta__title">
+                ¿Listo para <span>escalar</span> tus ventas?
+            </h2>
+            <p class="program-final-cta__subtitle">
+                Más de 120 empresas ya confían en CLOSERS HUB para cerrar sus ventas de alto valor
+            </p>
+            <a href="#contacto" class="program-final-cta__btn">
+                <span>Agendar llamada estratégica</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>

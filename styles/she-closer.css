@@ -1,0 +1,705 @@
+/* ============================================
+   SHE CLOSER ACADEMY - Estilos Específicos
+   Academia exclusiva para la closer femenina
+   ============================================ */
+
+/* Colores específicos She Closer */
+:root {
+    --she-pink: #E91E8C;
+    --she-pink-light: #FF6B9D;
+    --she-pink-soft: #FFB8D4;
+    --she-gradient: linear-gradient(135deg, #E91E8C 0%, #FF6B9D 50%, #FFB8D4 100%);
+    --she-gradient-dark: linear-gradient(135deg, #E91E8C 0%, #C4186F 100%);
+}
+
+/* ============================================
+   STAT BADGE (84% dato)
+   ============================================ */
+
+.she-stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(255, 107, 157, 0.1) 100%);
+    border: 1px solid rgba(233, 30, 140, 0.3);
+    border-radius: 100px;
+    margin-bottom: 2rem;
+}
+
+.she-stat-badge__number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--she-pink);
+    line-height: 1;
+}
+
+.she-stat-badge__text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 200px;
+    line-height: 1.4;
+}
+
+/* ============================================
+   FUNDADORA BADGE
+   ============================================ */
+
+.she-founder-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.she-founder-badge::before {
+    content: '✦';
+}
+
+/* ============================================
+   4 PILARES SECTION
+   ============================================ */
+
+.she-pillars {
+    padding: 8rem 0;
+    background: #050508;
+    position: relative;
+    overflow: hidden;
+}
+
+.she-pillars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top center, rgba(233, 30, 140, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.she-pillars__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.she-pillars__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.she-pillars__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--she-pink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.she-pillars__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.she-pillars__subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.she-pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.she-pillar {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.she-pillar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--she-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.she-pillar:hover {
+    transform: translateY(-5px);
+    border-color: var(--she-pink);
+}
+
+.she-pillar:hover::before {
+    opacity: 1;
+}
+
+.she-pillar__number {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--she-gradient);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.she-pillar__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.she-pillar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.she-pillar__list li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.she-pillar__list li::before {
+    content: '♦';
+    position: absolute;
+    left: 0;
+    color: var(--she-pink);
+    font-size: 0.6rem;
+}
+
+/* ============================================
+   CONTENIDO PRÁCTICO
+   ============================================ */
+
+.she-practical {
+    padding: 6rem 0;
+    background: var(--color-dark);
+}
+
+.she-practical__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.she-practical__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.she-practical__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--she-pink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.she-practical__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.she-practical__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.she-practical__item {
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.she-practical__item:hover {
+    border-color: var(--she-pink);
+    background: rgba(233, 30, 140, 0.05);
+}
+
+.she-practical__icon {
+    margin-bottom: 0.75rem;
+    color: var(--she-pink);
+}
+
+.she-practical__icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.she-practical__name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ============================================
+   QUÉ INCLUYE (Feature Cards)
+   ============================================ */
+
+.she-includes {
+    padding: 8rem 0;
+    background: #050508;
+}
+
+.she-includes__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.she-includes__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.she-includes__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--she-pink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.she-includes__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.she-includes__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.she-includes__card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.she-includes__card:hover {
+    border-color: var(--she-pink);
+    transform: translateX(5px);
+}
+
+.she-includes__card-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--she-pink);
+}
+
+.she-includes__card-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.she-includes__card-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.she-includes__card-content p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+/* ============================================
+   FUNDADORAS SECTION
+   ============================================ */
+
+.she-founders {
+    padding: 8rem 0;
+    background: var(--color-dark);
+    position: relative;
+}
+
+.she-founders::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(233, 30, 140, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.she-founders__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.she-founders__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.she-founders__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--she-pink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.she-founders__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.she-founders__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.she-founder {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.she-founder:hover {
+    border-color: var(--she-pink);
+}
+
+.she-founder__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.she-founder__avatar {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--she-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--she-pink);
+}
+
+.she-founder__avatar svg {
+    width: 36px;
+    height: 36px;
+}
+
+.she-founder__info h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.she-founder__role {
+    font-size: 0.9rem;
+    color: var(--she-pink);
+    font-weight: 600;
+}
+
+.she-founder__bio {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.she-founder__social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.she-founder__social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.she-founder__social-link:hover {
+    color: var(--she-pink);
+}
+
+.she-founder__social-link svg {
+    width: 18px;
+    height: 18px;
+    color: var(--she-pink);
+}
+
+/* ============================================
+   CALL TO ACTION ESPECIAL
+   ============================================ */
+
+.she-cta-special {
+    padding: 4rem 0;
+    background: var(--color-dark);
+}
+
+.she-cta-special__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(255, 107, 157, 0.05) 100%);
+    border: 1px solid rgba(233, 30, 140, 0.3);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.she-cta-special__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.she-cta-special__text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.she-cta-special__highlight {
+    color: var(--she-pink);
+    font-weight: 700;
+}
+
+/* ============================================
+   PRECIO ESPECIAL STYLING
+   ============================================ */
+
+.she-price-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 0.5rem 1.25rem;
+    background: var(--she-gradient);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.she-price-original {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+}
+
+.she-price-current {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.she-price-current span {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.she-savings {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(233, 30, 140, 0.2);
+    color: var(--she-pink-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 100px;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   CANDIDATA BADGE
+   ============================================ */
+
+.she-candidate-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(233, 30, 140, 0.2) 0%, rgba(255, 107, 157, 0.1) 100%);
+    border: 1px solid rgba(233, 30, 140, 0.3);
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.she-candidate-badge__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--she-pink);
+}
+
+.she-candidate-badge__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.she-candidate-badge__text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.she-candidate-badge__text strong {
+    color: var(--she-pink);
+}
+
+/* ============================================
+   ICONOS SIN FONDO (Overrides)
+   ============================================ */
+
+.program-intro__highlight-icon {
+    font-size: inherit;
+    color: var(--she-pink);
+}
+
+.program-intro__highlight-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.program-pricing__guarantee-icon {
+    font-size: inherit;
+    color: var(--she-pink);
+}
+
+.program-pricing__guarantee-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* ============================================
+   RESPONSIVE AJUSTES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .she-pillars__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .she-practical__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .she-founders__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .she-includes__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .she-pillars__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .she-practical__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .she-stat-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .she-founder__header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .she-founder__social {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .she-practical__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .she-cta-special__container {
+        padding: 2rem 1.5rem;
+    }
+}
