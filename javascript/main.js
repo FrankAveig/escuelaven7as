@@ -317,21 +317,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // ============================================
-            // PROGRAM ROWS - BLUR REVEAL ANIMATION
+            // PROGRAM ACCORDIONS - BLUR REVEAL ANIMATION
             // Characters appear from left to right with blur effect
             // ============================================
-            const programRows = document.querySelectorAll('.program-row');
+            const programAccordions = document.querySelectorAll('.program-accordion');
             
-            programRows.forEach((row, index) => {
-                // Get title and description elements
-                const titleEl = row.querySelector('.program-row__title');
-                const descEl = row.querySelector('.program-row__desc');
-                const indicator = row.querySelector('.program-row__indicator');
-                const content = row.querySelector('.program-row__content');
-                const arrow = row.querySelector('.program-row__arrow');
+            programAccordions.forEach((accordion, index) => {
+                const header = accordion.querySelector('.program-accordion__header');
+                const panel = accordion.querySelector('.program-accordion__panel');
+                const titleEl = accordion.querySelector('.program-row__title');
+                const descEl = accordion.querySelector('.program-row__desc');
+                const indicator = accordion.querySelector('.program-row__indicator');
+                const content = accordion.querySelector('.program-row__content');
+                const toggle = accordion.querySelector('.program-accordion__toggle');
                 
-                // Split text into words for blur reveal effect (not individual characters)
-                // This creates a smoother, more readable animation
+                // Accordion toggle functionality
+                if (header) {
+                    header.addEventListener('click', () => {
+                        const isActive = accordion.classList.contains('active');
+                        
+                        // Close all other accordions
+                        programAccordions.forEach(acc => {
+                            if (acc !== accordion) {
+                                acc.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current accordion
+                        accordion.classList.toggle('active');
+                    });
+                }
+                
+                // Split text into words for blur reveal effect
                 if (titleEl) {
                     const titleText = titleEl.textContent;
                     const words = titleText.split(' ');
@@ -348,16 +365,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     ).join(' ');
                 }
                 
-                // Create ScrollTrigger for each row
+                // Create ScrollTrigger for each accordion
                 ScrollTrigger.create({
-                    trigger: row,
+                    trigger: accordion,
                     start: 'top 85%',
                     end: 'bottom 60%',
                     onEnter: () => {
-                        row.classList.add('revealed');
+                        accordion.classList.add('revealed');
                     },
                     onLeaveBack: () => {
-                        row.classList.remove('revealed');
+                        accordion.classList.remove('revealed');
                     }
                 });
                 
@@ -375,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             rotate: 0,
                             ease: 'back.out(1.7)',
                             scrollTrigger: {
-                                trigger: row,
+                                trigger: accordion,
                                 start: 'top 85%',
                                 toggleActions: 'play none none reverse'
                             }
@@ -383,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     );
                 }
                 
-                // Content blur reveal with GSAP - Same animation for all rows
+                // Content blur reveal with GSAP
                 if (content) {
                     gsap.fromTo(content,
                         {
@@ -398,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: 0.8,
                             ease: 'power3.out',
                             scrollTrigger: {
-                                trigger: row,
+                                trigger: accordion,
                                 start: 'top 85%',
                                 toggleActions: 'play none none reverse'
                             }
@@ -406,23 +423,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     );
                 }
                 
-                // Arrow animation - Same animation for all rows
-                if (arrow) {
-                    gsap.fromTo(arrow,
+                // Toggle button animation
+                if (toggle) {
+                    gsap.fromTo(toggle,
                         {
                             opacity: 0,
-                            x: -40,
-                            filter: 'blur(15px)'
+                            scale: 0.5,
+                            rotate: -90
                         },
                         {
                             opacity: 1,
-                            x: 0,
-                            filter: 'blur(0px)',
+                            scale: 1,
+                            rotate: 0,
                             duration: 0.6,
                             delay: 0.2,
-                            ease: 'power3.out',
+                            ease: 'back.out(1.7)',
                             scrollTrigger: {
-                                trigger: row,
+                                trigger: accordion,
                                 start: 'top 85%',
                                 toggleActions: 'play none none reverse'
                             }
