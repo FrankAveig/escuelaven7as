@@ -166,6 +166,17 @@ a{
     letter-spacing: -0.5px;
 }
 
+.header__logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover .header__logo-img {
+    transform: scale(1.05);
+}
+
 .header__nav-list {
     display: flex;
     list-style: none;
@@ -756,6 +767,9 @@ a{
 
 /* UNESCO Badge */
 .hero__unesco-badge {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: .5rem;
     animation: heroEntranceSlide 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     animation-delay: 3.4s;
     opacity: 0;
@@ -912,8 +926,8 @@ a{
 /* Scroll Indicator */
 .hero__scroll-indicator {
     position: absolute;
-    bottom: 6rem;
-    left: 4rem;
+    bottom: 2rem;
+    left: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1408,6 +1422,10 @@ a{
     .header__logo-text,
     .header__logo-accent {
         font-size: 1.25rem;
+    }
+    
+    .header__logo-img {
+        height: 32px;
     }
     
     .header__nav-item:nth-child(n+2) {
@@ -2535,6 +2553,13 @@ a{
     background: var(--sub-color, #3457D5);
     border-radius: 12px;
     transition: all 0.4s ease;
+}
+
+.program-subitem__icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: invert(1) brightness(2);
 }
 
 .program-subitem__icon svg {
