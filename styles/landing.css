@@ -82,6 +82,18 @@ img, video {
     gap: 0.5rem;
 }
 
+.landing-header__logo-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.landing-header__logo:hover .landing-header__logo-img {
+    transform: scale(1.05);
+}
+
 .landing-header__logo-text {
     font-size: 1.25rem;
     font-weight: 800;

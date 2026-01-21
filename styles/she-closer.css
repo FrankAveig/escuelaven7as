@@ -412,9 +412,14 @@
 }
 
 .she-founders__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 3rem;
+}
+
+.she-founder {
+    max-width: 500px;
+    width: 100%;
 }
 
 .she-founder {
@@ -446,6 +451,13 @@
     justify-content: center;
     flex-shrink: 0;
     color: var(--she-pink);
+    overflow: hidden;
+}
+
+.she-founder__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .she-founder__avatar svg {

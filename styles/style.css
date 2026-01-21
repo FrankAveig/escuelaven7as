@@ -173,6 +173,10 @@ a{
     transition: transform 0.3s ease;
 }
 
+.header__logo-img--white {
+    filter: brightness(0) invert(1);
+}
+
 .header__logo:hover .header__logo-img {
     transform: scale(1.05);
 }
@@ -1757,7 +1761,7 @@ a{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 8rem 4rem;
+    padding: 2rem 4rem 8rem 4rem;
     background: #fafbff;
     z-index: 10;
     overflow: hidden;
@@ -1955,7 +1959,7 @@ a{
 .programs__container {
     position: relative;
     max-width: 1400px;
-    margin: 0 auto;
+    margin:8rem  auto 0 auto;
     width: 100%;
     z-index: 10;
     display: flex;
@@ -2246,7 +2250,7 @@ a{
 /* Programs Rows - Responsive */
 @media (max-width: 1200px) {
     .programs {
-        padding: 6rem 3rem;
+        padding: 6rem 3rem 1rem 3rem;
     }
     
     .programs__header {
@@ -2265,7 +2269,7 @@ a{
 
 @media (max-width: 968px) {
     .programs {
-        padding: 5rem 2rem;
+        padding: 5rem 2rem 1rem 2rem;
     }
     
     .programs__header {
@@ -2296,7 +2300,7 @@ a{
 
 @media (max-width: 768px) {
     .programs {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1.5rem 1rem 1.5rem;
     }
     
     .programs__header {
@@ -2345,7 +2349,7 @@ a{
 
 @media (max-width: 480px) {
     .programs {
-        padding: 3rem 1rem;
+        padding: 3rem 1rem 1rem 1rem;
     }
     
     .programs__header-label {
@@ -2728,6 +2732,156 @@ a{
     
     .program-subitem__desc {
         font-size: 0.75rem;
+    }
+}
+
+/* ============================================
+   CLIENTS MARQUEE SECTION
+   ============================================ */
+.clients {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0 4rem 0;
+
+    overflow: hidden;
+    z-index: 10;
+}
+
+.clients__container {
+    width: 100%;
+}
+
+.clients__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 2rem;
+}
+
+.clients__label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #666680;
+    text-transform: uppercase;
+}
+
+.clients__marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.clients__marquee::before,
+.clients__marquee::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clients__marquee::before {
+    left: 0;
+    background: linear-gradient(90deg, #fafbff 0%, transparent 100%);
+}
+
+.clients__marquee::after {
+    right: 0;
+    background: linear-gradient(270deg, #fafbff 0%, transparent 100%);
+}
+
+.clients__track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: clientsScroll 100s linear infinite;
+    width: max-content;
+}
+
+@keyframes clientsScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.clients__logo {
+    flex-shrink: 0;
+    width: 240px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+.clients__logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.clients__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Clients Responsive */
+@media (max-width: 768px) {
+    .clients {
+        padding: 3rem 0;
+    }
+    
+    .clients__header {
+        margin-bottom: 2rem;
+    }
+    
+    .clients__label {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+    
+    .clients__track {
+        gap: 2rem;
+    }
+    
+    .clients__logo {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .clients__marquee::before,
+    .clients__marquee::after {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients {
+        padding: 2rem 0;
+    }
+    
+    .clients__track {
+        gap: 1.5rem;
+        animation-duration: 30s;
+    }
+    
+    .clients__logo {
+        width: 80px;
+        height: 40px;
+    }
+    
+    .clients__marquee::before {
+        width: 50px;
     }
 }
 

@@ -49,7 +49,18 @@
             .program-cases__card,
             .program-contact__content,
             .program-contact__form-wrapper,
-            .program-final-cta__container
+            .program-final-cta__container,
+            .he-pillars-v2__title,
+            .he-pillars-v2__item,
+            .he-pillars-v2__dots,
+            .he-content-v2__header,
+            .he-content-v2__module,
+            .he-logistics__header,
+            .he-logistics__item,
+            .he-includes__header,
+            .he-includes__card,
+            .he-ceo__header,
+            .he-ceo__card
         `);
         
         console.log(`Found ${animatedElements.length} elements to animate`);
@@ -58,7 +69,23 @@
         animatedElements.forEach((el, index) => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+            el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+        });
+        
+        // Elements with fade-left animation
+        const fadeLeftElements = document.querySelectorAll('[data-animate="fade-left"]');
+        fadeLeftElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-30px)';
+            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        });
+        
+        // Elements with fade-up animation  
+        const fadeUpElements = document.querySelectorAll('[data-animate="fade-up"]');
+        fadeUpElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         });
         
         // Create Intersection Observer
@@ -77,6 +104,8 @@
         
         // Observe all elements
         animatedElements.forEach(el => observer.observe(el));
+        fadeLeftElements.forEach(el => observer.observe(el));
+        fadeUpElements.forEach(el => observer.observe(el));
         
         // ============================================
         // CURSOR GLOW
