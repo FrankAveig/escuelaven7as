@@ -65,27 +65,33 @@
         
         console.log(`Found ${animatedElements.length} elements to animate`);
         
+        // Evita delays enormes en secciones al final de la página
+        const capDelay = (delay, max = 0.3) => Math.min(delay, max);
+        
         // Apply initial styles via JS (so they work even without CSS)
         animatedElements.forEach((el, index) => {
+            const d = capDelay(index * 0.03, 0.25);
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+            el.style.transition = `opacity 0.6s ease ${d}s, transform 0.6s ease ${d}s`;
         });
         
         // Elements with fade-left animation
         const fadeLeftElements = document.querySelectorAll('[data-animate="fade-left"]');
         fadeLeftElements.forEach((el, index) => {
+            const d = capDelay(index * 0.04, 0.35);
             el.style.opacity = '0';
             el.style.transform = 'translateX(-30px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            el.style.transition = `opacity 0.6s ease ${d}s, transform 0.6s ease ${d}s`;
         });
         
         // Elements with fade-up animation  
         const fadeUpElements = document.querySelectorAll('[data-animate="fade-up"]');
         fadeUpElements.forEach((el, index) => {
+            const d = capDelay(index * 0.04, 0.35);
             el.style.opacity = '0';
             el.style.transform = 'translateY(40px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            el.style.transition = `opacity 0.6s ease ${d}s, transform 0.6s ease ${d}s`;
         });
         
         // Create Intersection Observer
@@ -93,13 +99,15 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    const anim = entry.target.getAttribute('data-animate');
+                    entry.target.style.transform = anim === 'fade-left' ? 'translateX(0)' : 'translateY(0)';
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -10% 0px'
+            // Activar antes (menos scroll necesario)
+            threshold: 0.05,
+            rootMargin: '0px 0px 15% 0px'
         });
         
         // Observe all elements

@@ -913,7 +913,7 @@ img, video {
    ============================================ */
 
 .program-pricing {
-    padding: 8rem 0;
+    padding: 2rem 0;
     background: var(--color-dark);
 }
 
@@ -1911,7 +1911,7 @@ img, video {
 
 .program-final-cta {
     position: relative;
-    padding: 8rem 0;
+    padding: 2rem 0;
     background: var(--program-gradient);
     text-align: center;
     overflow: hidden;
