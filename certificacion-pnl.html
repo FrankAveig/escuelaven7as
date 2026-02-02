@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificación Internacional PNL & Ventas | Escuela VEN7AS</title>
+    <meta name="description" content="Certificación Internacional en Programación Neurolingüística aplicada a las Ventas. Junto a Orlando Denegri, experto internacional en PNL.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    
+    <style>
+        :root {
+            --program-primary: #8B5CF6;
+            --program-secondary: #A78BFA;
+            --program-gradient: linear-gradient(135deg, #4C1D95 0%, #8B5CF6 50%, #C4B5FD 100%);
+        }
+        
+        /* PNL Specific Styles */
+        .pnl-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #A78BFA;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pnl-badge__icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Modules Grid */
+        .pnl-modules {
+            padding: 6rem 0;
+            background: #050508;
+        }
+        
+        .pnl-modules__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .pnl-modules__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .pnl-modules__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .pnl-modules__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .pnl-modules__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .pnl-module {
+            position: relative;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        
+        .pnl-module:hover {
+            border-color: var(--program-primary);
+            transform: translateY(-5px);
+        }
+        
+        .pnl-module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--program-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .pnl-module:hover::before {
+            opacity: 1;
+        }
+        
+        .pnl-module__number {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: var(--program-gradient);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        
+        .pnl-module__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+        
+        .pnl-module__desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+        
+        /* Trainer Section */
+        .pnl-trainer {
+            padding: 6rem 0;
+            background: var(--color-dark);
+        }
+        
+        .pnl-trainer__container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .pnl-trainer__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .pnl-trainer__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .pnl-trainer__title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .pnl-trainer__card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+        }
+        
+        .pnl-trainer__avatar {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--program-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pnl-trainer__avatar-placeholder {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .pnl-trainer__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .pnl-trainer__info h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pnl-trainer__role {
+            font-size: 1rem;
+            color: var(--program-primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pnl-trainer__bio {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .pnl-trainer__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .pnl-trainer__credential {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .pnl-trainer__credential svg {
+            width: 16px;
+            height: 16px;
+            color: var(--program-primary);
+        }
+        
+        /* Benefits Cards */
+        .pnl-benefits {
+            padding: 6rem 0;
+            background: #050508;
+        }
+        
+        .pnl-benefits__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .pnl-benefits__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .pnl-benefits__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .pnl-benefits__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .pnl-benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .pnl-benefit {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pnl-benefit:hover {
+            border-color: var(--program-primary);
+            transform: translateY(-5px);
+        }
+        
+        .pnl-benefit__icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.25rem;
+            background: var(--program-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pnl-benefit__icon svg {
+            width: 28px;
+            height: 28px;
+            color: #ffffff;
+        }
+        
+        .pnl-benefit__title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pnl-benefit__desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+        
+        /* Certification Badge */
+        .pnl-certification-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(167, 139, 250, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+        
+        .pnl-certification-badge__icon {
+            flex-shrink: 0;
+        }
+        
+        .pnl-certification-badge__icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--program-primary);
+        }
+        
+        .pnl-certification-badge__text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+        
+        .pnl-certification-badge__text strong {
+            color: #ffffff;
+        }
+        
+        /* Price Original & Savings */
+        .pnl-price-original {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: line-through;
+        }
+        
+        .pnl-savings {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--program-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 100px;
+            margin-top: 0.5rem;
+        }
+        
+        .pnl-price-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 1.25rem;
+            background: var(--program-gradient);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pnl-modules__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pnl-benefits__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pnl-trainer__card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .pnl-trainer__avatar {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .pnl-trainer__credentials {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pnl-modules__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pnl-benefits__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="program-page" data-program="certificacion-pnl">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
+            </a>
+            <nav class="program-header__nav">
+                <a href="#modulos">Módulos</a>
+                <a href="#trainer">Trainer</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#inscripcion">Inscripción</a>
+            </nav>
+            <a href="#inscripcion" class="program-header__cta">Inscribirme</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="program-hero__bg">
+            <div class="program-hero__gradient"></div>
+            <div class="program-hero__particles" id="particles"></div>
+            <div class="program-hero__lines">
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+                <div class="program-hero__line"></div>
+            </div>
+        </div>
+        
+        <div class="program-hero__container">
+            <div class="pnl-badge">
+                <svg class="pnl-badge__icon" viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/></svg>
+                <span>CERTIFICACIÓN INTERNACIONAL</span>
+            </div>
+            
+            <h1 class="program-hero__title">
+                <span class="program-hero__title-line" data-animate="title">PNL &</span>
+                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">VENTAS</span>
+            </h1>
+            
+            <p class="program-hero__subtitle" data-animate="fade">
+                Domina la <strong>Programación Neurolingüística</strong> aplicada a las ventas. Transforma tu comunicación y multiplica tus resultados.
+            </p>
+            
+            <div class="program-hero__stats" data-animate="fade">
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">40+</span>
+                    <span class="program-hero__stat-label">Horas de formación</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">100%</span>
+                    <span class="program-hero__stat-label">Práctico y aplicable</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">INT'L</span>
+                    <span class="program-hero__stat-label">Certificación válida</span>
+                </div>
+            </div>
+            
+            <div class="program-hero__cta-group" data-animate="fade">
+                <a href="#inscripcion" class="program-hero__cta-primary">
+                    <span>Quiero certificarme</span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#modulos" class="program-hero__cta-secondary">
+                    <span>Ver contenido</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="program-hero__scroll">
+            <span>Scroll</span>
+            <div class="program-hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="program-intro">
+        <div class="program-intro__container">
+            <div class="program-intro__content">
+                <span class="program-intro__label">¿QUÉ ES LA PNL?</span>
+                
+                <h2 class="program-intro__title">
+                    Reprograma tu mente para <span>vender sin límites</span>
+                </h2>
+                <p class="program-intro__text">
+                    La Programación Neurolingüística (PNL) es la ciencia de la comunicación efectiva y el cambio personal. Aplicada a las ventas, te permite comprender profundamente a tus clientes, generar rapport instantáneo y comunicar de manera persuasiva sin resistencia.
+                </p>
+                <div class="program-intro__highlights">
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div>
+                            <strong>Comunicación Persuasiva</strong>
+                            <p>Aprende a comunicar ideas de forma irresistible</p>
+                        </div>
+                    </div>
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C23 17.13 21.74 15.55 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.74 3.55 19 5.13 19 7C19 8.87 17.74 10.45 16 10.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div>
+                            <strong>Rapport Instantáneo</strong>
+                            <p>Conecta profundamente con cualquier cliente</p>
+                        </div>
+                    </div>
+                    <div class="program-intro__highlight">
+                        <div class="program-intro__highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C13.28 2 14.53 2.24 15.68 2.68" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <strong>Cierre sin Resistencia</strong>
+                            <p>Elimina objeciones antes de que aparezcan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="program-intro__visual">
+                <div class="program-intro__image-wrapper">
+                    <img src="assets/hero/3.jpg" alt="Certificación PNL y Ventas">
+                    <div class="program-intro__image-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="pnl-modules" id="modulos">
+        <div class="pnl-modules__container">
+            <div class="pnl-modules__header">
+                <span class="pnl-modules__label">CONTENIDO DEL PROGRAMA</span>
+                <h2 class="pnl-modules__title">Módulos de la Certificación</h2>
+            </div>
+            
+            <div class="pnl-modules__grid">
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 1</span>
+                    <h3 class="pnl-module__title">Fundamentos de PNL</h3>
+                    <p class="pnl-module__desc">Bases teóricas y prácticas de la Programación Neurolingüística. Modelos mentales y sistemas representacionales.</p>
+                </div>
+                
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 2</span>
+                    <h3 class="pnl-module__title">Rapport y Conexión</h3>
+                    <p class="pnl-module__desc">Técnicas avanzadas para crear conexión instantánea y profunda con cualquier tipo de cliente.</p>
+                </div>
+                
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 3</span>
+                    <h3 class="pnl-module__title">Lenguaje de Influencia</h3>
+                    <p class="pnl-module__desc">Patrones de lenguaje persuasivo, presuposiciones y comandos encubiertos aplicados a ventas.</p>
+                </div>
+                
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 4</span>
+                    <h3 class="pnl-module__title">Sistemas Representacionales</h3>
+                    <p class="pnl-module__desc">Identifica si tu cliente es visual, auditivo o kinestésico y adapta tu comunicación.</p>
+                </div>
+                
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 5</span>
+                    <h3 class="pnl-module__title">Manejo de Objeciones</h3>
+                    <p class="pnl-module__desc">Técnicas de reencuadre y metamodelo del lenguaje para transformar objeciones en oportunidades.</p>
+                </div>
+                
+                <div class="pnl-module">
+                    <span class="pnl-module__number">MÓDULO 6</span>
+                    <h3 class="pnl-module__title">Cierre Neurolingüístico</h3>
+                    <p class="pnl-module__desc">Estrategias de cierre basadas en los principios de PNL para conversiones de alto impacto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Section -->
+    <section class="pnl-trainer" id="trainer">
+        <div class="pnl-trainer__container">
+            <div class="pnl-trainer__header">
+                <span class="pnl-trainer__label">TU MENTOR</span>
+                <h2 class="pnl-trainer__title">Conoce a tu Trainer</h2>
+            </div>
+            
+            <div class="pnl-trainer__card">
+                <div class="pnl-trainer__avatar">
+                    <!-- Placeholder - Reemplazar con imagen real -->
+                    <span class="pnl-trainer__avatar-placeholder">👤</span>
+                </div>
+                <div class="pnl-trainer__info">
+                    <h3>Orlando Denegri</h3>
+                    <span class="pnl-trainer__role">Master Trainer en PNL</span>
+                    <p class="pnl-trainer__bio">
+                        Experto internacional en Programación Neurolingüística con más de <strong>20 años de experiencia</strong> formando profesionales en ventas, liderazgo y comunicación. Ha capacitado a miles de personas en Latinoamérica y Europa, siendo reconocido como uno de los referentes más importantes en PNL aplicada a negocios.
+                    </p>
+                    <div class="pnl-trainer__credentials">
+                        <div class="pnl-trainer__credential">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Master Trainer PNL</span>
+                        </div>
+                        <div class="pnl-trainer__credential">
+                            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M2 12H22" stroke="currentColor" stroke-width="2"/><path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22C9.5 19.5 8 16 8 12C8 8 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Certificación Internacional</span>
+                        </div>
+                        <div class="pnl-trainer__credential">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C22.9986 17.1771 21.765 15.5857 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.7699 3.58317 19.0078 5.17787 19.0078 7.005C19.0078 8.83213 17.7699 10.4268 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <span>+10,000 personas capacitadas</span>
+                        </div>
+                        <div class="pnl-trainer__credential">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>20+ años de experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="pnl-benefits" id="beneficios">
+        <div class="pnl-benefits__container">
+            <div class="pnl-benefits__header">
+                <span class="pnl-benefits__label">¿QUÉ OBTIENES?</span>
+                <h2 class="pnl-benefits__title">Beneficios de la Certificación</h2>
+            </div>
+            
+            <div class="pnl-benefits__grid">
+                <div class="pnl-benefit">
+                    <div class="pnl-benefit__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4 class="pnl-benefit__title">Certificado Internacional</h4>
+                    <p class="pnl-benefit__desc">Reconocimiento válido internacionalmente como Practitioner en PNL</p>
+                </div>
+                
+                <div class="pnl-benefit">
+                    <div class="pnl-benefit__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M23 7L16 12L23 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4 class="pnl-benefit__title">Sesiones en Vivo</h4>
+                    <p class="pnl-benefit__desc">Clases interactivas con práctica guiada y retroalimentación directa</p>
+                </div>
+                
+                <div class="pnl-benefit">
+                    <div class="pnl-benefit__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5C4 18.1193 5.11929 17 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 2H20V22H6.5C5.11929 22 4 20.8807 4 19.5V4.5C4 3.11929 5.11929 2 6.5 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4 class="pnl-benefit__title">Material Exclusivo</h4>
+                    <p class="pnl-benefit__desc">Manuales, guías y recursos descargables para tu aprendizaje</p>
+                </div>
+                
+                <div class="pnl-benefit">
+                    <div class="pnl-benefit__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C23 17.13 21.74 15.55 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.74 3.55 19 5.13 19 7C19 8.87 17.74 10.45 16 10.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4 class="pnl-benefit__title">Comunidad de Alumni</h4>
+                    <p class="pnl-benefit__desc">Acceso a red de profesionales certificados en PNL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="program-pricing" id="inscripcion">
+        <div class="program-pricing__container">
+            <div class="program-pricing__header">
+                <span class="program-pricing__label">INSCRIPCIÓN</span>
+                <h2 class="program-pricing__title">Invierte en tu futuro</h2>
+                <p class="program-pricing__subtitle">Obtén tu certificación internacional en PNL aplicada a ventas</p>
+            </div>
+            
+            <div class="program-pricing__cards" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 3rem;">
+                <div class="program-pricing__card program-pricing__card--featured">
+                    <div class="pnl-price-badge">CERTIFICACIÓN COMPLETA</div>
+                    <div class="program-pricing__card-header">
+                        <h3>PNL & Ventas</h3>
+                        <p>Certificación Internacional</p>
+                    </div>
+                    <div class="program-pricing__card-price" style="flex-direction: column; align-items: center;">
+                        <span class="pnl-price-original">Valorado en $1,500</span>
+                        <div style="display: flex; align-items: baseline;">
+                            <span class="program-pricing__card-currency">$</span>
+                            <span class="program-pricing__card-amount">797</span>
+                            <span class="program-pricing__card-period">USD</span>
+                        </div>
+                        <span class="pnl-savings">Ahorra $703 USD</span>
+                    </div>
+                    <ul class="program-pricing__card-features">
+                        <li>40+ horas de formación intensiva</li>
+                        <li>Clases en vivo con Orlando Denegri</li>
+                        <li>Material didáctico completo</li>
+                        <li>Ejercicios prácticos y role playing</li>
+                        <li>Acceso a grabaciones de las sesiones</li>
+                        <li>Comunidad exclusiva de alumni</li>
+                        <li><strong>Certificado Internacional en PNL</strong></li>
+                    </ul>
+                    <a href="https://wa.me/593981037979?text=Hola!%20Quiero%20inscribirme%20en%20la%20Certificación%20Internacional%20PNL%20y%20Ventas" target="_blank" class="program-pricing__card-btn program-pricing__card-btn--featured">
+                        ¡Quiero Certificarme!
+                    </a>
+                    
+                    <div class="pnl-certification-badge">
+                        <span class="pnl-certification-badge__icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/><path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/></svg>
+                        </span>
+                        <span class="pnl-certification-badge__text">
+                            Al finalizar recibirás tu <strong>Certificación Internacional como Practitioner en PNL</strong>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-pricing__guarantee">
+                <div class="program-pricing__guarantee-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="program-pricing__guarantee-content">
+                    <h4>Garantía de satisfacción</h4>
+                    <p>Si no quedas satisfecho con el programa, te devolvemos tu inversión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="program-final-cta">
+        <div class="program-final-cta__container">
+            <h2 class="program-final-cta__title">
+                Tu mente es tu <span>mejor herramienta</span>
+            </h2>
+            <p class="program-final-cta__subtitle">
+                Certifícate en PNL y transforma tu forma de vender para siempre
+            </p>
+            <a href="https://wa.me/593981037979?text=Hola!%20Quiero%20información%20sobre%20la%20Certificación%20PNL%20y%20Ventas" target="_blank" class="program-final-cta__btn">
+                <span>Quiero más información</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>

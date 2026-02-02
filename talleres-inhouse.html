@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres In-House | Escuela VEN7AS - Entrenamiento Corporativo de Fuerza de Ventas</title>
+    <meta name="description" content="Talleres corporativos in-house para potenciar tu fuerza de ventas. Programas personalizados diseñados para las necesidades específicas de tu equipo comercial.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    
+    <style>
+        :root {
+            --program-primary: #F59E0B;
+            --program-secondary: #FBBF24;
+            --program-gradient: linear-gradient(135deg, #92400E 0%, #F59E0B 50%, #FCD34D 100%);
+        }
+        
+        /* In-House Specific Styles */
+        .inhouse-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #FBBF24;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .inhouse-badge__icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Why Section */
+        .inhouse-why {
+            padding: 6rem 0;
+            background: #050508;
+        }
+        
+        .inhouse-why__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .inhouse-why__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .inhouse-why__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-why__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .inhouse-why__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .inhouse-why__card {
+            position: relative;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        
+        .inhouse-why__card:hover {
+            border-color: var(--program-primary);
+            transform: translateY(-5px);
+        }
+        
+        .inhouse-why__card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: var(--program-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .inhouse-why__card-icon svg {
+            width: 32px;
+            height: 32px;
+            color: #ffffff;
+        }
+        
+        .inhouse-why__card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+        
+        .inhouse-why__card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+        
+        /* Modalities Section */
+        .inhouse-modalities {
+            padding: 6rem 0;
+            background: var(--color-dark);
+        }
+        
+        .inhouse-modalities__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .inhouse-modalities__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .inhouse-modalities__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-modalities__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .inhouse-modalities__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .inhouse-modality {
+            position: relative;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+        
+        .inhouse-modality:hover {
+            border-color: var(--program-primary);
+        }
+        
+        .inhouse-modality--featured {
+            border-color: var(--program-primary);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+        }
+        
+        .inhouse-modality__badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            padding: 0.5rem 1rem;
+            background: var(--program-gradient);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 100px;
+        }
+        
+        .inhouse-modality__icon {
+            width: 60px;
+            height: 60px;
+            background: var(--program-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .inhouse-modality__icon svg {
+            width: 28px;
+            height: 28px;
+            color: #ffffff;
+        }
+        
+        .inhouse-modality h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .inhouse-modality__duration {
+            font-size: 0.9rem;
+            color: var(--program-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-modality p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .inhouse-modality__features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .inhouse-modality__features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .inhouse-modality__features li::before {
+            content: '✓';
+            color: var(--program-primary);
+            font-weight: 700;
+        }
+        
+        /* Topics Section */
+        .inhouse-topics {
+            padding: 6rem 0;
+            background: #050508;
+        }
+        
+        .inhouse-topics__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .inhouse-topics__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .inhouse-topics__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-topics__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .inhouse-topics__subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+        
+        .inhouse-topics__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .inhouse-topic {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .inhouse-topic:hover {
+            border-color: var(--program-primary);
+            transform: translateY(-3px);
+        }
+        
+        .inhouse-topic__icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 0.75rem;
+            background: var(--program-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .inhouse-topic__icon svg {
+            width: 24px;
+            height: 24px;
+            color: #ffffff;
+        }
+        
+        .inhouse-topic__name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        /* Process Section */
+        .inhouse-process {
+            padding: 6rem 0;
+            background: var(--color-dark);
+        }
+        
+        .inhouse-process__container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .inhouse-process__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .inhouse-process__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-process__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .inhouse-process__steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .inhouse-process__step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .inhouse-process__step:hover {
+            border-color: var(--program-primary);
+            transform: translateX(10px);
+        }
+        
+        .inhouse-process__step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--program-primary);
+            opacity: 0.5;
+            flex-shrink: 0;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .inhouse-process__step-content {
+            flex: 1;
+        }
+        
+        .inhouse-process__step-content h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .inhouse-process__step-content p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Clients Section */
+        .inhouse-clients {
+            padding: 4rem 0;
+            background: #050508;
+        }
+        
+        .inhouse-clients__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .inhouse-clients__header {
+            margin-bottom: 3rem;
+        }
+        
+        .inhouse-clients__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-clients__title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .inhouse-clients__logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            opacity: 0.6;
+        }
+        
+        .inhouse-clients__logo {
+            width: 120px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .inhouse-clients__logo img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+        
+        /* Form Section */
+        .inhouse-form {
+            padding: 6rem 0;
+            background: var(--color-dark);
+        }
+        
+        .inhouse-form__container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .inhouse-form__content {
+        }
+        
+        .inhouse-form__label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--program-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-form__title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .inhouse-form__subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .inhouse-form__benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .inhouse-form__benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .inhouse-form__benefit svg {
+            width: 20px;
+            height: 20px;
+            color: var(--program-primary);
+            flex-shrink: 0;
+        }
+        
+        .inhouse-form__wrapper {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+        }
+        
+        .inhouse-form__form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        
+        .inhouse-form__group {
+        }
+        
+        .inhouse-form__group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        
+        .inhouse-form__group input,
+        .inhouse-form__group select,
+        .inhouse-form__group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-family: var(--font-primary);
+            font-size: 0.95rem;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .inhouse-form__group input::placeholder,
+        .inhouse-form__group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .inhouse-form__group input:focus,
+        .inhouse-form__group select:focus,
+        .inhouse-form__group textarea:focus {
+            outline: none;
+            border-color: var(--program-primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .inhouse-form__group select {
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        .inhouse-form__group select option {
+            background: #1a1a2e;
+            color: #ffffff;
+        }
+        
+        .inhouse-form__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.25rem;
+            background: var(--program-primary);
+            color: #ffffff;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .inhouse-form__btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+        
+        .inhouse-form__btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .inhouse-form__note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .inhouse-why__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .inhouse-modalities__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .inhouse-topics__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .inhouse-form__container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .inhouse-topics__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .inhouse-process__step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .inhouse-process__step-number {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body class="program-page" data-program="talleres-inhouse">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
+            </a>
+            <nav class="program-header__nav">
+                <a href="#modalidades">Modalidades</a>
+                <a href="#temas">Temas</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#cotizar">Cotizar</a>
+            </nav>
+            <a href="#cotizar" class="program-header__cta">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="program-hero__bg">
+            <div class="program-hero__gradient"></div>
+            <div class="program-hero__particles" id="particles"></div>
+            <div class="program-hero__grid-bg"></div>
+        </div>
+        
+        <div class="program-hero__container">
+            <div class="inhouse-badge">
+                <svg class="inhouse-badge__icon" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>ENTRENAMIENTO CORPORATIVO</span>
+            </div>
+            
+            <h1 class="program-hero__title">
+                <span class="program-hero__title-line" data-animate="title">TALLERES</span>
+                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">IN-HOUSE</span>
+            </h1>
+            
+            <p class="program-hero__subtitle" data-animate="fade">
+                Potencia tu <strong>fuerza de ventas</strong> con entrenamientos personalizados. Llevamos nuestra metodología directamente a tu empresa.
+            </p>
+            
+            <div class="program-hero__stats" data-animate="fade">
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">120+</span>
+                    <span class="program-hero__stat-label">Empresas capacitadas</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">5000+</span>
+                    <span class="program-hero__stat-label">Vendedores entrenados</span>
+                </div>
+                <div class="program-hero__stat">
+                    <span class="program-hero__stat-number">95%</span>
+                    <span class="program-hero__stat-label">Tasa de satisfacción</span>
+                </div>
+            </div>
+            
+            <div class="program-hero__cta-group" data-animate="fade">
+                <a href="#cotizar" class="program-hero__cta-primary">
+                    <span>Solicitar cotización</span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#modalidades" class="program-hero__cta-secondary">
+                    <span>Ver modalidades</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="program-hero__scroll">
+            <span>Scroll</span>
+            <div class="program-hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="inhouse-why">
+        <div class="inhouse-why__container">
+            <div class="inhouse-why__header">
+                <span class="inhouse-why__label">¿POR QUÉ ELEGIRNOS?</span>
+                <h2 class="inhouse-why__title">Beneficios de entrenar con nosotros</h2>
+            </div>
+            
+            <div class="inhouse-why__grid">
+                <div class="inhouse-why__card">
+                    <div class="inhouse-why__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h3>100% Personalizado</h3>
+                    <p>Diseñamos cada programa según las necesidades específicas de tu industria, producto y equipo comercial.</p>
+                </div>
+                
+                <div class="inhouse-why__card">
+                    <div class="inhouse-why__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21V19C23 17.13 21.74 15.55 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13C17.74 3.55 19 5.13 19 7C19 8.87 17.74 10.45 16 10.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Equipos Unificados</h3>
+                    <p>Tu equipo completo aprende la misma metodología, creando un lenguaje común y resultados consistentes.</p>
+                </div>
+                
+                <div class="inhouse-why__card">
+                    <div class="inhouse-why__card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 20V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>ROI Medible</h3>
+                    <p>Establecemos KPIs claros antes y después del entrenamiento para demostrar el retorno de inversión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalities Section -->
+    <section class="inhouse-modalities" id="modalidades">
+        <div class="inhouse-modalities__container">
+            <div class="inhouse-modalities__header">
+                <span class="inhouse-modalities__label">MODALIDADES</span>
+                <h2 class="inhouse-modalities__title">Elige el formato ideal para tu equipo</h2>
+            </div>
+            
+            <div class="inhouse-modalities__grid">
+                <div class="inhouse-modality">
+                    <div class="inhouse-modality__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Taller Virtual</h3>
+                    <span class="inhouse-modality__duration">4-8 horas | Online en vivo</span>
+                    <p>Sesiones interactivas online con ejercicios prácticos, role playing y dinámicas grupales. Ideal para equipos distribuidos geográficamente.</p>
+                    <ul class="inhouse-modality__features">
+                        <li>Sesiones en vivo vía Zoom/Meet</li>
+                        <li>Grabación disponible post-sesión</li>
+                        <li>Material digital de apoyo</li>
+                        <li>Seguimiento por 30 días</li>
+                    </ul>
+                </div>
+                
+                <div class="inhouse-modality inhouse-modality--featured">
+                    <span class="inhouse-modality__badge">MÁS SOLICITADO</span>
+                    <div class="inhouse-modality__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Taller Presencial</h3>
+                    <span class="inhouse-modality__duration">1-3 días | En tu empresa</span>
+                    <p>Experiencia inmersiva en tus instalaciones. Entrenamiento intensivo con práctica en situaciones reales de tu negocio y coaching directo.</p>
+                    <ul class="inhouse-modality__features">
+                        <li>Entrenamiento en tus instalaciones</li>
+                        <li>Role playing con casos reales</li>
+                        <li>Coaching individual</li>
+                        <li>Material físico y digital</li>
+                        <li>Certificado de participación</li>
+                        <li>Seguimiento por 60 días</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="inhouse-topics" id="temas">
+        <div class="inhouse-topics__container">
+            <div class="inhouse-topics__header">
+                <span class="inhouse-topics__label">TEMÁTICAS</span>
+                <h2 class="inhouse-topics__title">Temas que podemos cubrir</h2>
+                <p class="inhouse-topics__subtitle">Personalizamos el contenido según tus objetivos comerciales</p>
+            </div>
+            
+            <div class="inhouse-topics__grid">
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Prospección Efectiva</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M11 17.25C11 18.77 9.657 20 8 20C6.343 20 5 18.77 5 17.25V4H8C9.657 4 11 5.23 11 6.75V17.25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 17.25C13 18.77 14.343 20 16 20C17.657 20 19 18.77 19 17.25V4H16C14.343 4 13 5.23 13 6.75V17.25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Técnicas de Cierre</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 22L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 8V2H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Manejo de Objeciones</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 16L12 11L15 14L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8H21V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Ventas Consultivas</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 17.55 8.45 18 9 18H15C15.55 18 16 17.55 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2Z" stroke="currentColor" stroke-width="2"/><path d="M9 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 18V21" stroke="currentColor" stroke-width="2"/><path d="M14 18V21" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">PNL en Ventas</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 5H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Ventas Digitales</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Servicio al Cliente</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M8 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 21V7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 21H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Liderazgo Comercial</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Gestión de Pipeline</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4.93 4.93L7.76 7.76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16.24 16.24L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4.93 19.07L7.76 16.24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Mentalidad de Ventas</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C10.34 2 9 3.34 9 5V11C9 12.66 10.34 14 12 14C13.66 14 15 12.66 15 11V5C15 3.34 13.66 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 10V11C19 14.87 15.87 18 12 18C8.13 18 5 14.87 5 11V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 22H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Presentaciones de Impacto</span>
+                </div>
+                <div class="inhouse-topic">
+                    <div class="inhouse-topic__icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M23 4V10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 20V14H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.51 9C4.01717 7.56678 4.87913 6.2854 6.01547 5.27542C7.1518 4.26543 8.52547 3.55976 10.0083 3.22426C11.4911 2.88875 13.0348 2.93434 14.4952 3.35677C15.9556 3.77921 17.2853 4.56471 18.36 5.64L23 10M1 14L5.64 18.36C6.71475 19.4353 8.04437 20.2208 9.50481 20.6432C10.9652 21.0657 12.5089 21.1112 13.9917 20.7757C15.4745 20.4402 16.8482 19.7346 17.9845 18.7246C19.1209 17.7146 19.9828 16.4332 20.49 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="inhouse-topic__name">Fidelización y Retención</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="inhouse-process" id="proceso">
+        <div class="inhouse-process__container">
+            <div class="inhouse-process__header">
+                <span class="inhouse-process__label">NUESTRO PROCESO</span>
+                <h2 class="inhouse-process__title">Cómo trabajamos contigo</h2>
+            </div>
+            
+            <div class="inhouse-process__steps">
+                <div class="inhouse-process__step">
+                    <span class="inhouse-process__step-number">01</span>
+                    <div class="inhouse-process__step-content">
+                        <h3>Diagnóstico Inicial</h3>
+                        <p>Analizamos tu proceso de ventas actual, identificamos áreas de mejora y definimos objetivos claros.</p>
+                    </div>
+                </div>
+                
+                <div class="inhouse-process__step">
+                    <span class="inhouse-process__step-number">02</span>
+                    <div class="inhouse-process__step-content">
+                        <h3>Diseño del Programa</h3>
+                        <p>Creamos un programa a medida con contenido, ejercicios y casos prácticos específicos para tu industria.</p>
+                    </div>
+                </div>
+                
+                <div class="inhouse-process__step">
+                    <span class="inhouse-process__step-number">03</span>
+                    <div class="inhouse-process__step-content">
+                        <h3>Ejecución del Taller</h3>
+                        <p>Impartimos el entrenamiento con metodología 100% práctica, dinámicas y role playing.</p>
+                    </div>
+                </div>
+                
+                <div class="inhouse-process__step">
+                    <span class="inhouse-process__step-number">04</span>
+                    <div class="inhouse-process__step-content">
+                        <h3>Seguimiento y Medición</h3>
+                        <p>Evaluamos resultados, damos retroalimentación y acompañamos la implementación de lo aprendido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="inhouse-clients">
+        <div class="inhouse-clients__container">
+            <div class="inhouse-clients__header">
+                <span class="inhouse-clients__label">CONFÍAN EN NOSOTROS</span>
+                <h2 class="inhouse-clients__title">Empresas que han capacitado con nosotros</h2>
+            </div>
+            
+            <div class="inhouse-clients__logos">
+                <div class="inhouse-clients__logo"><img src="assets/clients/1.jpg" alt="Cliente"></div>
+                <div class="inhouse-clients__logo"><img src="assets/clients/4.png" alt="Cliente"></div>
+                <div class="inhouse-clients__logo"><img src="assets/clients/10.png" alt="Cliente"></div>
+                <div class="inhouse-clients__logo"><img src="assets/clients/14.png" alt="Cliente"></div>
+                <div class="inhouse-clients__logo"><img src="assets/clients/20.png" alt="Cliente"></div>
+                <div class="inhouse-clients__logo"><img src="assets/clients/25.png" alt="Cliente"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="inhouse-form" id="cotizar">
+        <div class="inhouse-form__container">
+            <div class="inhouse-form__content">
+                <span class="inhouse-form__label">COTIZA TU ENTRENAMIENTO</span>
+                <h2 class="inhouse-form__title">Diseñemos tu plan de capacitación</h2>
+                <p class="inhouse-form__subtitle">
+                    Cuéntanos sobre tu equipo y objetivos comerciales. Un asesor especializado te contactará para diseñar el programa perfecto para tu empresa.
+                </p>
+                
+                <div class="inhouse-form__benefits">
+                    <div class="inhouse-form__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Diagnóstico gratuito de tu equipo comercial</span>
+                    </div>
+                    <div class="inhouse-form__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Propuesta personalizada en 48 horas</span>
+                    </div>
+                    <div class="inhouse-form__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Precios especiales para equipos grandes</span>
+                    </div>
+                    <div class="inhouse-form__benefit">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Facilidades de pago disponibles</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inhouse-form__wrapper">
+                <form class="inhouse-form__form">
+                    <div class="inhouse-form__group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Nombre de tu empresa" required>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="contact">Nombre de contacto</label>
+                        <input type="text" id="contact" name="contact" placeholder="Tu nombre completo" required>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="email">Email corporativo</label>
+                        <input type="email" id="email" name="email" placeholder="tu@empresa.com" required>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+593 999 999 999" required>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="team_size">Tamaño del equipo a capacitar</label>
+                        <select id="team_size" name="team_size" required>
+                            <option value="">Selecciona un rango</option>
+                            <option value="5-10">5-10 personas</option>
+                            <option value="11-25">11-25 personas</option>
+                            <option value="26-50">26-50 personas</option>
+                            <option value="50+">Más de 50 personas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="modality">Modalidad preferida</label>
+                        <select id="modality" name="modality" required>
+                            <option value="">Selecciona una modalidad</option>
+                            <option value="presencial">Presencial (en mi empresa)</option>
+                            <option value="virtual">Virtual (online en vivo)</option>
+                            <option value="hibrido">Híbrido</option>
+                            <option value="no-se">No estoy seguro/a</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inhouse-form__group">
+                        <label for="objectives">¿Cuáles son tus principales objetivos?</label>
+                        <textarea id="objectives" name="objectives" placeholder="Cuéntanos qué resultados esperas lograr con la capacitación..." rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="inhouse-form__btn">
+                        <span>Solicitar cotización</span>
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    
+                    <p class="inhouse-form__note">Te contactaremos en menos de 24 horas</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="program-final-cta">
+        <div class="program-final-cta__container">
+            <h2 class="program-final-cta__title">
+                Tu equipo <span>merece</span> el mejor entrenamiento
+            </h2>
+            <p class="program-final-cta__subtitle">
+                Más de 120 empresas ya potenciaron sus fuerzas de ventas con nosotros
+            </p>
+            <a href="https://wa.me/593981037979?text=Hola!%20Quiero%20cotizar%20un%20taller%20in-house%20para%20mi%20empresa" target="_blank" class="program-final-cta__btn">
+                <span>Contactar por WhatsApp</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>© 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>
