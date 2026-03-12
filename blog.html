@@ -82,12 +82,12 @@
     <section class="blog-categories">
         <div class="blog-categories__container">
             <div class="blog-categories__list">
-                <button class="blog-categories__btn blog-categories__btn--active">Todos</button>
-                <button class="blog-categories__btn">Estrategia</button>
-                <button class="blog-categories__btn">Mindset</button>
-                <button class="blog-categories__btn">Técnicas</button>
-                <button class="blog-categories__btn">Negociación</button>
-                <button class="blog-categories__btn">Liderazgo</button>
+                <button class="blog-categories__btn blog-categories__btn--active" data-category="all">Todos</button>
+                <button class="blog-categories__btn" data-category="mindset">Mindset & Técnicas</button>
+                <button class="blog-categories__btn" data-category="estrategia">Estrategia</button>
+                <button class="blog-categories__btn" data-category="diagnostico">Diagnóstico</button>
+                <button class="blog-categories__btn" data-category="he-closer">He Closer</button>
+                <button class="blog-categories__btn" data-category="she-closer">She Closer</button>
             </div>
         </div>
     </section>
@@ -97,22 +97,22 @@
         <div class="blog-featured__container">
             <article class="blog-featured__card">
                 <div class="blog-featured__image">
-                    <img src="assets/hero/1.jpg" alt="Las 7 claves del cierre perfecto">
+                    <img src="assets/hero/1.jpg" alt="La Psicología del Cierre: Estoicismo y la Técnica 7">
                     <div class="blog-featured__image-overlay"></div>
                 </div>
                 <div class="blog-featured__content">
                     <div class="blog-featured__meta">
-                        <span class="blog-featured__category">Estrategia</span>
-                        <span class="blog-featured__date">15 Dic 2025</span>
-                        <span class="blog-featured__read">8 min lectura</span>
+                        <span class="blog-featured__category">Mindset & Técnicas</span>
+                        <span class="blog-featured__date">10 Mar 2026</span>
+                        <span class="blog-featured__read">12 min lectura</span>
                     </div>
                     <h2 class="blog-featured__title">
-                        <a href="blog-single.html">Las 7 claves del cierre perfecto que todo vendedor debe dominar</a>
+                        <a href="blog-psicologia-cierre.html">La Psicología del Cierre: Cómo el Estoicismo y la Técnica 7 Elevan tu Valor de Mercado</a>
                     </h2>
                     <p class="blog-featured__excerpt">
-                        Descubre las técnicas que utilizan los cerradores de élite para convertir objeciones en ventas. En este artículo profundizamos en los principios fundamentales que separan a los vendedores promedio de los verdaderos maestros del cierre.
+                        Vender no es un evento que ocurre al final de una charla; es un estado mental que se mantiene desde el segundo uno. Descubre las herramientas prácticas para que dejes de ser un "tomador de pedidos" y te conviertas en un asesor magnético.
                     </p>
-                    <a href="blog-single.html" class="blog-featured__link">
+                    <a href="blog-psicologia-cierre.html" class="blog-featured__link">
                         <span>Leer artículo</span>
                         <svg viewBox="0 0 24 24" fill="none">
                             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -126,83 +126,27 @@
     <!-- Posts Grid -->
     <section class="blog-grid">
         <div class="blog-grid__container">
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/2.jpg" alt="Psicología del comprador">
+
+            <!-- Card: El Costo Invisible de la Improvisación -->
+            <article class="blog-card" data-category="estrategia">
+                <a href="blog-costo-improvisacion.html" class="blog-card__image">
+                    <img src="assets/hero/2.jpg" alt="El Costo Invisible de la Improvisación">
                     <div class="blog-card__image-overlay"></div>
                 </a>
                 <div class="blog-card__content">
                     <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--blue">Mindset</span>
-                        <span class="blog-card__date">12 Dic 2025</span>
+                        <span class="blog-card__category blog-card__category--coral">Estrategia</span>
+                        <span class="blog-card__date">8 Mar 2026</span>
                     </div>
                     <h3 class="blog-card__title">
-                        <a href="blog-single.html">Psicología del comprador: entiende cómo piensa tu cliente</a>
+                        <a href="blog-costo-improvisacion.html">El Costo Invisible de la Improvisación: Por qué el 80% de los Vendedores "Queman" sus Prospectos</a>
                     </h3>
                     <p class="blog-card__excerpt">
-                        Aprende a descifrar las motivaciones y objeciones de tus clientes para cerrar más ventas.
-                    </p>
-                    <div class="blog-card__footer">
-                        <span class="blog-card__read">5 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/3.jpg" alt="El método SPIN">
-                    <div class="blog-card__image-overlay"></div>
-                </a>
-                <div class="blog-card__content">
-                    <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--coral">Técnicas</span>
-                        <span class="blog-card__date">10 Dic 2025</span>
-                    </div>
-                    <h3 class="blog-card__title">
-                        <a href="blog-single.html">El método SPIN aplicado a ventas de alto valor</a>
-                    </h3>
-                    <p class="blog-card__excerpt">
-                        Domina la técnica de preguntas que te permite cerrar ventas consultivas de manera efectiva.
-                    </p>
-                    <div class="blog-card__footer">
-                        <span class="blog-card__read">6 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/4.jpg" alt="Negociación estratégica">
-                    <div class="blog-card__image-overlay"></div>
-                </a>
-                <div class="blog-card__content">
-                    <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--blue">Negociación</span>
-                        <span class="blog-card__date">8 Dic 2025</span>
-                    </div>
-                    <h3 class="blog-card__title">
-                        <a href="blog-single.html">Negociación estratégica: cómo ganar sin perder la relación</a>
-                    </h3>
-                    <p class="blog-card__excerpt">
-                        Las tácticas de negociación que te permiten cerrar tratos favorables mientras construyes relaciones duraderas.
+                        La simpatía no paga las facturas y un buen producto no se vende solo. Descubre por qué la falta de estructura destruye tu confianza y tus resultados.
                     </p>
                     <div class="blog-card__footer">
                         <span class="blog-card__read">7 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
+                        <a href="blog-costo-improvisacion.html" class="blog-card__link">
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -210,27 +154,27 @@
                     </div>
                 </div>
             </article>
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/5.jpg" alt="Liderazgo en ventas">
+
+            <!-- Card: ¿Vendedor o Hablador? -->
+            <article class="blog-card" data-category="diagnostico">
+                <a href="blog-vendedor-o-hablador.html" class="blog-card__image">
+                    <img src="assets/hero/3.jpg" alt="¿Vendedor o Hablador?">
                     <div class="blog-card__image-overlay"></div>
                 </a>
                 <div class="blog-card__content">
                     <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--coral">Liderazgo</span>
-                        <span class="blog-card__date">5 Dic 2025</span>
+                        <span class="blog-card__category blog-card__category--blue">Diagnóstico</span>
+                        <span class="blog-card__date">5 Mar 2026</span>
                     </div>
                     <h3 class="blog-card__title">
-                        <a href="blog-single.html">Cómo liderar un equipo de ventas de alto rendimiento</a>
+                        <a href="blog-vendedor-o-hablador.html">¿Vendedor o "Hablador"? La Auditoría de 5 Pasos para Detectar por qué tus Cierres se Escapan</a>
                     </h3>
                     <p class="blog-card__excerpt">
-                        Las claves para motivar, entrenar y escalar un equipo de ventas que supere sus metas consistentemente.
+                        La herramienta de diagnóstico rápido para detectar los errores técnicos invisibles que están saboteando tus ventas.
                     </p>
                     <div class="blog-card__footer">
-                        <span class="blog-card__read">9 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
+                        <span class="blog-card__read">15 min lectura</span>
+                        <a href="blog-vendedor-o-hablador.html" class="blog-card__link">
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -238,27 +182,27 @@
                     </div>
                 </div>
             </article>
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/6.jpg" alt="Objeciones comunes">
+
+            <!-- Card: ¿Vendedor de Élite o Mendigo con Corbata? -->
+            <article class="blog-card" data-category="he-closer">
+                <a href="blog-vendedor-elite-o-mendigo.html" class="blog-card__image">
+                    <img src="assets/hero/4.jpg" alt="¿Vendedor de Élite o Mendigo con Corbata?">
                     <div class="blog-card__image-overlay"></div>
                 </a>
                 <div class="blog-card__content">
                     <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--blue">Técnicas</span>
-                        <span class="blog-card__date">2 Dic 2025</span>
+                        <span class="blog-card__category blog-card__category--coral">He Closer</span>
+                        <span class="blog-card__date">2 Mar 2026</span>
                     </div>
                     <h3 class="blog-card__title">
-                        <a href="blog-single.html">Las 10 objeciones más comunes y cómo superarlas</a>
+                        <a href="blog-vendedor-elite-o-mendigo.html">¿Vendedor de Élite o Mendigo con Corbata? El precio que pagas por tu falta de método</a>
                     </h3>
                     <p class="blog-card__excerpt">
-                        Un manual práctico para manejar las objeciones que escuchas todos los días en tus llamadas.
+                        La improvisación no es talento, es pereza mental. Descubre el Framework de la Disciplina de Hierro para salir de la mediocridad comercial.
                     </p>
                     <div class="blog-card__footer">
-                        <span class="blog-card__read">10 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
+                        <span class="blog-card__read">14 min lectura</span>
+                        <a href="blog-vendedor-elite-o-mendigo.html" class="blog-card__link">
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -266,27 +210,27 @@
                     </div>
                 </div>
             </article>
-            
-            <!-- Post Card -->
-            <article class="blog-card">
-                <a href="blog-single.html" class="blog-card__image">
-                    <img src="assets/hero/7.jpg" alt="Mentalidad ganadora">
+
+            <!-- Card: ¿Las ventas parecen ignorar que eres mujer? -->
+            <article class="blog-card" data-category="she-closer">
+                <a href="blog-ventas-ignoran-mujer.html" class="blog-card__image">
+                    <img src="assets/hero/5.jpg" alt="¿Las ventas parecen ignorar que eres mujer?">
                     <div class="blog-card__image-overlay"></div>
                 </a>
                 <div class="blog-card__content">
                     <div class="blog-card__meta">
-                        <span class="blog-card__category blog-card__category--coral">Mindset</span>
-                        <span class="blog-card__date">28 Nov 2025</span>
+                        <span class="blog-card__category blog-card__category--blue">She Closer</span>
+                        <span class="blog-card__date">28 Feb 2026</span>
                     </div>
                     <h3 class="blog-card__title">
-                        <a href="blog-single.html">Mentalidad ganadora: el secreto de los top performers</a>
+                        <a href="blog-ventas-ignoran-mujer.html">¿Las ventas parecen ignorar que eres mujer? El fin de la productividad masculina aplicada a tu negocio</a>
                     </h3>
                     <p class="blog-card__excerpt">
-                        Descubre los hábitos mentales que practican los vendedores más exitosos del mundo.
+                        La mayoría de las formaciones te enseñan a cerrar ventas, pero ninguna te enseña a ser una cerradora de alto rendimiento mientras eres mujer.
                     </p>
                     <div class="blog-card__footer">
-                        <span class="blog-card__read">6 min lectura</span>
-                        <a href="blog-single.html" class="blog-card__link">
+                        <span class="blog-card__read">12 min lectura</span>
+                        <a href="blog-ventas-ignoran-mujer.html" class="blog-card__link">
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -294,28 +238,7 @@
                     </div>
                 </div>
             </article>
-            
-        </div>
-        
-        <!-- Pagination -->
-        <div class="blog-pagination">
-            <button class="blog-pagination__btn blog-pagination__btn--prev" disabled>
-                <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <div class="blog-pagination__numbers">
-                <button class="blog-pagination__num blog-pagination__num--active">1</button>
-                <button class="blog-pagination__num">2</button>
-                <button class="blog-pagination__num">3</button>
-                <span class="blog-pagination__dots">...</span>
-                <button class="blog-pagination__num">12</button>
-            </div>
-            <button class="blog-pagination__btn blog-pagination__btn--next">
-                <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+
         </div>
     </section>
 
@@ -358,6 +281,15 @@
                             <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
+                    <a href="https://www.linkedin.com/company/escuelaven7as" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@ESCUELAVEN7AS" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/escuelaventas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
                     <a href="tel:+593981037979" aria-label="Teléfono">
                         <svg viewBox="0 0 24 24" fill="none">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -377,6 +309,54 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btns = document.querySelectorAll('.blog-categories__btn');
+        var cards = document.querySelectorAll('.blog-card[data-category]');
+        var featured = document.querySelector('.blog-featured');
+
+        btns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                btns.forEach(function(b) { b.classList.remove('blog-categories__btn--active'); });
+                btn.classList.add('blog-categories__btn--active');
+
+                var cat = btn.getAttribute('data-category');
+
+                if (cat === 'all') {
+                    featured.style.display = '';
+                    cards.forEach(function(c) { c.style.display = ''; });
+                } else {
+                    featured.style.display = (cat === 'mindset') ? '' : 'none';
+                    cards.forEach(function(c) {
+                        c.style.display = c.getAttribute('data-category') === cat ? '' : 'none';
+                    });
+                }
+            });
+        });
+
+        // Search filter
+        var searchInput = document.querySelector('.blog-hero__search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                var query = this.value.toLowerCase().trim();
+                cards.forEach(function(c) {
+                    var title = c.querySelector('.blog-card__title').textContent.toLowerCase();
+                    var excerpt = c.querySelector('.blog-card__excerpt').textContent.toLowerCase();
+                    c.style.display = (!query || title.includes(query) || excerpt.includes(query)) ? '' : 'none';
+                });
+                if (featured) {
+                    var fTitle = featured.querySelector('.blog-featured__title').textContent.toLowerCase();
+                    featured.style.display = (!query || fTitle.includes(query)) ? '' : 'none';
+                }
+                if (query) {
+                    btns.forEach(function(b) { b.classList.remove('blog-categories__btn--active'); });
+                    btns[0].classList.add('blog-categories__btn--active');
+                }
+            });
+        }
+    });
+    </script>
 
 </body>
 </html>

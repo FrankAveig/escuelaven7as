@@ -60,7 +60,45 @@
             .he-includes__header,
             .he-includes__card,
             .he-ceo__header,
-            .he-ceo__card
+            .ce-quote,
+            .ce-duo__card,
+            .ce-pillar,
+            .ce-dim,
+            .ce-includes__item,
+            .ce-trainer,
+            .ce-testimonial,
+            .ce-pricing__card,
+            .ce-commitment,
+            .cv-feature,
+            .cv-gen,
+            .cv-diff,
+            .cv-ticket,
+            .he-ceo__card,
+            .ch-path,
+            .ch-quote,
+            .ch-pillar,
+            .ch-compare,
+            .ch-trainer,
+            .ch-cta-final__title,
+            .ch-cta-final__desc,
+            .ch-cta-final__buttons,
+            .hub-quote,
+            .hub-philosophy__card,
+            .hub-exclusive,
+            .hub-phase,
+            .hub-guarantees,
+            .hub-guarantee,
+            .hub-dimension,
+            .hub-benefit-card,
+            .hub-protocol__step,
+            .hub-principle,
+            .hub-permanence,
+            .hub-alliance,
+            .hub-employment,
+            .hub-value-prop,
+            .hub-contact,
+            .hub-cta-final__title,
+            .hub-cta-final__desc
         `);
         
         console.log(`Found ${animatedElements.length} elements to animate`);
@@ -217,6 +255,39 @@
             window.addEventListener('scroll', () => {
                 scrollIndicator.style.opacity = window.scrollY > 200 ? '0' : '1';
             });
+        }
+        
+        // ============================================
+        // CERRADORES ÉLITE: partículas se reducen al hacer scroll (se apagan)
+        // ============================================
+        if (document.body.getAttribute('data-program') === 'cerradores-elite') {
+            var heroH = window.innerHeight;
+            var halfHero = heroH * 0.5;
+            var targetIntensity = 1;
+            var currentIntensity = 1;
+            var MIN_INTENSITY = 0.38;
+
+            function updateInfernoIntensity() {
+                var sy = window.scrollY;
+                if (sy <= 0) {
+                    targetIntensity = 1;
+                } else if (sy >= halfHero) {
+                    targetIntensity = MIN_INTENSITY;
+                } else {
+                    targetIntensity = 1 - (sy / halfHero) * (1 - MIN_INTENSITY);
+                }
+                document.body.classList.toggle('inferno-past-hero', sy > halfHero);
+            }
+
+            function lerpIntensity() {
+                currentIntensity += (targetIntensity - currentIntensity) * 0.08;
+                window.infernoIntensity = currentIntensity;
+                requestAnimationFrame(lerpIntensity);
+            }
+
+            window.addEventListener('scroll', updateInfernoIntensity, { passive: true });
+            updateInfernoIntensity();
+            lerpIntensity();
         }
         
         // ============================================

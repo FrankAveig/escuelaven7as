@@ -5,11 +5,27 @@
 
 /* Colores específicos She Closer */
 :root {
-    --she-pink: #E91E8C;
-    --she-pink-light: #FF6B9D;
-    --she-pink-soft: #FFB8D4;
-    --she-gradient: linear-gradient(135deg, #E91E8C 0%, #FF6B9D 50%, #FFB8D4 100%);
-    --she-gradient-dark: linear-gradient(135deg, #E91E8C 0%, #C4186F 100%);
+    --program-primary: #FFD21F;
+    --program-secondary: #FFE066;
+    --program-gradient: linear-gradient(135deg, #FFD21F 0%, #FFE066 50%, #FFF0B3 100%);
+    --she-pink: #FFD21F;
+    --she-pink-light: #FFE066;
+    --she-pink-soft: #FFF0B3;
+    --she-gradient: linear-gradient(135deg, #FFD21F 0%, #FFE066 50%, #FFF0B3 100%);
+    --she-gradient-dark: linear-gradient(135deg, #FFD21F 0%, #000000 100%);
+}
+
+/* Hero: amarillo más suave, sin líneas animadas */
+.program-hero__gradient {
+    opacity: 0.06;
+}
+.program-hero__lines {
+    display: none;
+}
+
+/* Resplandor del mouse más suave */
+.cursor-glow {
+    opacity: 0.06;
 }
 
 /* ============================================
@@ -21,8 +37,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(255, 107, 157, 0.1) 100%);
-    border: 1px solid rgba(233, 30, 140, 0.3);
+    background: linear-gradient(135deg, rgba(255, 210, 31, 0.15) 0%, rgba(255, 224, 102, 0.1) 100%);
+    border: 1px solid rgba(255, 210, 31, 0.3);
     border-radius: 100px;
     margin-bottom: 2rem;
 }
@@ -81,7 +97,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at top center, rgba(233, 30, 140, 0.1) 0%, transparent 60%);
+    background: radial-gradient(ellipse at top center, rgba(255, 210, 31, 0.1) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -254,7 +270,7 @@
 
 .she-practical__item:hover {
     border-color: var(--she-pink);
-    background: rgba(233, 30, 140, 0.05);
+    background: rgba(255, 210, 31, 0.05);
 }
 
 .she-practical__icon {
@@ -377,7 +393,7 @@
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(to top, rgba(233, 30, 140, 0.05) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(255, 210, 31, 0.05) 0%, transparent 100%);
     pointer-events: none;
 }
 
@@ -523,8 +539,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 3rem;
-    background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(255, 107, 157, 0.05) 100%);
-    border: 1px solid rgba(233, 30, 140, 0.3);
+    background: linear-gradient(135deg, rgba(255, 210, 31, 0.15) 0%, rgba(255, 224, 102, 0.05) 100%);
+    border: 1px solid rgba(255, 210, 31, 0.3);
     border-radius: 24px;
     text-align: center;
 }
@@ -592,7 +608,7 @@
 .she-savings {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(233, 30, 140, 0.2);
+    background: rgba(255, 210, 31, 0.2);
     color: var(--she-pink-light);
     font-size: 0.85rem;
     font-weight: 700;
@@ -609,8 +625,8 @@
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 1.5rem;
-    background: linear-gradient(135deg, rgba(233, 30, 140, 0.2) 0%, rgba(255, 107, 157, 0.1) 100%);
-    border: 1px solid rgba(233, 30, 140, 0.3);
+    background: linear-gradient(135deg, rgba(255, 210, 31, 0.2) 0%, rgba(255, 224, 102, 0.1) 100%);
+    border: 1px solid rgba(255, 210, 31, 0.3);
     border-radius: 12px;
     margin-top: 1.5rem;
 }

@@ -1333,7 +1333,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ========================================
     // BLOG POSTS - DYNAMIC LOADING FROM WP API
+    // (Commented out — will reconnect when WordPress is ready)
     // ========================================
+    /*
     async function loadBlogPosts() {
         const blogGrid = document.getElementById('blogGrid');
         if (!blogGrid) return;
@@ -1351,7 +1353,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Render posts
             blogGrid.innerHTML = posts.map((post, index) => {
                 const title = post.title.rendered;
                 const excerpt = post.excerpt.rendered.replace(/<[^>]*>/g, '').trim();
@@ -1362,25 +1363,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     year: 'numeric'
                 });
                 
-                // Get featured image
-                let imageUrl = 'assets/hero/1.jpg'; // fallback
+                let imageUrl = 'assets/hero/1.jpg';
                 if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
                     imageUrl = post._embedded['wp:featuredmedia'][0].source_url || imageUrl;
                 }
                 
-                // Get category
                 let category = 'Estrategia';
                 let categoryClass = 'blog__card-category--coral';
                 if (post._embedded && post._embedded['wp:term'] && post._embedded['wp:term'][0] && post._embedded['wp:term'][0][0]) {
                     category = post._embedded['wp:term'][0][0].name;
-                    // Alternate colors based on category
                     const catSlug = post._embedded['wp:term'][0][0].slug.toLowerCase();
                     if (catSlug.includes('mindset') || catSlug.includes('psicolog')) {
                         categoryClass = 'blog__card-category--blue';
                     }
                 }
                 
-                // Calculate read time (approx 200 words per minute)
                 const wordCount = post.content.rendered.replace(/<[^>]*>/g, '').split(/\s+/).length;
                 const readTime = Math.max(1, Math.ceil(wordCount / 200));
                 
@@ -1407,7 +1404,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             }).join('');
             
-            // Re-initialize blog animations after loading
             initBlogAnimations();
             
         } catch (error) {
@@ -1419,8 +1415,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Load blog posts
     loadBlogPosts();
+    */
+
+    // Static blog cards are now rendered directly in index.html
+    initBlogAnimations();
     
     // ========================================
     // CONTACT FORM - WHATSAPP INTEGRATION

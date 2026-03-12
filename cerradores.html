@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERRADORES ÉLITE | Escuela VEN7AS</title>
+    <meta name="description" content="Cerradores Élite: el ecosistema de transformación comercial y personal más poderoso de Latinoamérica. Retiro de inmersión y Clínica de Ventas.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/programs-pages.css">
+    <link rel="stylesheet" href="styles/cerradores-hub-page.css">
+
+    <style>
+        :root {
+            --program-primary: #FF6B35;
+            --program-secondary: #FFB347;
+            --program-gradient: linear-gradient(135deg, #C62828 0%, #FF6B35 50%, #FFB347 100%);
+            --ch-orange: #FF6B35;
+            --ch-dark: #0a0a12;
+            --ch-card: rgba(255, 255, 255, 0.025);
+            --ch-border: rgba(255, 255, 255, 0.06);
+        }
+    </style>
+</head>
+<body class="program-page" data-program="cerradores-hub">
+
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header class="program-header">
+        <div class="program-header__container">
+            <a href="index.html" class="program-header__logo">
+                <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
+            </a>
+            <nav class="program-header__nav">
+                <a href="#experiencias">Experiencias</a>
+                <a href="#filosofia">Filosofía</a>
+                <a href="#entrenadores">Entrenadores</a>
+                <a href="#elegir">Empezar</a>
+            </nav>
+            <a href="#elegir" class="program-header__cta">Elegir Experiencia</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="program-hero ch-hero">
+        <div class="ch-hero__bg"></div>
+        <div class="ch-hero__particles" id="chParticles"></div>
+        <div class="ch-hero__container">
+            <span class="ch-hero__label">ESCUELA VEN7AS PRESENTA</span>
+            <h1 class="ch-hero__title">
+                <span class="ch-hero__title-line">CERRADORES</span>
+                <span class="ch-hero__title-line ch-hero__title-accent">ÉLITE</span>
+            </h1>
+            <p class="ch-hero__subtitle">El ecosistema de transformación comercial y personal más poderoso de Latinoamérica</p>
+            <div class="ch-hero__stats">
+                <div class="ch-hero__stat">
+                    <span class="ch-hero__stat-number">5000+</span>
+                    <span class="ch-hero__stat-label">Vidas transformadas</span>
+                </div>
+                <div class="ch-hero__stat-divider"></div>
+                <div class="ch-hero__stat">
+                    <span class="ch-hero__stat-number">18+</span>
+                    <span class="ch-hero__stat-label">Años de experiencia</span>
+                </div>
+                <div class="ch-hero__stat-divider"></div>
+                <div class="ch-hero__stat">
+                    <span class="ch-hero__stat-number">2</span>
+                    <span class="ch-hero__stat-label">Experiencias únicas</span>
+                </div>
+            </div>
+            <a href="#experiencias" class="ch-hero__scroll">
+                <span>Descubre</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+        <img src="assets/logo/unesco.png" alt="Cátedra UNESCO" class="ch-hero__unesco">
+    </section>
+
+    <!-- Dos Experiencias -->
+    <section class="ch-section" id="experiencias">
+        <div class="ch-section__container">
+            <span class="ch-section__label">DOS CAMINOS, UN DESTINO</span>
+            <h2 class="ch-section__title">Elige tu experiencia de transformación</h2>
+            <p class="ch-section__tagline">Cada experiencia está diseñada con un propósito específico. Ambas comparten la misma esencia: convertirte en un líder comercial imparable.</p>
+
+            <div class="ch-paths">
+                <!-- HIGH TICKET -->
+                <div class="ch-path ch-path--retreat">
+                    <div class="ch-path__glow"></div>
+                    <div class="ch-path__badge">RETIRO INMERSIVO</div>
+                    <div class="ch-path__icon">🔥</div>
+                    <h3 class="ch-path__title">Sangre, Fuego y Autoridad</h3>
+                    <p class="ch-path__type">HIGH TICKET &middot; 3 DÍAS</p>
+                    <p class="ch-path__desc">Una sentencia de muerte a tu mediocridad. Retiro de inmersión de alto impacto donde mueres a tu versión limitada y renaces como un Guerrero Integral que domina la abundancia financiera, la armonía familiar y la trascendencia del propósito.</p>
+                    <ul class="ch-path__highlights">
+                        <li>Dinámicas de fuego, hielo y liderazgo</li>
+                        <li>PNL y neuroestrategia aplicada</li>
+                        <li>Reprogramación de identidad</li>
+                        <li>Certificación oficial</li>
+                    </ul>
+                    <div class="ch-path__price">
+                        <span class="ch-path__price-amount">$1,500</span>
+                        <span class="ch-path__price-label">Inversión única</span>
+                    </div>
+                    <a href="cerradores-elite.html" class="ch-path__cta">
+                        Conocer el Retiro
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <!-- LOW TICKET -->
+                <div class="ch-path ch-path--clinica">
+                    <div class="ch-path__glow"></div>
+                    <div class="ch-path__badge">CLÍNICA DE VENTAS</div>
+                    <div class="ch-path__icon">⚡</div>
+                    <h3 class="ch-path__title">La Clínica de Ventas más Grande del Ecuador</h3>
+                    <p class="ch-path__type">EVENTO MASIVO &middot; 1 DÍA</p>
+                    <p class="ch-path__desc">Entrenamiento 100% práctico con herramientas de PNL aplicadas a la persuasión. Reconocido por la Cátedra UNESCO. 7 generaciones de éxito lo respaldan.</p>
+                    <ul class="ch-path__highlights">
+                        <li>Reconocido por Cátedra UNESCO</li>
+                        <li>Herramientas de PNL aplicadas</li>
+                        <li>100% práctico y ejecutable</li>
+                        <li>Tres niveles de acceso</li>
+                    </ul>
+                    <div class="ch-path__price">
+                        <span class="ch-path__price-amount">Desde $97</span>
+                        <span class="ch-path__price-label">Múltiples niveles</span>
+                    </div>
+                    <a href="clinica-ventas.html" class="ch-path__cta">
+                        Conocer la Clínica
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofía Compartida -->
+    <section class="ch-section ch-section--alt" id="filosofia">
+        <div class="ch-section__container">
+            <span class="ch-section__label">NUESTRA ESENCIA</span>
+            <h2 class="ch-section__title">El éxito exterior es un reflejo del dominio interior</h2>
+
+            <blockquote class="ch-quote">
+                "Para liderar a otros y cerrar negocios de alto valor, primero debes ser el dueño absoluto de tu propia mente, tu propio miedo y tu propia paz."
+            </blockquote>
+
+            <div class="ch-pillars">
+                <div class="ch-pillar">
+                    <div class="ch-pillar__number">01</div>
+                    <h3 class="ch-pillar__title">Mentalidad</h3>
+                    <p>Reprogramamos las creencias limitantes que frenan tu crecimiento. Identificamos los techos de cristal financieros y personales para construir una identidad inquebrantable.</p>
+                </div>
+                <div class="ch-pillar">
+                    <div class="ch-pillar__number">02</div>
+                    <h3 class="ch-pillar__title">Dominio del Miedo</h3>
+                    <p>Entrenamos el sistema nervioso para no reaccionar desde el miedo. La resiliencia antifrágil te permite mantener la paz imperturbable ante cualquier situación de presión.</p>
+                </div>
+                <div class="ch-pillar">
+                    <div class="ch-pillar__number">03</div>
+                    <h3 class="ch-pillar__title">Impacto Real</h3>
+                    <p>El verdadero ROI se mide en resultados de negocio, relaciones familiares sanadas y un propósito alineado. Liderazgo desde la inspiración, no desde el control.</p>
+                </div>
+                <div class="ch-pillar">
+                    <div class="ch-pillar__number">04</div>
+                    <h3 class="ch-pillar__title">Ejecución</h3>
+                    <p>No enseñamos teoría. Cada herramienta, cada dinámica y cada estrategia está diseñada para implementarse de inmediato en tu vida, tu negocio y tu hogar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparativa -->
+    <section class="ch-section" id="comparativa">
+        <div class="ch-section__container">
+            <span class="ch-section__label">¿CUÁL ES PARA TI?</span>
+            <h2 class="ch-section__title">Encuentra tu camino</h2>
+            <p class="ch-section__tagline">Ambas experiencias transforman. La diferencia está en la profundidad y la intensidad.</p>
+
+            <div class="ch-compare">
+                <div class="ch-compare__row ch-compare__row--header">
+                    <div class="ch-compare__cell"></div>
+                    <div class="ch-compare__cell ch-compare__cell--retreat">🔥 Retiro Inmersivo</div>
+                    <div class="ch-compare__cell ch-compare__cell--clinica">⚡ Clínica de Ventas</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Duración</div>
+                    <div class="ch-compare__cell">3 días de inmersión total</div>
+                    <div class="ch-compare__cell">1 día intensivo</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Formato</div>
+                    <div class="ch-compare__cell">Retiro presencial exclusivo</div>
+                    <div class="ch-compare__cell">Evento masivo presencial</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Enfoque</div>
+                    <div class="ch-compare__cell">Transformación integral (mente, miedos, impacto)</div>
+                    <div class="ch-compare__cell">Herramientas prácticas de cierre y PNL</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Dinámicas</div>
+                    <div class="ch-compare__cell">Fuego, hielo, reprogramación profunda</div>
+                    <div class="ch-compare__cell">PNL aplicada, rol-plays, simulaciones</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Ideal para</div>
+                    <div class="ch-compare__cell">Líderes que buscan una transformación radical</div>
+                    <div class="ch-compare__cell">Vendedores que quieren resultados inmediatos</div>
+                </div>
+                <div class="ch-compare__row">
+                    <div class="ch-compare__cell ch-compare__cell--label">Inversión</div>
+                    <div class="ch-compare__cell ch-compare__cell--price">$1,500</div>
+                    <div class="ch-compare__cell ch-compare__cell--price">Desde $97</div>
+                </div>
+                <div class="ch-compare__row ch-compare__row--actions">
+                    <div class="ch-compare__cell"></div>
+                    <div class="ch-compare__cell"><a href="cerradores-elite.html" class="ch-compare__btn">Ver Retiro</a></div>
+                    <div class="ch-compare__cell"><a href="clinica-ventas.html" class="ch-compare__btn">Ver Clínica</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrenadores -->
+    <section class="ch-section ch-section--alt" id="entrenadores">
+        <div class="ch-section__container">
+            <span class="ch-section__label">QUIÉNES TE GUÍAN</span>
+            <h2 class="ch-section__title">Entrenadores de clase mundial</h2>
+            <p class="ch-section__tagline">El equipo detrás de las transformaciones más poderosas de Latinoamérica</p>
+
+            <div class="ch-trainers">
+                <div class="ch-trainer">
+                    <div class="ch-trainer__avatar">MS</div>
+                    <h3 class="ch-trainer__name">Madeli Santos</h3>
+                    <p class="ch-trainer__role">CEO & Cofundadora · Psicóloga Clínica</p>
+                    <p class="ch-trainer__bio">Neuropsicóloga con 18 años de trayectoria en transformación humana. Mentora en agilidad emocional, productividad y liderazgo interno. Integra el crecimiento personal con la estrategia de negocios.</p>
+                </div>
+                <div class="ch-trainer">
+                    <div class="ch-trainer__avatar">AL</div>
+                    <h3 class="ch-trainer__name">Alejandro López</h3>
+                    <p class="ch-trainer__role">CEO · Estratega Comercial</p>
+                    <p class="ch-trainer__bio">Especialista en ventas de alto ticket y estructuración de equipos de cierre. Ha dedicado su trayectoria a formar cerradores de élite capaces de convertir influencia en resultados medibles.</p>
+                </div>
+                <div class="ch-trainer ch-trainer--guest">
+                    <div class="ch-trainer__avatar">OD</div>
+                    <div class="ch-trainer__guest-badge">INVITADO ESPECIAL</div>
+                    <h3 class="ch-trainer__name">Orlando Denegri Schroth</h3>
+                    <p class="ch-trainer__role">CEO BINLP · Experto en PNL</p>
+                    <p class="ch-trainer__bio">Creador del método Mind Fast Transformation. Más de 12 años acompañando a miles de personas en Latinoamérica. Primer peruano experto en PNL en compartir escenario con Tony Robbins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="ch-section ch-cta-final" id="elegir">
+        <div class="ch-section__container">
+            <h2 class="ch-cta-final__title">¿Listo para transformar tu vida y tus resultados?</h2>
+            <p class="ch-cta-final__desc">No importa cuál elijas. Lo que importa es que decidas dejar de ser espectador y te conviertas en protagonista de tu propia transformación.</p>
+            <div class="ch-cta-final__buttons">
+                <a href="cerradores-elite.html" class="ch-cta-final__btn ch-cta-final__btn--primary">
+                    <span class="ch-cta-final__btn-icon">🔥</span>
+                    <span>
+                        <strong>Retiro Inmersivo</strong>
+                        <small>3 días · $1,500</small>
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="clinica-ventas.html" class="ch-cta-final__btn ch-cta-final__btn--secondary">
+                    <span class="ch-cta-final__btn-icon">⚡</span>
+                    <span>
+                        <strong>Clínica de Ventas</strong>
+                        <small>1 día · Desde $97</small>
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="program-footer">
+        <div class="program-footer__container">
+            <div class="program-footer__top">
+                <a href="index.html" class="program-footer__logo">
+                    <span class="program-footer__logo-text">ESCUELA</span>
+                    <span class="program-footer__logo-accent">VEN7AS</span>
+                </a>
+                <div class="program-footer__social">
+                    <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/escuelaven7as" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@ESCUELAVEN7AS" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/escuelaventas/" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+593981037979" aria-label="Teléfono">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="program-footer__divider"></div>
+            <div class="program-footer__bottom">
+                <p>&copy; 2026 Escuela VEN7AS. Todos los derechos reservados.</p>
+                <div class="program-footer__links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/programs.js"></script>
+
+</body>
+</html>

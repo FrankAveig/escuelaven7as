@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CERRADORES ÉLITE | Escuela VEN7AS - La Clínica de Ventas más Grande del País</title>
-    <meta name="description" content="Eventos presenciales intensivos de alto impacto. La Clínica de Ventas más grande del país para transformar vendedores en cerradores de élite.">
+    <title>CERRADORES ÉLITE: Sangre, Fuego y Autoridad | Escuela VEN7AS</title>
+    <meta name="description" content="Retiro de inmersión de alto impacto. Trascendencia, Mentalidad y Negocios. Elimina bloqueos, reprograma tu identidad y renace como un Guerrero Integral.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="styles/programs-pages.css">
+    <link rel="stylesheet" href="styles/cerradores-elite.css">
     
     <style>
         :root {
@@ -31,6 +35,13 @@
     <!-- Cursor Effect -->
     <div class="cursor-glow"></div>
 
+    <!-- Full-page inferno atmosphere -->
+    <canvas id="infernoCanvas" class="inferno-canvas"></canvas>
+    <div class="inferno-smoke"></div>
+    <div class="inferno-smoke inferno-smoke--2"></div>
+    <div class="inferno-vignette"></div>
+    <div class="inferno-heat-overlay"></div>
+
     <!-- Header -->
     <header class="program-header">
         <div class="program-header__container">
@@ -38,9 +49,11 @@
                 <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
             </a>
             <nav class="program-header__nav">
-                <a href="#experiencia">Experiencia</a>
-                <a href="#programa">Programa</a>
-                <a href="#testimonios">Testimonios</a>
+                <a href="#filosofia">Filosofía</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#dimensiones">Dimensiones</a>
+                <a href="#cronograma">Cronograma</a>
+                <a href="#entrenadores">Entrenadores</a>
                 <a href="#inscripcion">Inscripción</a>
             </nav>
             <a href="#inscripcion" class="program-header__cta">Reservar Lugar</a>
@@ -48,375 +61,310 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="program-hero program-hero--event">
-        <div class="program-hero__bg">
-            <div class="program-hero__gradient"></div>
-            <div class="program-hero__particles" id="particles"></div>
-            <div class="program-hero__lines">
-                <div class="program-hero__line"></div>
-                <div class="program-hero__line"></div>
-                <div class="program-hero__line"></div>
-                <div class="program-hero__line"></div>
-                <div class="program-hero__line"></div>
-            </div>
-            <div class="program-hero__video-bg">
-                <video autoplay muted loop playsinline>
-                    <source src="assets/videos/hero.mp4" type="video/mp4">
-                </video>
-                <div class="program-hero__video-overlay"></div>
-            </div>
-        </div>
-        
+    <section class="program-hero program-hero--event ce-hero">
+        <div class="program-hero__bg"></div>
         <div class="program-hero__container">
-            <div class="program-hero__badge program-hero__badge--urgent">
-                <span class="program-hero__badge-dot program-hero__badge-dot--pulse"></span>
-                <span>PRÓXIMO EVENTO: 15 DE FEBRERO 2026 - CUPOS LIMITADOS</span>
-            </div>
-            
-            <h1 class="program-hero__title">
-                <span class="program-hero__title-line" data-animate="title">CERRADORES</span>
-                <span class="program-hero__title-line program-hero__title-line--accent" data-animate="title">ÉLITE</span>
+            <h1 class="program-hero__title ce-hero__title">
+                <span class="program-hero__title-line">CERRADORES</span>
+                <span class="program-hero__title-line program-hero__title-line--accent ce-hero__title-fire">ÉLITE</span>
             </h1>
-            
-            <p class="program-hero__subtitle" data-animate="fade">
-                La Clínica de Ventas más grande del país. <strong>3 días presenciales</strong> de entrenamiento intensivo que transformarán tu forma de vender para siempre.
-            </p>
-            
-            <div class="program-hero__stats" data-animate="fade">
-                <div class="program-hero__stat">
-                    <span class="program-hero__stat-number" data-count="5000">0</span>
-                    <span class="program-hero__stat-label">Participantes en 18 años</span>
-                </div>
-                <div class="program-hero__stat">
-                    <span class="program-hero__stat-number">3</span>
-                    <span class="program-hero__stat-label">Días intensivos</span>
-                </div>
-                <div class="program-hero__stat">
-                    <span class="program-hero__stat-number">100%</span>
-                    <span class="program-hero__stat-label">Práctico y vivencial</span>
-                </div>
-            </div>
-            
-            <div class="program-hero__cta-group" data-animate="fade">
-                <a href="#inscripcion" class="program-hero__cta-primary">
-                    <span>Reservar mi lugar ahora</span>
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="#experiencia" class="program-hero__cta-secondary">
-                    <span>Ver la experiencia</span>
-                </a>
-            </div>
-            
-            <div class="program-hero__countdown" data-animate="fade">
-                <div class="program-hero__countdown-item">
-                    <span class="program-hero__countdown-number" id="days">45</span>
-                    <span class="program-hero__countdown-label">Días</span>
-                </div>
-                <div class="program-hero__countdown-item">
-                    <span class="program-hero__countdown-number" id="hours">12</span>
-                    <span class="program-hero__countdown-label">Horas</span>
-                </div>
-                <div class="program-hero__countdown-item">
-                    <span class="program-hero__countdown-number" id="minutes">34</span>
-                    <span class="program-hero__countdown-label">Minutos</span>
-                </div>
-                <div class="program-hero__countdown-item">
-                    <span class="program-hero__countdown-number" id="seconds">56</span>
-                    <span class="program-hero__countdown-label">Segundos</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="program-hero__scroll">
-            <span>Scroll</span>
-            <div class="program-hero__scroll-line"></div>
+            <p class="program-hero__subtitle ce-hero__slogan">Sangre, Fuego y Autoridad...</p>
+            <p class="ce-hero__sentence">Una sentencia de muerte a tu mediocridad</p>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="program-experience" id="experiencia">
-        <div class="program-experience__container">
-            <div class="program-experience__header">
-                <span class="program-experience__label">LA EXPERIENCIA</span>
-                <h2 class="program-experience__title">3 días que cambiarán tu vida</h2>
-                <p class="program-experience__subtitle">No es un curso, es una inmersión total en el mundo del cierre de ventas de alto nivel</p>
-            </div>
-            
-            <div class="program-experience__grid">
-                <div class="program-experience__card">
-                    <div class="program-experience__card-icon"></div>
-                    <h3>Ponentes Internacionales</h3>
-                    <p>Aprende de los mejores cerradores de Latinoamérica con décadas de experiencia en el campo</p>
+    <!-- Filosofía Section -->
+    <section class="ce-section" id="filosofia">
+        <div class="ce-section__container">
+            <span class="ce-section__label">FILOSOFÍA</span>
+            <h2 class="ce-section__title">Inmersión de Alto Impacto</h2>
+            <p class="ce-section__tagline">Trascendencia, Mentalidad y Negocios</p>
+
+            <blockquote class="ce-quote">
+                "Para liderar a otros y cerrar negocios de alto valor, primero debes ser el dueño absoluto de tu propia mente, tu propio miedo y tu propia paz."
+            </blockquote>
+
+            <div class="ce-duo">
+                <div class="ce-duo__card">
+                    <span class="ce-duo__number">01</span>
+                    <h3>Identidad Inquebrantable</h3>
+                    <p>La filosofía de este entrenamiento radica en la forja de una Identidad Inquebrantable, donde el dominio del sistema nervioso es la piedra angular del éxito exponencial. Aquí no se viene a aprender técnicas, se viene a morir a una versión limitada del Ser para renacer como un/a Guerrero/a Integral.</p>
                 </div>
-                <div class="program-experience__card">
-                    <div class="program-experience__card-icon"></div>
-                    <h3>Role-Play Intensivo</h3>
-                    <p>Práctica en vivo con feedback inmediato. Aprende haciendo, no solo escuchando.</p>
-                </div>
-                <div class="program-experience__card">
-                    <div class="program-experience__card-icon"></div>
-                    <h3>Networking Poderoso</h3>
-                    <p>Conecta con cientos de vendedores de alto rendimiento de diversas industrias</p>
-                </div>
-                <div class="program-experience__card">
-                    <div class="program-experience__card-icon"></div>
-                    <h3>Certificación Oficial</h3>
-                    <p>Recibe tu certificación como Cerrador Élite con validez internacional</p>
+                <div class="ce-duo__card">
+                    <span class="ce-duo__number">02</span>
+                    <h3>Liderazgo Sistémico</h3>
+                    <p>Nadie puede cerrar un acuerdo millonario si no es capaz de cerrar primero sus propias brechas de miedo, ni liderar una industria si no gobierna con paz su propio hogar. Hackeamos el software mental para transmutar la reactividad en frialdad estratégica y el autosabotaje en determinación espiritual absoluta.</p>
                 </div>
             </div>
-            
-            <div class="program-experience__gallery">
-                <div class="program-experience__gallery-item">
-                    <img src="assets/hero/2.jpg" alt="Evento Cerradores Élite">
+
+            <div class="ce-duo" style="margin-top:2rem;">
+                <div class="ce-duo__card ce-duo__card--glass">
+                    <h3>Misión</h3>
+                    <p>Facilitar una experiencia de inmersión profunda en líderes y empresarios a través de Dinámicas de Alto Impacto y herramientas de Psicología, PNL y Coaching, permitiéndoles eliminar bloqueos mentales y reprogramar su identidad para el éxito en los negocios, el dominio interno y el liderazgo en todos los ámbitos de la vida.</p>
                 </div>
-                <div class="program-experience__gallery-item">
-                    <img src="assets/hero/3.jpg" alt="Entrenamiento intensivo">
-                </div>
-                <div class="program-experience__gallery-item">
-                    <img src="assets/hero/4.jpg" alt="Networking">
+                <div class="ce-duo__card ce-duo__card--glass">
+                    <h3>Visión</h3>
+                    <p>Ser el epicentro de formación para la élite empresarial que busca un éxito integral, demostrando que la rentabilidad de una empresa es directamente proporcional al nivel de consciencia y sanidad mental de su líder.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Program Section -->
-    <section class="program-agenda" id="programa">
-        <div class="program-agenda__container">
-            <div class="program-agenda__header">
-                <span class="program-agenda__label">AGENDA</span>
-                <h2 class="program-agenda__title">Programa de los 3 días</h2>
-            </div>
-            
-            <div class="program-agenda__days">
-                <div class="program-agenda__day">
-                    <div class="program-agenda__day-header">
-                        <span class="program-agenda__day-number">DÍA 1</span>
-                        <h3>Mentalidad del Cerrador</h3>
-                    </div>
-                    <ul class="program-agenda__day-list">
-                        <li>
-                            <span class="program-agenda__time">09:00</span>
-                            <span class="program-agenda__topic">Ceremonia de apertura y networking</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">10:00</span>
-                            <span class="program-agenda__topic">La psicología del vendedor de élite</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">12:00</span>
-                            <span class="program-agenda__topic">Workshop: Eliminando creencias limitantes</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">15:00</span>
-                            <span class="program-agenda__topic">El arte de la primera impresión</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">17:00</span>
-                            <span class="program-agenda__topic">Sesión de role-play grupal</span>
-                        </li>
+    <!-- Pilares de Entrenamiento -->
+    <section class="ce-section ce-section--alt" id="pilares">
+        <div class="ce-section__container">
+            <span class="ce-section__label">PILARES DE ENTRENAMIENTO</span>
+            <h2 class="ce-section__title">Tu Mentalidad. Tus Miedos. Tu Impacto.</h2>
+
+            <div class="ce-pillars">
+                <div class="ce-pillar">
+                    <div class="ce-pillar__icon">A</div>
+                    <h3 class="ce-pillar__name">Tu Mentalidad</h3>
+                    <ul class="ce-pillar__list">
+                        <li><strong>Reprogramación de Creencias:</strong> Identificar los "techos de cristal" financieros y personales instalados en la infancia o por fracasos previos.</li>
+                        <li><strong>Anclajes de Poder:</strong> Técnicas de PNL para acceder a estados de confianza absoluta antes de una junta de directorio o una negociación difícil.</li>
+                        <li><strong>Lenguaje de Influencia:</strong> Dominar la comunicación asertiva para direccionar equipos de trabajo y resolver conflictos sin erosión emocional.</li>
                     </ul>
                 </div>
-                
-                <div class="program-agenda__day program-agenda__day--featured">
-                    <div class="program-agenda__day-header">
-                        <span class="program-agenda__day-number">DÍA 2</span>
-                        <h3>Técnicas de Cierre</h3>
-                    </div>
-                    <ul class="program-agenda__day-list">
-                        <li>
-                            <span class="program-agenda__time">09:00</span>
-                            <span class="program-agenda__topic">Las 12 técnicas de cierre infalibles</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">11:00</span>
-                            <span class="program-agenda__topic">Masterclass: Manejo de objeciones</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">14:00</span>
-                            <span class="program-agenda__topic">Competencia de cierre en vivo</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">16:00</span>
-                            <span class="program-agenda__topic">Negociación de alto nivel</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">19:00</span>
-                            <span class="program-agenda__topic">Cena de gala y networking</span>
-                        </li>
+                <div class="ce-pillar ce-pillar--featured">
+                    <div class="ce-pillar__icon">B</div>
+                    <h3 class="ce-pillar__name">Tus Miedos</h3>
+                    <ul class="ce-pillar__list">
+                        <li><strong>Terapia de Hielo (Foco bajo presión):</strong> Entrenamos al sistema nervioso para no reaccionar desde el miedo. Un líder que domina su respuesta al frío, no pierde los estribos cuando las ventas bajan o un socio lo traiciona.</li>
+                        <li><strong>Firewalking (Ruptura de Imposibles):</strong> La metáfora definitiva de la PNL. Al cruzar el fuego, el cerebro recibe la prueba irrefutable de que sus "límites" eran solo percepciones erróneas.</li>
                     </ul>
                 </div>
-                
-                <div class="program-agenda__day">
-                    <div class="program-agenda__day-header">
-                        <span class="program-agenda__day-number">DÍA 3</span>
-                        <h3>Implementación</h3>
-                    </div>
-                    <ul class="program-agenda__day-list">
-                        <li>
-                            <span class="program-agenda__time">09:00</span>
-                            <span class="program-agenda__topic">Construyendo tu sistema de ventas</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">11:00</span>
-                            <span class="program-agenda__topic">Workshop: Plan de acción personal</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">14:00</span>
-                            <span class="program-agenda__topic">Panel de cerradores exitosos</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">16:00</span>
-                            <span class="program-agenda__topic">Compromisos y accountability</span>
-                        </li>
-                        <li>
-                            <span class="program-agenda__time">17:30</span>
-                            <span class="program-agenda__topic">Ceremonia de certificación</span>
-                        </li>
+                <div class="ce-pillar">
+                    <div class="ce-pillar__icon">C</div>
+                    <h3 class="ce-pillar__name">Tu Impacto</h3>
+                    <ul class="ce-pillar__list">
+                        <li><strong>Liderazgo:</strong> Aprender a dirigir desde la inspiración, no desde el control. Aplica los principios rectores para liderar en todos los ámbitos de tu vida.</li>
+                        <li><strong>Visión de Negocios:</strong> Salir de la operatividad para entrar en la estrategia. El entorno natural permite que el cerebro entre en ondas Alpha y Theta, donde surge la creatividad para nuevos modelos de negocio.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="program-testimonials" id="testimonios">
-        <div class="program-testimonials__container">
-            <div class="program-testimonials__header">
-                <span class="program-testimonials__label">TESTIMONIOS</span>
-                <h2 class="program-testimonials__title">Lo que dicen los graduados</h2>
+    <!-- 4 Dimensiones -->
+    <section class="ce-section" id="dimensiones">
+        <div class="ce-section__container">
+            <span class="ce-section__label">TU TRANSFORMACIÓN</span>
+            <h2 class="ce-section__title">Las 4 Dimensiones</h2>
+            <p class="ce-section__tagline">El alcance de este retiro trasciende la oficina</p>
+
+            <div class="ce-dimensions">
+                <div class="ce-dim">
+                    <span class="ce-dim__num">I</span>
+                    <h3>El Guerrero Estratégico</h3>
+                    <p>El líder afila su visión, domina el cierre desde la certeza interna y transforma la presión en dirección clara, influencia natural y ventas conscientes de alto nivel.</p>
+                </div>
+                <div class="ce-dim">
+                    <span class="ce-dim__num">II</span>
+                    <h3>El Dominio del Ser</h3>
+                    <p>El ser humano que elimina sus bloqueos internos reprograma su relación con el miedo y consolida una autoestima inquebrantable desde la cual ya no negocia su valor.</p>
+                </div>
+                <div class="ce-dim">
+                    <span class="ce-dim__num">III</span>
+                    <h3>El Legado de Amor</h3>
+                    <p>El éxito deja de cobrarse en casa: el líder sana vínculos, comunica con empatía y construye relaciones profundas desde la presencia y la coherencia emocional.</p>
+                </div>
+                <div class="ce-dim">
+                    <span class="ce-dim__num">IV</span>
+                    <h3>La Conexión Superior</h3>
+                    <p>El profesional se alinea con su propósito, accede a una paz trascendental y comprende que el verdadero poder nace del estado interno desde el cual crea resultados.</p>
+                </div>
             </div>
-            
-            <div class="program-testimonials__slider">
-                <div class="program-testimonials__track">
-                    <div class="program-testimonials__card">
-                        <div class="program-testimonials__card-video">
-                            <video poster="assets/hero/5.jpg" controls>
-                                <source src="assets/videos/testimonials/testimonio7.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="program-testimonials__card-content">
-                            <div class="program-testimonials__stars">★★★★★</div>
-                            <p>"Los 3 días más intensos y transformadores de mi carrera. Salí siendo una persona diferente."</p>
-                            <div class="program-testimonials__author">
-                                <strong>Patricia Vega</strong>
-                                <span>Gerente de Ventas</span>
-                            </div>
-                        </div>
+        </div>
+    </section>
+
+    <!-- Cronograma -->
+    <section class="ce-section ce-section--alt" id="cronograma">
+        <div class="ce-section__container">
+            <span class="ce-section__label">CRONOGRAMA</span>
+            <h2 class="ce-section__title">3 días de inmersión total</h2>
+
+            <div class="ce-pillars">
+                <div class="ce-pillar">
+                    <div class="ce-pillar__icon">V</div>
+                    <h3 class="ce-pillar__name">Viernes &mdash; Llegada e Inicio</h3>
+                    <ul class="ce-pillar__list ce-pillar__list--schedule">
+                        <li><span>4:00 PM</span> Llegada y Registro</li>
+                        <li><span>6:00 PM</span> Brunch de Bienvenida</li>
+                        <li><span>7:00 PM</span> Inicio de Actividades</li>
+                        <li><span>10:00 PM</span> Ritual del Sueño</li>
+                    </ul>
+                </div>
+                <div class="ce-pillar ce-pillar--featured">
+                    <div class="ce-pillar__icon">S</div>
+                    <h3 class="ce-pillar__name">Sábado &mdash; Inmersión Total</h3>
+                    <ul class="ce-pillar__list ce-pillar__list--schedule">
+                        <li><span>5:00 AM</span> Ritual Matutino</li>
+                        <li><span>6:30 AM</span> Desayuno</li>
+                        <li><span>7:30 AM</span> Primera Jornada</li>
+                        <li><span>11:00 AM</span> Segunda Jornada</li>
+                        <li><span>1:30 PM</span> Almuerzo</li>
+                        <li><span>3:00 PM</span> Tercera Jornada</li>
+                        <li><span>6:30 PM</span> Cuarta Jornada</li>
+                        <li><span>8:00 PM</span> Cena</li>
+                        <li><span>8:30 PM</span> Quinta Jornada</li>
+                        <li><span>10:00 PM</span> Ritual del Sueño</li>
+                    </ul>
+                </div>
+                <div class="ce-pillar">
+                    <div class="ce-pillar__icon">D</div>
+                    <h3 class="ce-pillar__name">Domingo &mdash; Fuego y Renacimiento</h3>
+                    <ul class="ce-pillar__list ce-pillar__list--schedule">
+                        <li><span>5:00 AM</span> Ritual Matutino</li>
+                        <li><span>6:00 AM</span> Terapia de Hielo</li>
+                        <li><span>8:30 AM</span> Desayuno</li>
+                        <li><span>9:30 AM</span> Actividades de Cierre</li>
+                        <li><span>12:00 PM</span> Almuerzo</li>
+                        <li><span>1:30 PM</span> Caminata sobre Fuego</li>
+                        <li><span>4:00 PM</span> Cierre y Certificación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incluye -->
+    <section class="ce-section" id="incluye">
+        <div class="ce-section__container">
+            <span class="ce-section__label">¿QUÉ INCLUYE?</span>
+            <h2 class="ce-section__title">Todo lo que recibes</h2>
+
+            <div class="ce-includes">
+                <div class="ce-includes__item"><span class="ce-includes__icon">🔥</span><h4>Experiencia Inmersiva</h4><p>Dinámicas de fuego, hielo, liderazgo y reprogramación mental de alto impacto.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">🧠</span><h4>Sesiones de PNL</h4><p>Sesiones prácticas de neuroestrategia aplicada a ventas y autoridad.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">📘</span><h4>Playbook Exclusivo</h4><p>Estrategia pura. Jugadas maestras que garantizan tus resultados.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">🎯</span><h4>Plantillas y Frameworks</h4><p>Cierre consciente y ventas de alta autoridad.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">🧭</span><h4>Mapa Estratégico 2026</h4><p>Mapa personal de dirección estratégica diseñado durante el retiro.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">🧊</span><h4>Protocolo de Resiliencia</h4><p>Protocolo guiado de resiliencia antifrágil.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">🎓</span><h4>Certificación Oficial</h4><p>Certificación Cerradores Elite: Sangre, Fuego y Autoridad.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">📸</span><h4>Kit Exclusivo + Foto</h4><p>Kit simbólico, fotografía profesional con speakers, descuento preferencial.</p></div>
+                <div class="ce-includes__item"><span class="ce-includes__icon">📞</span><h4>Seguimiento Post-Retiro</h4><p>Plantilla "Regreso a Casa", llamada a los 30 días, comunidad privada.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrenadores -->
+    <section class="ce-section ce-section--alt" id="entrenadores">
+        <div class="ce-section__container">
+            <span class="ce-section__label">TUS ENTRENADORES</span>
+            <h2 class="ce-section__title">Quiénes te guiarán en este proceso</h2>
+
+            <div class="ce-trainers">
+                <div class="ce-trainer">
+                    <div class="ce-trainer__role">CEO &amp; COFUNDADORA</div>
+                    <h3 class="ce-trainer__name">Madeli Santos</h3>
+                    <p>Psicóloga clínica y neuropsicóloga con 18 años de trayectoria en transformación humana. Mentora en agilidad emocional, productividad y liderazgo interno. Integra el crecimiento personal con la estrategia de negocios, demostrando que el verdadero éxito comienza en la identidad.</p>
+                </div>
+                <div class="ce-trainer">
+                    <div class="ce-trainer__role">CEO &amp; COFUNDADOR</div>
+                    <h3 class="ce-trainer__name">Alejandro López</h3>
+                    <p>Empresario, estratega comercial y CEO de Escuela Ven7as. Especialista en ventas de alto ticket y estructuración de equipos de cierre. Impulsa una cultura basada en disciplina, mentalidad ganadora y ejecución estratégica.</p>
+                </div>
+                <div class="ce-trainer ce-trainer--guest">
+                    <div class="ce-trainer__role">ENTRENADOR INVITADO INTERNACIONAL</div>
+                    <h3 class="ce-trainer__name">Orlando Denegri Schroth</h3>
+                    <p>CEO del Business Institute &amp; NLP (BINLP). Creador del método Mind Fast Transformation. Experto en PNL, Hipnosis y Alto Rendimiento con más de 12 años de experiencia. Primer peruano en compartir escenario junto a Tony Robbins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="ce-section" id="testimonios">
+        <div class="ce-section__container">
+            <span class="ce-section__label">TESTIMONIOS</span>
+            <h2 class="ce-section__title">Lo que dicen los graduados</h2>
+
+            <div class="ce-testimonials">
+                <div class="ce-testimonial">
+                    <div class="ce-testimonial__video">
+                        <video poster="assets/hero/5.jpg" controls><source src="assets/videos/testimonials/testimonio7.mp4" type="video/mp4"></video>
                     </div>
-                    
-                    <div class="program-testimonials__card">
-                        <div class="program-testimonials__card-video">
-                            <video poster="assets/hero/6.jpg" controls>
-                                <source src="assets/videos/testimonials/testimonio8.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="program-testimonials__card-content">
-                            <div class="program-testimonials__stars">★★★★★</div>
-                            <p>"El networking solo vale la inversión. Hice contactos que se convirtieron en clientes."</p>
-                            <div class="program-testimonials__author">
-                                <strong>Miguel Ángel Torres</strong>
-                                <span>Empresario</span>
-                            </div>
-                        </div>
+                    <div class="ce-testimonial__body">
+                        <div class="ce-testimonial__stars">★★★★★</div>
+                        <p>"Los 3 días más intensos y transformadores de mi carrera. Salí siendo una persona diferente."</p>
+                        <strong>Patricia Vega</strong><span>Gerente de Ventas</span>
                     </div>
-                    
-                    <div class="program-testimonials__card">
-                        <div class="program-testimonials__card-video">
-                            <video poster="assets/hero/7.jpg" controls>
-                                <source src="assets/videos/testimonials/testimonio1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="program-testimonials__card-content">
-                            <div class="program-testimonials__stars">★★★★★</div>
-                            <p>"Ya he asistido 3 veces. Cada año salgo con nuevas herramientas y más motivado que nunca."</p>
-                            <div class="program-testimonials__author">
-                                <strong>Fernando Ruiz</strong>
-                                <span>Director Comercial</span>
-                            </div>
-                        </div>
+                </div>
+                <div class="ce-testimonial">
+                    <div class="ce-testimonial__video">
+                        <video poster="assets/hero/6.jpg" controls><source src="assets/videos/testimonials/testimonio8.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="ce-testimonial__body">
+                        <div class="ce-testimonial__stars">★★★★★</div>
+                        <p>"El networking solo vale la inversión. Hice contactos que se convirtieron en clientes."</p>
+                        <strong>Miguel Ángel Torres</strong><span>Empresario</span>
+                    </div>
+                </div>
+                <div class="ce-testimonial">
+                    <div class="ce-testimonial__video">
+                        <video poster="assets/hero/7.jpg" controls><source src="assets/videos/testimonials/testimonio1.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="ce-testimonial__body">
+                        <div class="ce-testimonial__stars">★★★★★</div>
+                        <p>"Ya he asistido 3 veces. Cada año salgo con nuevas herramientas y más motivado que nunca."</p>
+                        <strong>Fernando Ruiz</strong><span>Director Comercial</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="program-pricing" id="inscripcion">
-        <div class="program-pricing__container">
-            <div class="program-pricing__header">
-                <span class="program-pricing__label">INSCRIPCIÓN</span>
-                <h2 class="program-pricing__title">Reserva tu lugar</h2>
-                <p class="program-pricing__subtitle">Cupos limitados - Solo 200 participantes por evento</p>
-            </div>
-            
-            <div class="program-pricing__cards">
-                <div class="program-pricing__card">
-                    <div class="program-pricing__card-header">
-                        <h3>Entrada General</h3>
-                        <p>Acceso al evento</p>
+    <!-- Pricing -->
+    <section class="ce-section ce-section--alt" id="inscripcion">
+        <div class="ce-section__container">
+            <span class="ce-section__label">INSCRIPCIÓN</span>
+            <h2 class="ce-section__title">Reserva tu lugar</h2>
+            <p class="ce-section__tagline">Cupos limitados</p>
+
+            <div class="ce-pricing">
+                <div class="ce-pricing__card">
+                    <div class="ce-pricing__badge">ACCESO COMPLETO</div>
+                    <h3 class="ce-pricing__name">Cerradores Élite</h3>
+                    <p class="ce-pricing__sub">Sangre, Fuego y Autoridad</p>
+                    <div class="ce-pricing__price">
+                        <span class="ce-pricing__currency">$</span>
+                        <span class="ce-pricing__amount">1,500</span>
+                        <span class="ce-pricing__period">USD</span>
                     </div>
-                    <div class="program-pricing__card-price">
-                        <span class="program-pricing__card-currency">$</span>
-                        <span class="program-pricing__card-amount">497</span>
-                        <span class="program-pricing__card-period">USD</span>
-                    </div>
-                    <ul class="program-pricing__card-features">
-                        <li>Acceso a los 3 días</li>
-                        <li>Material de trabajo</li>
-                        <li>Coffee breaks incluidos</li>
-                        <li>Certificado de participación</li>
-                        <li>Acceso a comunidad</li>
+                    <ul class="ce-pricing__features">
+                        <li>3 días de inmersión total</li>
+                        <li>Dinámicas de fuego, hielo y liderazgo</li>
+                        <li>Sesiones de PNL y neuroestrategia</li>
+                        <li>Playbook exclusivo del retiro</li>
+                        <li>Plantillas y frameworks de cierre</li>
+                        <li>Mapa estratégico 2026 personalizado</li>
+                        <li>Protocolo de resiliencia antifrágil</li>
+                        <li>Certificación oficial</li>
+                        <li>Kit exclusivo + Foto con speakers</li>
+                        <li>Seguimiento post-retiro a 30 días</li>
+                        <li>Acceso a comunidad privada</li>
                     </ul>
-                    <a href="#" class="program-pricing__card-btn">Reservar Ahora</a>
-                </div>
-                
-                <div class="program-pricing__card program-pricing__card--featured">
-                    <div class="program-pricing__card-badge">VIP</div>
-                    <div class="program-pricing__card-header">
-                        <h3>Entrada VIP</h3>
-                        <p>Experiencia premium</p>
-                    </div>
-                    <div class="program-pricing__card-price">
-                        <span class="program-pricing__card-original">$1,497</span>
-                        <span class="program-pricing__card-currency">$</span>
-                        <span class="program-pricing__card-amount">997</span>
-                        <span class="program-pricing__card-period">USD</span>
-                    </div>
-                    <ul class="program-pricing__card-features">
-                        <li>Todo lo de entrada general</li>
-                        <li><strong>Asientos primera fila</strong></li>
-                        <li><strong>Cena de gala incluida</strong></li>
-                        <li>Meet & greet con ponentes</li>
-                        <li>Grabaciones del evento</li>
-                        <li>Sesión 1:1 post-evento</li>
-                    </ul>
-                    <a href="#" class="program-pricing__card-btn program-pricing__card-btn--featured">¡Quiero ser VIP!</a>
-                    <p class="program-pricing__card-note">Solo quedan 23 lugares VIP</p>
+                    <a href="#" class="ce-pricing__btn">Reservar mi lugar ahora</a>
                 </div>
             </div>
-            
-            <div class="program-pricing__guarantee">
-                <div class="program-pricing__guarantee-icon"></div>
-                <div class="program-pricing__guarantee-content">
-                    <h4>Ubicación del evento</h4>
-                    <p>Centro de Convenciones Principal - Ciudad de Guayaquil, Ecuador. Incluye estacionamiento gratuito.</p>
-                </div>
+
+            <div class="ce-commitment">
+                <h4>No aceptamos resultados mediocres.</h4>
+                <p>Entregamos un protocolo de "Regreso a Casa" y una llamada de seguimiento a los 30 días para revisión de implementaciones y resultados.</p>
             </div>
         </div>
     </section>
 
     <!-- CTA Final -->
-    <section class="program-final-cta">
-        <div class="program-final-cta__container">
-            <h2 class="program-final-cta__title">
-                No te quedes <span>afuera</span>
+    <section class="ce-section ce-cta-final">
+        <div class="ce-section__container">
+            <h2 class="ce-section__title" style="font-size:clamp(1.5rem,4vw,2.5rem); line-height:1.4;">
+                El mundo exterior solo se rinde ante quien ha <span style="color:var(--program-primary);">conquistado primero su mundo interior</span>
             </h2>
-            <p class="program-final-cta__subtitle">
-                Este evento se llena cada año. Asegura tu lugar antes de que sea tarde.
-            </p>
-            <a href="#inscripcion" class="program-final-cta__btn">
+            <p class="ce-section__tagline" style="margin-top:1rem;">Sangre, Fuego y Autoridad. Una sentencia de muerte a tu mediocridad.</p>
+            <a href="#inscripcion" class="ce-pricing__btn" style="margin-top:2rem; display:inline-flex;">
                 <span>Reservar mi lugar ahora</span>
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
         </div>
     </section>
@@ -436,6 +384,15 @@
                     <a href="https://www.tiktok.com/@escuela.ven7as" target="_blank" aria-label="TikTok">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
+                    <a href="https://www.linkedin.com/company/escuelaven7as" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@ESCUELAVEN7AS" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/escuelaventas/" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
                     <a href="tel:+593981037979" aria-label="Teléfono">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
                     </a>
@@ -454,6 +411,7 @@
 
     <!-- Scripts -->
     <script src="javascript/programs.js"></script>
+    <script src="javascript/inferno.js"></script>
 
 </body>
 </html>

@@ -185,29 +185,29 @@
         </div>
         
         <!-- Bottom Section: Programas -->
-        <a href="#programas" class="hero__programs-strip">
+        <div class="hero__programs-strip">
             <div class="hero__programs-container">
-                <div class="hero__program-pill">
+                <a href="she-closer.html" class="hero__program-pill hero__program-pill--she-he">
                     <span class="hero__program-name">SHE CLOSER</span>
                     <span class="hero__program-tag">Entrenamiento</span>
-                </div>
+                </a>
                 <div class="hero__program-divider"></div>
-                <div class="hero__program-pill">
+                <a href="he-closer.html" class="hero__program-pill hero__program-pill--she-he">
                     <span class="hero__program-name">HE CLOSER</span>
                     <span class="hero__program-tag">Entrenamiento</span>
-                </div>
+                </a>
                 <div class="hero__program-divider"></div>
-                <div class="hero__program-pill">
+                <a href="cerradores.html" class="hero__program-pill">
                     <span class="hero__program-name">CERRADORES ÉLITE</span>
-                    <span class="hero__program-tag">Clínica</span>
-                </div>
+                    <span class="hero__program-tag">Experiencias</span>
+                </a>
                 <div class="hero__program-divider"></div>
-                <div class="hero__program-pill">
+                <a href="closers-hub.html" class="hero__program-pill">
                     <span class="hero__program-name">CLOSERS HUB</span>
                     <span class="hero__program-tag">Agencia</span>
-                </div>
+                </a>
             </div>
-        </a>
+        </div>
         
         <!-- Scroll indicator -->
         <div class="hero__scroll-indicator">
@@ -281,7 +281,7 @@
                     </div>
                     <div class="program-accordion__panel">
                         <a href="./she-closer.html" class="program-subitem">
-                            <span class="program-subitem__icon" style="--sub-color: #FE6F5E;">
+                            <span class="program-subitem__icon" style="--sub-color: #FFD21F;">
                                 <img src="assets/icons/she.png" alt="She Closer">
                             </span>
                             <div class="program-subitem__content">
@@ -295,7 +295,7 @@
                             </span>
                         </a>
                         <a href="./he-closer.html" class="program-subitem">
-                            <span class="program-subitem__icon" style="--sub-color: #3457D5;">
+                            <span class="program-subitem__icon" style="--sub-color: #FFD21F;">
                                 <img src="assets/icons/men.png" alt="He Closer">
                             </span>
                             <div class="program-subitem__content">
@@ -326,13 +326,13 @@
                         </div>
                     </div>
                     <div class="program-accordion__panel">
-                        <a href="./cerradores-elite.html" class="program-subitem">
+                        <a href="./cerradores.html" class="program-subitem">
                             <span class="program-subitem__icon" style="--sub-color: #FE6F5E;">
                                 <img src="assets/icons/elite.png" alt="Cerradores Élite">
                             </span>
                             <div class="program-subitem__content">
                                 <span class="program-subitem__name">Cerradores Élite</span>
-                                <span class="program-subitem__desc">Entrenamiento de alto rendimiento para vendedores</span>
+                                <span class="program-subitem__desc">Retiro inmersivo y Clínica de Ventas</span>
                             </div>
                             <span class="program-subitem__arrow">
                                 <svg viewBox="0 0 24 24" fill="none">
@@ -964,7 +964,7 @@
                         <span class="blog__title-word">de vender</span>
                     </h2>
                 </div>
-                <a href="http://escuelaven7as.local/" class="blog__view-all">
+                <a href="blog.html" class="blog__view-all">
                     <span>Ver todos</span>
                     <svg viewBox="0 0 24 24" fill="none">
                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -972,13 +972,63 @@
                 </a>
             </div>
             
-            <!-- Articles Grid - 3 Cards (loaded dynamically) -->
+            <!-- Articles Grid - 3 Latest Blog Posts (static) -->
             <div class="blog__grid" id="blogGrid">
-                <!-- Loading state -->
-                <div class="blog__loading">
-                    <div class="blog__loading-spinner"></div>
-                    <span>Cargando artículos...</span>
-                </div>
+
+                <!-- Card 1 - Featured -->
+                <a href="blog-psicologia-cierre.html" class="blog__card blog__card--featured" data-index="01">
+                    <div class="blog__card-image">
+                        <img src="assets/hero/1.jpg" alt="La Psicología del Cierre" loading="lazy">
+                        <div class="blog__card-overlay"></div>
+                    </div>
+                    <div class="blog__card-content">
+                        <span class="blog__card-category blog__card-category--blue">Mindset & Técnicas</span>
+                        <h3 class="blog__card-title">La Psicología del Cierre: Cómo el Estoicismo y la Técnica 7 Elevan tu Valor de Mercado</h3>
+                        <p class="blog__card-excerpt">Herramientas prácticas para que dejes de ser un "tomador de pedidos" y te conviertas en un asesor magnético.</p>
+                        <div class="blog__card-meta">
+                            <span class="blog__card-date">10 Mar 2026</span>
+                            <span class="blog__card-read">12 min lectura</span>
+                        </div>
+                    </div>
+                    <span class="blog__card-number">01</span>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="blog-costo-improvisacion.html" class="blog__card blog__card--vertical" data-index="02">
+                    <div class="blog__card-image">
+                        <img src="assets/hero/2.jpg" alt="El Costo Invisible de la Improvisación" loading="lazy">
+                        <div class="blog__card-overlay"></div>
+                    </div>
+                    <div class="blog__card-content">
+                        <span class="blog__card-category blog__card-category--coral">Estrategia</span>
+                        <h3 class="blog__card-title">El Costo Invisible de la Improvisación: Por qué el 80% de los Vendedores "Queman" sus Prospectos</h3>
+                        <p class="blog__card-excerpt">La simpatía no paga las facturas. Descubre por qué la falta de estructura destruye tu confianza y tus resultados.</p>
+                        <div class="blog__card-meta">
+                            <span class="blog__card-date">8 Mar 2026</span>
+                            <span class="blog__card-read">7 min lectura</span>
+                        </div>
+                    </div>
+                    <span class="blog__card-number">02</span>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="blog-vendedor-o-hablador.html" class="blog__card blog__card--vertical" data-index="03">
+                    <div class="blog__card-image">
+                        <img src="assets/hero/3.jpg" alt="¿Vendedor o Hablador?" loading="lazy">
+                        <div class="blog__card-overlay"></div>
+                    </div>
+                    <div class="blog__card-content">
+                        <span class="blog__card-category blog__card-category--blue">Diagnóstico</span>
+                        <h3 class="blog__card-title">¿Vendedor o "Hablador"? La Auditoría de 5 Pasos para Detectar por qué tus Cierres se Escapan</h3>
+                        <p class="blog__card-excerpt">La herramienta de diagnóstico rápido para detectar los errores técnicos invisibles que sabotean tus ventas.</p>
+                        <div class="blog__card-meta">
+                            <span class="blog__card-date">5 Mar 2026</span>
+                            <span class="blog__card-read">15 min lectura</span>
+                        </div>
+                    </div>
+                    <span class="blog__card-number">03</span>
+                </a>
+
             </div>
             
         </div>
@@ -1054,6 +1104,24 @@
                         <a href="https://www.tiktok.com/@escuela.ven7as?_r=1&_t=ZS-92R1yCHyFm8" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/escuelaven7as" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@ESCUELAVEN7AS" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/escuelaventas/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
                     </div>

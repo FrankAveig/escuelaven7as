@@ -892,6 +892,8 @@ a{
     padding: 0.75rem 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .hero__program-pill:hover {
@@ -900,6 +902,10 @@ a{
 
 .hero__program-pill:hover .hero__program-name {
     color: #ff6450;
+}
+
+.hero__program-pill--she-he:hover .hero__program-name {
+    color: #FFD21F;
 }
 
 .hero__program-name {
@@ -1009,7 +1015,7 @@ a{
     }
     
     .hero__title-line {
-        font-size: clamp(2.5rem, 7vw, 5.5rem);
+        font-size: clamp(2.5rem, 7vw, 4.8rem);
     }
     
     .hero__floating-stats {
