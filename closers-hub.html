@@ -21,11 +21,18 @@
 
     <style>
         :root {
-            --program-primary: #00C9A7;
-            --program-secondary: #00F5D4;
-            --program-gradient: linear-gradient(135deg, #004D40 0%, #00C9A7 50%, #00F5D4 100%);
-            --hub-teal: #00C9A7;
-            --hub-dark: #0a0a12;
+            /* Acento UI (botones, bordes, detalles) — no sustituye fondos de página */
+            --hub-accent: #000C3E;
+            --hub-accent-rgb: 0, 12, 62;
+            --hub-accent-hover: #102a8c;
+            --hub-accent-text: #b4c7ff;
+            --hub-teal: #000C3E;
+            --hub-teal-hover: #102a8c;
+            --program-primary: #000C3E;
+            --program-secondary: #5b7fff;
+            --program-gradient: linear-gradient(135deg, #050a30 0%, #000C3E 45%, #5b7fff 100%);
+            --hub-navy: #050a30;
+            --hub-dark: #06080f;
             --hub-card: rgba(255, 255, 255, 0.025);
             --hub-border: rgba(255, 255, 255, 0.06);
         }
@@ -37,20 +44,28 @@
     <div class="cursor-glow"></div>
 
     <!-- Header -->
-    <header class="program-header">
-        <div class="program-header__container">
-            <a href="index.html" class="program-header__logo">
-                <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
-            </a>
+    <header class="program-header hub-page-header">
+        <div class="program-header__container hub-page-header__inner">
+            <div class="hub-page-header__logos">
+                <a href="index.html" class="program-header__logo">
+                    <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-header__logo-img">
+                </a>
+                <span class="program-header__logo-divider" aria-hidden="true"></span>
+                <div class="hub-logo-pill hub-logo-pill--header" title="Closers Hub Agency">
+                    <img src="assets/closerhub/logocloserWhite.png" alt="Closers Hub Agency" width="220" height="72" decoding="async">
+                </div>
+            </div>
             <nav class="program-header__nav">
+                <a href="#intro">Introducción</a>
                 <a href="#filosofia">Filosofía</a>
                 <a href="#fases">4 Fases</a>
                 <a href="#perfiles">Perfiles</a>
                 <a href="#protocolo">Protocolo</a>
                 <a href="#alianzas">Alianzas</a>
+                <a href="#propuesta">Valor</a>
                 <a href="#contacto">Contacto</a>
             </nav>
-            <a href="#contacto" class="program-header__cta">Agendar Llamada</a>
+            <a href="#contacto" class="program-header__cta">Agendar llamada</a>
         </div>
     </header>
 
@@ -59,39 +74,47 @@
         <div class="hub-hero__bg"></div>
         <div class="program-hero__container">
             <div class="hub-hero__label">AGENCIA INTERNACIONAL DE CLOSERS</div>
-            <h1 class="hub-hero__title">
-                <span class="hub-hero__title-line">CLOSERS</span>
-                <span class="hub-hero__title-line hub-hero__title-accent">HUB</span>
-            </h1>
-            <p class="hub-hero__subtitle">No es simplemente una agencia de ventas; es un ecosistema de alto rendimiento diseñado para conectar a empresas con Closers profesionales.</p>
+            <div class="hub-hero__logo-wrap">
+                <img src="assets/closerhub/logocloserWhite.png" alt="Closers Hub Agency" class="hub-hero__logo-img" width="360" height="140" decoding="async">
+            </div>
+            <p class="hub-hero__subtitle hub-hero__subtitle--lead">Ecosistema de alto rendimiento que conecta empresas con closers profesionales. Psicología, ética y precisión técnica en cada transacción.</p>
             <div class="hub-hero__ctas">
                 <a href="#contacto" class="hub-hero__cta hub-hero__cta--primary">
                     <span>Agendar llamada estratégica</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#filosofia" class="hub-hero__cta hub-hero__cta--secondary">Conocer más</a>
+                <a href="#intro" class="hub-hero__cta hub-hero__cta--secondary">Conocer más</a>
             </div>
             <div class="hub-hero__markets">
-                <span>Operamos en:</span>
+                <span>Modelo internacional:</span>
                 <div class="hub-hero__market-tags">
-                    <span class="hub-hero__tag">Latinoamérica</span>
-                    <span class="hub-hero__tag">España</span>
+                    <span class="hub-hero__tag">Europa</span>
                     <span class="hub-hero__tag">Estados Unidos</span>
+                    <span class="hub-hero__tag">Latinoamérica</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Introducción / Filosofía -->
+    <!-- Introducción -->
+    <section class="hub-intro" id="intro">
+        <div class="hub-section__container hub-intro__container">
+            <span class="hub-section__label">INTRODUCCIÓN</span>
+            <h2 class="hub-section__title">CLOSERS HUB</h2>
+            <div class="hub-intro__body">
+                <p><strong>CLOSERS HUB</strong> no es simplemente una agencia de ventas; es un <strong>ecosistema de alto rendimiento</strong> diseñado para conectar a empresas con closers profesionales.</p>
+                <p>En un mundo saturado de «vendedores», nosotros nos enfocamos en <strong>ventas de alto rendimiento</strong>, donde la psicología, la ética y la precisión técnica son los pilares de cada transacción. Nuestra agencia actúa como el <strong>sello de garantía definitivo</strong> para cualquier empresa que busque escalar su facturación con integridad.</p>
+                <p>Operamos bajo un <strong>modelo internacional</strong>, conectando mercados de habla hispana en <strong>Europa, Estados Unidos y Latinoamérica</strong> con expertos en cierre que no solo venden, sino que <strong>protegen la reputación de la marca</strong> que representan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofía de exclusividad -->
     <section class="hub-section" id="filosofia">
         <div class="hub-section__container">
-            <span class="hub-section__label">NUESTRA FILOSOFÍA</span>
-            <h2 class="hub-section__title">Exclusividad como estándar operativo</h2>
-            <p class="hub-section__tagline">En un mundo saturado de "vendedores", nosotros nos enfocamos en ventas de alto rendimiento, donde la psicología, la ética y la precisión técnica son los pilares de cada transacción.</p>
-
-            <blockquote class="hub-quote">
-                "Nuestra agencia actúa como el sello de garantía definitivo para cualquier empresa que busque escalar su facturación con integridad."
-            </blockquote>
+            <span class="hub-section__label">FILOSOFÍA</span>
+            <h2 class="hub-section__title">Nuestra filosofía de exclusividad</h2>
+            <p class="hub-section__tagline">Para mantener los estándares que las empresas internacionales demandan, CLOSERS HUB opera bajo un modelo de <strong>selección rigurosa</strong>. La exclusividad no es una estrategia de marketing: es un <strong>estándar operativo</strong>.</p>
 
             <div class="hub-philosophy">
                 <div class="hub-philosophy__card">
@@ -112,8 +135,8 @@
             </div>
 
             <div class="hub-exclusive">
-                <div class="hub-exclusive__badge">REQUISITO INNEGOCIABLE</div>
-                <p>La admisión a la agencia está restringida exclusivamente a los graduados de los programas <strong>HE CLOSER</strong> y <strong>SHE CLOSER</strong>. Esta formación garantiza que todos nuestros miembros hablen el mismo idioma técnico y compartan una metodología unificada.</p>
+                <div class="hub-exclusive__badge">ADMISIÓN</div>
+                <p>La admisión a la agencia está restringida <strong>exclusivamente</strong> a graduados de <strong>HE CLOSER</strong> y <strong>SHE CLOSER</strong> (Escuela Ven7as).</p>
             </div>
         </div>
     </section>
@@ -122,8 +145,9 @@
     <section class="hub-section hub-section--alt" id="fases">
         <div class="hub-section__container">
             <span class="hub-section__label">ADN DE CIERRE</span>
-            <h2 class="hub-section__title">Las 4 Fases Críticas del Cierre</h2>
-            <p class="hub-section__tagline">El rigor de nuestros programas asegura que cada closer ha dominado estas fases antes de representar a tu marca.</p>
+            <h2 class="hub-section__title">Las 4 fases críticas del cierre</h2>
+            <h3 class="hub-subsection-title">¿Qué garantiza este entrenamiento al mercado?</h3>
+            <p class="hub-section__tagline">El rigor de <strong>HE CLOSER</strong> y <strong>SHE CLOSER</strong> asegura que el closer ha dominado estas fases antes de representar a tu marca.</p>
 
             <div class="hub-phases">
                 <div class="hub-phase">
@@ -149,7 +173,8 @@
             </div>
 
             <div class="hub-guarantees">
-                <h3 class="hub-guarantees__title">Lo que esta metodología garantiza</h3>
+                <h3 class="hub-guarantees__title">¿Por qué este requisito es innegociable?</h3>
+                <p class="hub-guarantees__lead">Esta formación garantiza que todos nuestros miembros hablen el mismo idioma técnico y compartan una <strong>metodología unificada</strong>:</p>
                 <div class="hub-guarantees__grid">
                     <div class="hub-guarantee">
                         <span class="hub-guarantee__check">✓</span>
@@ -181,6 +206,7 @@
                     </div>
                 </div>
             </div>
+            <p class="hub-adn-footer">Solo quienes han superado las pruebas de <strong>HE/SHE CLOSER</strong> poseen el <strong>«ADN de cierre»</strong> que nuestra agencia exige.</p>
         </div>
     </section>
 
@@ -188,29 +214,29 @@
     <section class="hub-section" id="perfiles">
         <div class="hub-section__container">
             <span class="hub-section__label">NUESTRO TALENTO</span>
-            <h2 class="hub-section__title">Perfil de Nuestros Closers</h2>
-            <p class="hub-section__tagline">Tres dimensiones fundamentales que definen a cada miembro de CLOSERS HUB.</p>
+            <h2 class="hub-section__title">Perfil de nuestros closers</h2>
+            <p class="hub-section__tagline">Tres dimensiones que caracterizan a quienes integran CLOSERS HUB.</p>
 
             <div class="hub-dimensions">
                 <div class="hub-dimension">
-                    <div class="hub-dimension__icon">⚙️</div>
-                    <h3>Dimensión Técnica</h3>
+                    <div class="hub-dimension__icon" aria-hidden="true">⚙</div>
+                    <h3>Dimensión técnica</h3>
                     <p>Manejo experto de CRM, scripts adaptativos y seguimiento (follow-up) de alto impacto.</p>
                 </div>
                 <div class="hub-dimension">
-                    <div class="hub-dimension__icon">🧠</div>
-                    <h3>Dimensión Emocional</h3>
+                    <div class="hub-dimension__icon" aria-hidden="true">◆</div>
+                    <h3>Dimensión emocional</h3>
                     <p>Alta resiliencia, inteligencia emocional y capacidad de generar rapport instantáneo.</p>
                 </div>
                 <div class="hub-dimension">
-                    <div class="hub-dimension__icon">📊</div>
-                    <h3>Dimensión Estratégica</h3>
+                    <div class="hub-dimension__icon" aria-hidden="true">◇</div>
+                    <h3>Dimensión estratégica</h3>
                     <p>Entendimiento profundo del embudo de ventas y optimización de la tasa de conversión.</p>
                 </div>
             </div>
 
             <div class="hub-benefits-enterprise">
-                <h3 class="hub-benefits-enterprise__title">Beneficios para las Empresas</h3>
+                <h3 class="hub-benefits-enterprise__title">Beneficios para las empresas</h3>
                 <div class="hub-benefits-enterprise__grid">
                     <div class="hub-benefit-card">
                         <h4>Talento Filtrado</h4>
@@ -321,36 +347,41 @@
     <!-- Alianzas y Ecosistema -->
     <section class="hub-section hub-section--alt" id="alianzas">
         <div class="hub-section__container">
-            <span class="hub-section__label">ECOSISTEMA DE ALIANZAS</span>
-            <h2 class="hub-section__title">Networking Internacional</h2>
-            <p class="hub-section__tagline">Hemos construido puentes sólidos con los jugadores más importantes de la industria en Latinoamérica, España y el mercado Hispano en Estados Unidos.</p>
+            <span class="hub-section__label">EL ECOSISTEMA DE ALIANZAS</span>
+            <h2 class="hub-section__title">Networking internacional</h2>
+            <p class="hub-section__tagline">La mayor fortaleza de CLOSERS HUB es su red de contactos y convenios corporativos. No esperamos a que el mercado nos encuentre; construimos puentes con los actores clave de la industria.</p>
+            <h3 class="hub-subsection-title hub-subsection-title--left">A. Alianzas nacionales e internacionales</h3>
+            <p class="hub-section__tagline hub-section__tagline--tight">Hemos consolidado alianzas en Latinoamérica, España y el mercado hispano en Estados Unidos, abarcando:</p>
 
             <div class="hub-alliances">
                 <div class="hub-alliance">
-                    <div class="hub-alliance__icon">🎓</div>
+                    <div class="hub-alliance__icon" aria-hidden="true">◇</div>
                     <h3>Infoproducción y EdTech</h3>
                     <p>Academias de formación online que facturan millones de dólares mensualmente.</p>
                 </div>
                 <div class="hub-alliance">
-                    <div class="hub-alliance__icon">📈</div>
-                    <h3>Agencias de Marketing</h3>
-                    <p>Agencias de resultados que requieren closers para cerrar los leads que generan para sus clientes.</p>
+                    <div class="hub-alliance__icon" aria-hidden="true">◆</div>
+                    <h3>Agencias de marketing de resultados</h3>
+                    <p>Que requieren closers para cerrar los leads que generan para sus propios clientes.</p>
                 </div>
                 <div class="hub-alliance">
-                    <div class="hub-alliance__icon">🏠</div>
-                    <h3>Real Estate de Lujo</h3>
+                    <div class="hub-alliance__icon" aria-hidden="true">◇</div>
+                    <h3>Sector real estate de lujo</h3>
                     <p>Desarrolladoras inmobiliarias que buscan la sofisticación de un She Closer o la determinación de un He Closer.</p>
                 </div>
                 <div class="hub-alliance">
-                    <div class="hub-alliance__icon">💻</div>
-                    <h3>SaaS</h3>
+                    <div class="hub-alliance__icon" aria-hidden="true">◇</div>
+                    <h3>SaaS (Software as a Service)</h3>
                     <p>Empresas tecnológicas que necesitan traductores de beneficios técnicos a soluciones comerciales.</p>
                 </div>
             </div>
 
             <div class="hub-employment">
-                <h3>Generación de Fuentes de Empleo</h3>
-                <p>Nuestra agencia funciona como un <strong>Headhunter Especializado</strong>. Al ser parte de CLOSERS HUB, el graduado accede a una <em>bolsa de empleo privada</em> donde las vacantes no se publican en portales comunes, sino que se asignan directamente por mérito y perfil.</p>
+                <h3>B. Generación de fuentes de empleo</h3>
+                <p>Nuestra agencia funciona como un <strong>headhunter especializado</strong>. Gracias a nuestro prestigio, las empresas acuden a nosotros buscando <strong>exclusivamente perfiles certificados</strong>.</p>
+                <aside class="hub-employment__note">
+                    <strong>Nota:</strong> Al ser parte de CLOSERS HUB, el graduado accede a una <em>bolsa de empleo privada</em>: las vacantes no se publican en portales comunes; se asignan por mérito y perfil.
+                </aside>
             </div>
         </div>
     </section>
@@ -358,35 +389,53 @@
     <!-- 5 Pilares de Beneficio para Empresas -->
     <section class="hub-section" id="propuesta">
         <div class="hub-section__container">
-            <span class="hub-section__label">PROPUESTA DE VALOR</span>
+            <span class="hub-section__label">PROPUESTA DE VALOR PARA EMPRESAS ALIADAS</span>
             <h2 class="hub-section__title">¿Por qué las empresas eligen CLOSERS HUB?</h2>
-            <p class="hub-section__tagline">Contratar a través de nuestra agencia elimina la incertidumbre del departamento de ventas. Estos son los 5 pilares de beneficio directo.</p>
+            <p class="hub-section__tagline">Contratar a través de nuestra agencia reduce la incertidumbre del área comercial. Cinco pilares de beneficio directo para el aliado.</p>
 
             <div class="hub-value-props">
                 <div class="hub-value-prop">
                     <div class="hub-value-prop__number">01</div>
-                    <h3>Eliminación del Riesgo de Contratación</h3>
-                    <p>El mayor costo de una empresa es el "vendedor que no vende". Nuestros closers ya superaron los filtros más exigentes. Reduces el tiempo de rampa de meses a días.</p>
+                    <h3>Eliminación del riesgo de contratación</h3>
+                    <p>El mayor costo es el «vendedor que no vende».</p>
+                    <ul class="hub-value-prop__list">
+                        <li><strong>Talento pre-validado:</strong> no recibes a un desconocido, sino a un profesional que ya superó los filtros de HE CLOSER o SHE CLOSER.</li>
+                        <li><strong>Ahorro en onboarding:</strong> dominan la técnica; solo necesitan conocer el producto. La rampa pasa de meses a días.</li>
+                    </ul>
                 </div>
                 <div class="hub-value-prop">
                     <div class="hub-value-prop__number">02</div>
-                    <h3>Incremento Inmediato en el ROAS</h3>
-                    <p>Un closer de élite no "desperdicia" llamadas. Su alta tasa de conversión asegura que cada dólar invertido en marketing tenga la mayor probabilidad de retorno.</p>
+                    <h3>Incremento inmediato en el ROAS</h3>
+                    <p>Tu inversión en publicidad necesita cerrarse en ventas.</p>
+                    <ul class="hub-value-prop__list">
+                        <li><strong>Maximización de leads:</strong> un closer de élite no desperdicia llamadas; alta conversión y mejor retorno por dólar invertido.</li>
+                        <li><strong>Gestión real de objeciones:</strong> navegación de la psicología del cliente para encontrar el «sí» detrás del miedo o la duda.</li>
+                    </ul>
                 </div>
                 <div class="hub-value-prop">
                     <div class="hub-value-prop__number">03</div>
-                    <h3>Profesionalismo y Blindaje de Marca</h3>
-                    <p>Nuestros closers venden por convicción, no por presión. Esto reduce drásticamente las devoluciones y eleva el estatus de tu empresa ante el mercado.</p>
+                    <h3>Profesionalismo y blindaje de marca</h3>
+                    <p>El closer es la cara de tu empresa.</p>
+                    <ul class="hub-value-prop__list">
+                        <li><strong>Ética de venta:</strong> cierre por convicción, no por presión; menos devoluciones y quejas post-venta.</li>
+                        <li><strong>Comunicación de alto nivel:</strong> oratoria, empatía estratégica y trato que elevan el estatus de la marca.</li>
+                    </ul>
                 </div>
                 <div class="hub-value-prop">
                     <div class="hub-value-prop__number">04</div>
-                    <h3>Escalabilidad Bajo Demanda</h3>
-                    <p>Si necesitas 5 closers de inmediato para una campaña masiva, CLOSERS HUB provee el equipo listo para operar. Sustitución ágil garantizada.</p>
+                    <h3>Escalabilidad bajo demanda</h3>
+                    <ul class="hub-value-prop__list">
+                        <li><strong>Flexibilidad:</strong> campañas masivas con varios closers listos para operar.</li>
+                        <li><strong>Sustitución ágil:</strong> si el perfil no encaja con la cultura, gestionamos el reemplazo con otro certificado sin detener el flujo.</li>
+                    </ul>
                 </div>
                 <div class="hub-value-prop">
                     <div class="hub-value-prop__number">05</div>
-                    <h3>Data y Retroalimentación Estratégica</h3>
-                    <p>Nuestros closers no solo cierran; reportan. Identifican patrones en objeciones que le dan a tu empresa información valiosa para mejorar su producto, anuncios u oferta.</p>
+                    <h3>Data y retroalimentación estratégica</h3>
+                    <p>Nuestros closers no solo cierran; <strong>reportan</strong>.</p>
+                    <ul class="hub-value-prop__list">
+                        <li><strong>Insights de mercado:</strong> patrones en objeciones para mejorar producto, anuncios u oferta de valor.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -471,10 +520,14 @@
     <footer class="program-footer">
         <div class="program-footer__container">
             <div class="program-footer__top">
-                <a href="index.html" class="program-footer__logo">
-                    <span class="program-footer__logo-text">ESCUELA</span>
-                    <span class="program-footer__logo-accent">VEN7AS</span>
-                </a>
+                <div class="hub-footer__brands">
+                    <a href="index.html" class="program-footer__logo">
+                        <img src="assets/logo/logo.png" alt="Escuela Ven7as" class="program-footer__logo-img">
+                    </a>
+                    <div class="hub-logo-pill hub-logo-pill--footer">
+                        <img src="assets/closerhub/logocloserWhite.png" alt="Closers Hub Agency" width="200" height="64" decoding="async">
+                    </div>
+                </div>
                 <div class="program-footer__social">
                     <a href="https://www.instagram.com/escuelaven7as" target="_blank" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
