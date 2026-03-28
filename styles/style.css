@@ -2804,7 +2804,7 @@ a{
     display: flex;
     align-items: center;
     gap: 3rem;
-    animation: clientsScroll 100s linear infinite;
+    animation: clientsScroll 180s linear infinite;
     width: max-content;
 }
 
@@ -2878,7 +2878,7 @@ a{
     
     .clients__track {
         gap: 1.5rem;
-        animation-duration: 30s;
+        animation-duration: 70s;
     }
     
     .clients__logo {
@@ -3242,11 +3242,11 @@ a{
     display: flex;
     gap: 1.5rem;
     width: max-content;
-    animation: marqueeScroll 40s linear infinite;
+    animation: marqueeScroll 90s linear infinite;
 }
 
 .gallery__track--reverse {
-    animation: marqueeScrollReverse 35s linear infinite;
+    animation: marqueeScrollReverse 85s linear infinite;
 }
 
 @keyframes marqueeScroll {
